@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     //test
 
     override func viewDidLoad() {
-        super.viewDidLoad()
+        super.viewDidLoad()//liwei...........
         // Do any additional setup after loading the view, typically from a nib.
     }
 
