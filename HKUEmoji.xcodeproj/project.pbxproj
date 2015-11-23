@@ -1,0 +1,505 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D47C02611C0334CB00CDFDEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47C02601C0334CB00CDFDEB /* AppDelegate.swift */; };
+		D47C02631C0334CB00CDFDEB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47C02621C0334CB00CDFDEB /* ViewController.swift */; };
+		D47C02661C0334CB00CDFDEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D47C02641C0334CB00CDFDEB /* Main.storyboard */; };
+		D47C02681C0334CB00CDFDEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D47C02671C0334CB00CDFDEB /* Assets.xcassets */; };
+		D47C026B1C0334CB00CDFDEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D47C02691C0334CB00CDFDEB /* LaunchScreen.storyboard */; };
+		D47C02761C0334CB00CDFDEB /* HKUEmojiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47C02751C0334CB00CDFDEB /* HKUEmojiTests.swift */; };
+		D47C02811C0334CB00CDFDEB /* HKUEmojiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47C02801C0334CB00CDFDEB /* HKUEmojiUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D47C02721C0334CB00CDFDEB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D47C02551C0334CB00CDFDEB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D47C025C1C0334CB00CDFDEB;
+			remoteInfo = HKUEmoji;
+		};
+		D47C027D1C0334CB00CDFDEB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D47C02551C0334CB00CDFDEB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D47C025C1C0334CB00CDFDEB;
+			remoteInfo = HKUEmoji;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D47C025D1C0334CB00CDFDEB /* HKUEmoji.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HKUEmoji.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D47C02601C0334CB00CDFDEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D47C02621C0334CB00CDFDEB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D47C02651C0334CB00CDFDEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D47C02671C0334CB00CDFDEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D47C026A1C0334CB00CDFDEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D47C026C1C0334CB00CDFDEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D47C02711C0334CB00CDFDEB /* HKUEmojiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HKUEmojiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D47C02751C0334CB00CDFDEB /* HKUEmojiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKUEmojiTests.swift; sourceTree = "<group>"; };
+		D47C02771C0334CB00CDFDEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D47C027C1C0334CB00CDFDEB /* HKUEmojiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HKUEmojiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D47C02801C0334CB00CDFDEB /* HKUEmojiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKUEmojiUITests.swift; sourceTree = "<group>"; };
+		D47C02821C0334CB00CDFDEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D47C025A1C0334CB00CDFDEB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D47C026E1C0334CB00CDFDEB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D47C02791C0334CB00CDFDEB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D47C02541C0334CB00CDFDEB = {
+			isa = PBXGroup;
+			children = (
+				D47C025F1C0334CB00CDFDEB /* HKUEmoji */,
+				D47C02741C0334CB00CDFDEB /* HKUEmojiTests */,
+				D47C027F1C0334CB00CDFDEB /* HKUEmojiUITests */,
+				D47C025E1C0334CB00CDFDEB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D47C025E1C0334CB00CDFDEB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D47C025D1C0334CB00CDFDEB /* HKUEmoji.app */,
+				D47C02711C0334CB00CDFDEB /* HKUEmojiTests.xctest */,
+				D47C027C1C0334CB00CDFDEB /* HKUEmojiUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D47C025F1C0334CB00CDFDEB /* HKUEmoji */ = {
+			isa = PBXGroup;
+			children = (
+				D47C02601C0334CB00CDFDEB /* AppDelegate.swift */,
+				D47C02621C0334CB00CDFDEB /* ViewController.swift */,
+				D47C02641C0334CB00CDFDEB /* Main.storyboard */,
+				D47C02671C0334CB00CDFDEB /* Assets.xcassets */,
+				D47C02691C0334CB00CDFDEB /* LaunchScreen.storyboard */,
+				D47C026C1C0334CB00CDFDEB /* Info.plist */,
+			);
+			path = HKUEmoji;
+			sourceTree = "<group>";
+		};
+		D47C02741C0334CB00CDFDEB /* HKUEmojiTests */ = {
+			isa = PBXGroup;
+			children = (
+				D47C02751C0334CB00CDFDEB /* HKUEmojiTests.swift */,
+				D47C02771C0334CB00CDFDEB /* Info.plist */,
+			);
+			path = HKUEmojiTests;
+			sourceTree = "<group>";
+		};
+		D47C027F1C0334CB00CDFDEB /* HKUEmojiUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D47C02801C0334CB00CDFDEB /* HKUEmojiUITests.swift */,
+				D47C02821C0334CB00CDFDEB /* Info.plist */,
+			);
+			path = HKUEmojiUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D47C025C1C0334CB00CDFDEB /* HKUEmoji */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D47C02851C0334CB00CDFDEB /* Build configuration list for PBXNativeTarget "HKUEmoji" */;
+			buildPhases = (
+				D47C02591C0334CB00CDFDEB /* Sources */,
+				D47C025A1C0334CB00CDFDEB /* Frameworks */,
+				D47C025B1C0334CB00CDFDEB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HKUEmoji;
+			productName = HKUEmoji;
+			productReference = D47C025D1C0334CB00CDFDEB /* HKUEmoji.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D47C02701C0334CB00CDFDEB /* HKUEmojiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D47C02881C0334CB00CDFDEB /* Build configuration list for PBXNativeTarget "HKUEmojiTests" */;
+			buildPhases = (
+				D47C026D1C0334CB00CDFDEB /* Sources */,
+				D47C026E1C0334CB00CDFDEB /* Frameworks */,
+				D47C026F1C0334CB00CDFDEB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D47C02731C0334CB00CDFDEB /* PBXTargetDependency */,
+			);
+			name = HKUEmojiTests;
+			productName = HKUEmojiTests;
+			productReference = D47C02711C0334CB00CDFDEB /* HKUEmojiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D47C027B1C0334CB00CDFDEB /* HKUEmojiUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D47C028B1C0334CB00CDFDEB /* Build configuration list for PBXNativeTarget "HKUEmojiUITests" */;
+			buildPhases = (
+				D47C02781C0334CB00CDFDEB /* Sources */,
+				D47C02791C0334CB00CDFDEB /* Frameworks */,
+				D47C027A1C0334CB00CDFDEB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D47C027E1C0334CB00CDFDEB /* PBXTargetDependency */,
+			);
+			name = HKUEmojiUITests;
+			productName = HKUEmojiUITests;
+			productReference = D47C027C1C0334CB00CDFDEB /* HKUEmojiUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D47C02551C0334CB00CDFDEB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Wang Youan";
+				TargetAttributes = {
+					D47C025C1C0334CB00CDFDEB = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+					D47C02701C0334CB00CDFDEB = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = D47C025C1C0334CB00CDFDEB;
+					};
+					D47C027B1C0334CB00CDFDEB = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = D47C025C1C0334CB00CDFDEB;
+					};
+				};
+			};
+			buildConfigurationList = D47C02581C0334CB00CDFDEB /* Build configuration list for PBXProject "HKUEmoji" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D47C02541C0334CB00CDFDEB;
+			productRefGroup = D47C025E1C0334CB00CDFDEB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D47C025C1C0334CB00CDFDEB /* HKUEmoji */,
+				D47C02701C0334CB00CDFDEB /* HKUEmojiTests */,
+				D47C027B1C0334CB00CDFDEB /* HKUEmojiUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D47C025B1C0334CB00CDFDEB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D47C026B1C0334CB00CDFDEB /* LaunchScreen.storyboard in Resources */,
+				D47C02681C0334CB00CDFDEB /* Assets.xcassets in Resources */,
+				D47C02661C0334CB00CDFDEB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D47C026F1C0334CB00CDFDEB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D47C027A1C0334CB00CDFDEB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D47C02591C0334CB00CDFDEB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D47C02631C0334CB00CDFDEB /* ViewController.swift in Sources */,
+				D47C02611C0334CB00CDFDEB /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D47C026D1C0334CB00CDFDEB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D47C02761C0334CB00CDFDEB /* HKUEmojiTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D47C02781C0334CB00CDFDEB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D47C02811C0334CB00CDFDEB /* HKUEmojiUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D47C02731C0334CB00CDFDEB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D47C025C1C0334CB00CDFDEB /* HKUEmoji */;
+			targetProxy = D47C02721C0334CB00CDFDEB /* PBXContainerItemProxy */;
+		};
+		D47C027E1C0334CB00CDFDEB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D47C025C1C0334CB00CDFDEB /* HKUEmoji */;
+			targetProxy = D47C027D1C0334CB00CDFDEB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D47C02641C0334CB00CDFDEB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D47C02651C0334CB00CDFDEB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D47C02691C0334CB00CDFDEB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D47C026A1C0334CB00CDFDEB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D47C02831C0334CB00CDFDEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D47C02841C0334CB00CDFDEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D47C02861C0334CB00CDFDEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HKUEmoji/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = HKUEmoji.HKUEmoji;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D47C02871C0334CB00CDFDEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HKUEmoji/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = HKUEmoji.HKUEmoji;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D47C02891C0334CB00CDFDEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = HKUEmojiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = HKUEmoji.HKUEmojiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HKUEmoji.app/HKUEmoji";
+			};
+			name = Debug;
+		};
+		D47C028A1C0334CB00CDFDEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = HKUEmojiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = HKUEmoji.HKUEmojiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HKUEmoji.app/HKUEmoji";
+			};
+			name = Release;
+		};
+		D47C028C1C0334CB00CDFDEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = HKUEmojiUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = HKUEmoji.HKUEmojiUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = HKUEmoji;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		D47C028D1C0334CB00CDFDEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = HKUEmojiUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = HKUEmoji.HKUEmojiUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = HKUEmoji;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D47C02581C0334CB00CDFDEB /* Build configuration list for PBXProject "HKUEmoji" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D47C02831C0334CB00CDFDEB /* Debug */,
+				D47C02841C0334CB00CDFDEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D47C02851C0334CB00CDFDEB /* Build configuration list for PBXNativeTarget "HKUEmoji" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D47C02861C0334CB00CDFDEB /* Debug */,
+				D47C02871C0334CB00CDFDEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D47C02881C0334CB00CDFDEB /* Build configuration list for PBXNativeTarget "HKUEmojiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D47C02891C0334CB00CDFDEB /* Debug */,
+				D47C028A1C0334CB00CDFDEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D47C028B1C0334CB00CDFDEB /* Build configuration list for PBXNativeTarget "HKUEmojiUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D47C028C1C0334CB00CDFDEB /* Debug */,
+				D47C028D1C0334CB00CDFDEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D47C02551C0334CB00CDFDEB /* Project object */;
+}
