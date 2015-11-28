@@ -105,17 +105,19 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="About" id="NfZ-Nz-9CS"/>
+                    <navigationItem key="navigationItem" title="About" id="NfZ-Nz-9CS">
+                        <barButtonItem key="backBarButtonItem" title="How to show" id="6to-cF-bDu"/>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ont-BP-fKm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="721" y="-76"/>
+            <point key="canvasLocation" x="903" y="-28"/>
         </scene>
         <!--StaticCamera-->
         <scene sceneID="egf-8b-8mR">
             <objects>
-                <viewController title="StaticCamera" id="txh-ek-kSn" sceneMemberID="viewController">
+                <viewController title="StaticCamera" id="txh-ek-kSn" customClass="StaticCamera" customModule="HKUEmoji" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FKf-Ma-gPP"/>
                         <viewControllerLayoutGuide type="bottom" id="kR9-Gx-3jP"/>
@@ -135,7 +137,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="568"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jtn-4q-lRE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

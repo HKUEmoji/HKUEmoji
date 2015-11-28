@@ -14,6 +14,7 @@
 		D47C026B1C0334CB00CDFDEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D47C02691C0334CB00CDFDEB /* LaunchScreen.storyboard */; };
 		D47C02761C0334CB00CDFDEB /* HKUEmojiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47C02751C0334CB00CDFDEB /* HKUEmojiTests.swift */; };
 		D47C02811C0334CB00CDFDEB /* HKUEmojiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47C02801C0334CB00CDFDEB /* HKUEmojiUITests.swift */; };
+		D49553001C09E707003700B3 /* StaticCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49552FF1C09E707003700B3 /* StaticCamera.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +48,7 @@
 		D47C027C1C0334CB00CDFDEB /* HKUEmojiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HKUEmojiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D47C02801C0334CB00CDFDEB /* HKUEmojiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKUEmojiUITests.swift; sourceTree = "<group>"; };
 		D47C02821C0334CB00CDFDEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D49552FA1C09D8F8003700B3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D49552FF1C09E707003700B3 /* StaticCamera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticCamera.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +105,7 @@
 				D47C02671C0334CB00CDFDEB /* Assets.xcassets */,
 				D47C02691C0334CB00CDFDEB /* LaunchScreen.storyboard */,
 				D47C026C1C0334CB00CDFDEB /* Info.plist */,
+				D49552FF1C09E707003700B3 /* StaticCamera.swift */,
 			);
 			path = HKUEmoji;
 			sourceTree = "<group>";
@@ -258,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D47C02631C0334CB00CDFDEB /* ViewController.swift in Sources */,
+				D49553001C09E707003700B3 /* StaticCamera.swift in Sources */,
 				D47C02611C0334CB00CDFDEB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -298,7 +301,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				D47C02651C0334CB00CDFDEB /* Base */,
-				D49552FA1C09D8F8003700B3 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
