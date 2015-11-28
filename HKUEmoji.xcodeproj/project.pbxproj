@@ -47,6 +47,7 @@
 		D47C027C1C0334CB00CDFDEB /* HKUEmojiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HKUEmojiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D47C02801C0334CB00CDFDEB /* HKUEmojiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKUEmojiUITests.swift; sourceTree = "<group>"; };
 		D47C02821C0334CB00CDFDEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D49552FA1C09D8F8003700B3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -297,6 +298,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				D47C02651C0334CB00CDFDEB /* Base */,
+				D49552FA1C09D8F8003700B3 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -482,6 +484,7 @@
 				D47C02871C0334CB00CDFDEB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D47C02881C0334CB00CDFDEB /* Build configuration list for PBXNativeTarget "HKUEmojiTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +493,7 @@
 				D47C028A1C0334CB00CDFDEB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D47C028B1C0334CB00CDFDEB /* Build configuration list for PBXNativeTarget "HKUEmojiUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +502,7 @@
 				D47C028D1C0334CB00CDFDEB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
