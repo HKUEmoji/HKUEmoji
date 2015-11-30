@@ -12,6 +12,10 @@ import GPUImage
 class StaticEmojiGen: UIViewController {
 
     @IBOutlet weak var imageShow: UIImageView!
+    @IBOutlet weak var leftEye: UIImageView!
+    @IBOutlet weak var rightEye: UIImageView!
+    @IBOutlet weak var mouth: UIImageView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +27,9 @@ class StaticEmojiGen: UIViewController {
         let stillImageFilter:GPUImageKuwaharaFilter = GPUImageKuwaharaFilter()
         
         imageShow.image = stillImageFilter.imageByFilteringImage(image)
+        leftEye.image = UIImage(named: "eye.png")
+        rightEye.image = UIImage(named: "eye.png")
+        mouth.image = UIImage(named: "mouth.png")
         
     }
 
