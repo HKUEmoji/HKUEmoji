@@ -252,6 +252,7 @@
 				TargetAttributes = {
 					D47C025C1C0334CB00CDFDEB = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = 864XSL2U7M;
 					};
 					D47C02701C0334CB00CDFDEB = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -489,6 +490,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = HKUEmoji/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -502,6 +504,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = HKUEmoji/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
