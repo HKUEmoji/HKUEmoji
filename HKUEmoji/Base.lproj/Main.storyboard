@@ -48,9 +48,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FgF-pl-b0z">
-                                <rect key="frame" x="20" y="130" width="236" height="287"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="460"/>
                                 <animations/>
                             </imageView>
+                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qav-ep-PPb">
+                                <rect key="frame" x="6" y="519" width="320" height="49"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <tabBarItem title="Item" id="Uh5-U7-H2R"/>
+                                    <tabBarItem systemItem="favorites" id="NE4-1J-eHb"/>
+                                    <tabBarItem systemItem="more" id="Eei-u1-tT8"/>
+                                </items>
+                            </tabBar>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

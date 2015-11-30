@@ -23,8 +23,6 @@ class StaticEmojiGen: UIViewController {
         let stillImageFilter:GPUImageKuwaharaFilter = GPUImageKuwaharaFilter()
         
         imageShow.image = stillImageFilter.imageByFilteringImage(image)
-
-//        imageShow = init()
         
     }
 
