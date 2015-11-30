@@ -7,13 +7,13 @@
 //
 
 import UIKit
+import MobileCoreServices
 
-class StaticCamera: UIViewController {
+class StaticCamera: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.navigationController?.setNavigationBarHidden(false, animated: true)
 
         // Do any additional setup after loading the view.
     }
@@ -23,6 +23,23 @@ class StaticCamera: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBOutlet weak var staticPhotoTaker: UIImageView!
+    
+    var imagePicker: UIImagePickerController!
+    var newMedia: Bool?
+    
+    @IBAction func takePhone(sender: UIButton) {
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
+                
+                imagePicker.delegate = self
+                imagePicker.sourceType = UIImagePickerControllerSourceType.Camera
+                imagePicker.mediaTypes = [kUTTypeImage as NSString as String]
+                imagePicker.allowsEditing = false
+                
+                self.presentViewController(imagePicker, animated: true, completion: nil)
+                newMedia = true
+        }
+    }
 
     /*
     // MARK: - Navigation

@@ -19,7 +19,10 @@ class StaticEmojiGen: UIViewController {
         // Do any additional setup after loading the view.
         
         let image: UIImage = UIImage(named: "test.png")!
-        imageShow.image = image
+        
+        let stillImageFilter:GPUImageKuwaharaFilter = GPUImageKuwaharaFilter()
+        
+        imageShow.image = stillImageFilter.imageByFilteringImage(image)
 
 //        imageShow = init()
         
