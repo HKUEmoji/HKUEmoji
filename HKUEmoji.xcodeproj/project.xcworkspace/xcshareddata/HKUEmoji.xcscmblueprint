@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "34500FB8ABF43AEB74E21047415BA5F7F4E1A1FD",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "E609DD15689CC93D8F4D219EB393F30F9F726178" : 0,
+    "34500FB8ABF43AEB74E21047415BA5F7F4E1A1FD" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "989E3CB1-16C4-4CC1-A395-0622B8E57DEC",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "E609DD15689CC93D8F4D219EB393F30F9F726178" : "GPUImage\/",
+    "34500FB8ABF43AEB74E21047415BA5F7F4E1A1FD" : "HKUEmoji\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "HKUEmoji",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "HKUEmoji.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:HKUEmoji\/HKUEmoji.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "34500FB8ABF43AEB74E21047415BA5F7F4E1A1FD"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:BradLarson\/GPUImage.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E609DD15689CC93D8F4D219EB393F30F9F726178"
+    }
+  ]
+}
