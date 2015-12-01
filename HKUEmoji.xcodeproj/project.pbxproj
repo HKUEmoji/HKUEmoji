@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D477ABB71C0DF5F500A85A3B /* GPUImage.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D49F05371C0BED1A00E6EBA6 /* GPUImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D47C02611C0334CB00CDFDEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47C02601C0334CB00CDFDEB /* AppDelegate.swift */; };
 		D47C02631C0334CB00CDFDEB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47C02621C0334CB00CDFDEB /* ViewController.swift */; };
 		D47C02661C0334CB00CDFDEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D47C02641C0334CB00CDFDEB /* Main.storyboard */; };
@@ -59,6 +60,19 @@
 			remoteInfo = GPUImageFramework;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D477ABB41C0DF5E200A85A3B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D477ABB71C0DF5F500A85A3B /* GPUImage.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		D47C025D1C0334CB00CDFDEB /* HKUEmoji.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HKUEmoji.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -193,6 +207,7 @@
 				D47C02591C0334CB00CDFDEB /* Sources */,
 				D47C025A1C0334CB00CDFDEB /* Frameworks */,
 				D47C025B1C0334CB00CDFDEB /* Resources */,
+				D477ABB41C0DF5E200A85A3B /* CopyFiles */,
 			);
 			buildRules = (
 			);
