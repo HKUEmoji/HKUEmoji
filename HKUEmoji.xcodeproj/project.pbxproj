@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D41A81AF1C0DF88D00CF0511 /* eye.png in Resources */ = {isa = PBXBuildFile; fileRef = D41A81AC1C0DF88D00CF0511 /* eye.png */; };
+		D41A81B01C0DF88D00CF0511 /* mouth.png in Resources */ = {isa = PBXBuildFile; fileRef = D41A81AD1C0DF88D00CF0511 /* mouth.png */; };
+		D41A81B11C0DF88D00CF0511 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = D41A81AE1C0DF88D00CF0511 /* test.png */; };
 		D477ABB71C0DF5F500A85A3B /* GPUImage.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D49F05371C0BED1A00E6EBA6 /* GPUImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D47C02611C0334CB00CDFDEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47C02601C0334CB00CDFDEB /* AppDelegate.swift */; };
 		D47C02631C0334CB00CDFDEB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47C02621C0334CB00CDFDEB /* ViewController.swift */; };
@@ -17,10 +20,7 @@
 		D47C02811C0334CB00CDFDEB /* HKUEmojiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47C02801C0334CB00CDFDEB /* HKUEmojiUITests.swift */; };
 		D49553001C09E707003700B3 /* StaticCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49552FF1C09E707003700B3 /* StaticCamera.swift */; };
 		D49F05091C0BE2DE00E6EBA6 /* StaticEmojiGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49F05081C0BE2DE00E6EBA6 /* StaticEmojiGen.swift */; };
-		D49F050C1C0BE6C600E6EBA6 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = D49F050B1C0BE6C600E6EBA6 /* test.png */; };
 		D49F05491C0BEF6600E6EBA6 /* GPUImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D49F05371C0BED1A00E6EBA6 /* GPUImage.framework */; };
-		D49F054C1C0C23B100E6EBA6 /* eye.png in Resources */ = {isa = PBXBuildFile; fileRef = D49F054B1C0C23B100E6EBA6 /* eye.png */; };
-		D49F05501C0C23BC00E6EBA6 /* mouth.png in Resources */ = {isa = PBXBuildFile; fileRef = D49F054F1C0C23BC00E6EBA6 /* mouth.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +75,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D41A81AC1C0DF88D00CF0511 /* eye.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = eye.png; path = HKUEmoji/Assets.xcassets/eye.png; sourceTree = "<group>"; };
+		D41A81AD1C0DF88D00CF0511 /* mouth.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mouth.png; path = HKUEmoji/Assets.xcassets/mouth.png; sourceTree = "<group>"; };
+		D41A81AE1C0DF88D00CF0511 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = test.png; path = HKUEmoji/Assets.xcassets/test.png; sourceTree = "<group>"; };
 		D47C025D1C0334CB00CDFDEB /* HKUEmoji.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HKUEmoji.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D47C02601C0334CB00CDFDEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D47C02621C0334CB00CDFDEB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -90,10 +93,7 @@
 		D47C02821C0334CB00CDFDEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D49552FF1C09E707003700B3 /* StaticCamera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticCamera.swift; sourceTree = "<group>"; };
 		D49F05081C0BE2DE00E6EBA6 /* StaticEmojiGen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticEmojiGen.swift; sourceTree = "<group>"; };
-		D49F050B1C0BE6C600E6EBA6 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = test.png; path = HKUEmoji/Assets.xcassets/test.png; sourceTree = "<group>"; };
 		D49F052E1C0BED1A00E6EBA6 /* GPUImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GPUImage.xcodeproj; path = Submodules/GPUImage/framework/GPUImage.xcodeproj; sourceTree = "<group>"; };
-		D49F054B1C0C23B100E6EBA6 /* eye.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = eye.png; path = HKUEmoji/Assets.xcassets/eye.png; sourceTree = "<group>"; };
-		D49F054F1C0C23BC00E6EBA6 /* mouth.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mouth.png; path = HKUEmoji/Assets.xcassets/mouth.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,9 +180,9 @@
 		D49F050A1C0BE68800E6EBA6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				D49F054B1C0C23B100E6EBA6 /* eye.png */,
-				D49F054F1C0C23BC00E6EBA6 /* mouth.png */,
-				D49F050B1C0BE6C600E6EBA6 /* test.png */,
+				D41A81AC1C0DF88D00CF0511 /* eye.png */,
+				D41A81AD1C0DF88D00CF0511 /* mouth.png */,
+				D41A81AE1C0DF88D00CF0511 /* test.png */,
 			);
 			name = Resources;
 			path = ..;
@@ -327,12 +327,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D41A81B01C0DF88D00CF0511 /* mouth.png in Resources */,
 				D47C026B1C0334CB00CDFDEB /* LaunchScreen.storyboard in Resources */,
+				D41A81AF1C0DF88D00CF0511 /* eye.png in Resources */,
 				D47C02681C0334CB00CDFDEB /* Assets.xcassets in Resources */,
 				D47C02661C0334CB00CDFDEB /* Main.storyboard in Resources */,
-				D49F050C1C0BE6C600E6EBA6 /* test.png in Resources */,
-				D49F054C1C0C23B100E6EBA6 /* eye.png in Resources */,
-				D49F05501C0C23BC00E6EBA6 /* mouth.png in Resources */,
+				D41A81B11C0DF88D00CF0511 /* test.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
