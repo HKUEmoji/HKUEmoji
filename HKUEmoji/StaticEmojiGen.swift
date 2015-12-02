@@ -24,13 +24,23 @@ class StaticEmojiGen: UIViewController {
         
         let image: UIImage = UIImage(named: "test.png")!
         
-        let stillImageFilter:GPUImageKuwaharaFilter = GPUImageKuwaharaFilter()
+        let stillImageFilter:GPUImageSketchFilter = GPUImageSketchFilter()
         
         imageShow.image = stillImageFilter.imageByFilteringImage(image)
         leftEye.image = UIImage(named: "eye.png")
         rightEye.image = UIImage(named: "eye.png")
         mouth.image = UIImage(named: "mouth.png")
         
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.hidesBarsOnTap = true
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.hidesBarsOnTap = false
     }
 
     override func didReceiveMemoryWarning() {

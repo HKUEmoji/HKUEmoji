@@ -46,10 +46,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FgF-pl-b0z">
-                                <rect key="frame" x="0.0" y="116" width="320" height="362"/>
-                                <animations/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Locate your eye and mouth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HTM-Kd-UNe">
                                 <rect key="frame" x="10" y="80" width="218" height="21"/>
                                 <animations/>
@@ -57,28 +53,31 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bIx-G7-3Ei">
-                                <rect key="frame" x="20" y="486" width="67" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Confirm"/>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TPh-Hp-n4i">
-                                <rect key="frame" x="104" y="467" width="70" height="46"/>
+                                <rect key="frame" x="104" y="569" width="70" height="46"/>
                                 <animations/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G0S-LH-PnS">
-                                <rect key="frame" x="254" y="467" width="66" height="46"/>
+                                <rect key="frame" x="256" y="569" width="66" height="46"/>
                                 <animations/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QTW-2L-sES">
-                                <rect key="frame" x="182" y="467" width="66" height="46"/>
+                                <rect key="frame" x="182" y="569" width="66" height="46"/>
+                                <animations/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bIx-G7-3Ei">
+                                <rect key="frame" x="10" y="577" width="67" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Confirm"/>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FgF-pl-b0z">
+                                <rect key="frame" x="0.0" y="126" width="375" height="362"/>
                                 <animations/>
                             </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="imageShow" destination="FgF-pl-b0z" id="SYg-Tf-nY3"/>
                         <outlet property="leftEye" destination="TPh-Hp-n4i" id="bYp-J9-X5G"/>
@@ -88,7 +87,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9qY-Hi-Grx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1206" y="-1475"/>
+            <point key="canvasLocation" x="1403.5" y="-1445.5"/>
         </scene>
         <!--DynamicPhoto-->
         <scene sceneID="XgS-qW-fAy">
@@ -172,18 +171,20 @@
                                 <rect key="frame" x="-5" y="64" width="325" height="460"/>
                                 <animations/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="860-wY-hd5">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="860-wY-hd5">
                                 <rect key="frame" x="134" y="477" width="46" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Catch"/>
                                 <connections>
-                                    <action selector="takePhone:" destination="txh-ek-kSn" eventType="touchUpInside" id="5dQ-GI-Dd7"/>
                                     <segue destination="91b-1G-Psu" kind="show" id="gGy-C4-Rwf"/>
                                 </connections>
                             </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="860-wY-hd5" secondAttribute="bottom" constant="20" id="v0u-AB-L66"/>
+                        </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Camera" id="8De-Ry-zgV"/>
@@ -195,7 +196,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jtn-4q-lRE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="845" y="-1518"/>
+            <point key="canvasLocation" x="928.5" y="-1682.5"/>
         </scene>
         <!--MainPage-->
         <scene sceneID="tne-QT-ifu">
