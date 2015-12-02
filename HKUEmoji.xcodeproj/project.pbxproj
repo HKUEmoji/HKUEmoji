@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		907672FB1C0F16BB00E9FF36 /* DynamicCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907672FA1C0F16BB00E9FF36 /* DynamicCamera.swift */; };
 		D41A81AF1C0DF88D00CF0511 /* eye.png in Resources */ = {isa = PBXBuildFile; fileRef = D41A81AC1C0DF88D00CF0511 /* eye.png */; };
 		D41A81B01C0DF88D00CF0511 /* mouth.png in Resources */ = {isa = PBXBuildFile; fileRef = D41A81AD1C0DF88D00CF0511 /* mouth.png */; };
 		D41A81B11C0DF88D00CF0511 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = D41A81AE1C0DF88D00CF0511 /* test.png */; };
@@ -75,6 +76,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		907672FA1C0F16BB00E9FF36 /* DynamicCamera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicCamera.swift; sourceTree = "<group>"; };
 		D41A81AC1C0DF88D00CF0511 /* eye.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = eye.png; path = HKUEmoji/Assets.xcassets/eye.png; sourceTree = "<group>"; };
 		D41A81AD1C0DF88D00CF0511 /* mouth.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mouth.png; path = HKUEmoji/Assets.xcassets/mouth.png; sourceTree = "<group>"; };
 		D41A81AE1C0DF88D00CF0511 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = test.png; path = HKUEmoji/Assets.xcassets/test.png; sourceTree = "<group>"; };
@@ -146,13 +148,13 @@
 		D47C025F1C0334CB00CDFDEB /* HKUEmoji */ = {
 			isa = PBXGroup;
 			children = (
+				907672FA1C0F16BB00E9FF36 /* DynamicCamera.swift */,
 				D49F050A1C0BE68800E6EBA6 /* Resources */,
 				D47C02601C0334CB00CDFDEB /* AppDelegate.swift */,
 				D47C02621C0334CB00CDFDEB /* ViewController.swift */,
 				D47C02641C0334CB00CDFDEB /* Main.storyboard */,
 				D47C02671C0334CB00CDFDEB /* Assets.xcassets */,
 				D47C02691C0334CB00CDFDEB /* LaunchScreen.storyboard */,
-				9016B8C41C0C6F7A003CD84C /* DynamicCamera.swift */,
 				D47C026C1C0334CB00CDFDEB /* Info.plist */,
 				D49552FF1C09E707003700B3 /* StaticCamera.swift */,
 				D49F05081C0BE2DE00E6EBA6 /* StaticEmojiGen.swift */,
@@ -361,7 +363,7 @@
 				D47C02631C0334CB00CDFDEB /* ViewController.swift in Sources */,
 				D49F05091C0BE2DE00E6EBA6 /* StaticEmojiGen.swift in Sources */,
 				D49553001C09E707003700B3 /* StaticCamera.swift in Sources */,
-				9016B8C51C0C6F7A003CD84C /* DynamicCamera.swift in Sources */,
+				907672FB1C0F16BB00E9FF36 /* DynamicCamera.swift in Sources */,
 				D47C02611C0334CB00CDFDEB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
