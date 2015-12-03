@@ -3,6 +3,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--DynamicEmojiPage-->
@@ -47,49 +48,71 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Locate your eye and mouth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HTM-Kd-UNe">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Locate your eye and mouth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HTM-Kd-UNe">
                                 <rect key="frame" x="10" y="80" width="218" height="21"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="218" id="AQG-Ek-xFo"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TPh-Hp-n4i">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TPh-Hp-n4i">
                                 <rect key="frame" x="104" y="569" width="70" height="46"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="TPh-Hp-n4i" secondAttribute="height" multiplier="35:23" id="kL4-Fc-TWf"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G0S-LH-PnS">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G0S-LH-PnS">
                                 <rect key="frame" x="256" y="569" width="66" height="46"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="G0S-LH-PnS" secondAttribute="height" multiplier="33:23" id="wEV-mv-DXt"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QTW-2L-sES">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QTW-2L-sES">
                                 <rect key="frame" x="182" y="569" width="66" height="46"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="QTW-2L-sES" secondAttribute="height" multiplier="33:23" id="bi8-eb-ps2"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bIx-G7-3Ei">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bIx-G7-3Ei">
                                 <rect key="frame" x="10" y="577" width="67" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Confirm"/>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FgF-pl-b0z">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FgF-pl-b0z">
                                 <rect key="frame" x="0.0" y="126" width="375" height="362"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="362" id="lH9-Yk-Xsc"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="TPh-Hp-n4i" firstAttribute="top" secondItem="FgF-pl-b0z" secondAttribute="bottom" constant="81" id="2an-Hp-tls"/>
+                            <constraint firstItem="QTW-2L-sES" firstAttribute="top" secondItem="FgF-pl-b0z" secondAttribute="bottom" constant="81" id="2kL-4p-FGt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="G0S-LH-PnS" secondAttribute="trailing" constant="37" id="3aD-xR-pZs"/>
                             <constraint firstItem="G0S-LH-PnS" firstAttribute="height" secondItem="QTW-2L-sES" secondAttribute="height" id="6hx-la-EKc"/>
+                            <constraint firstItem="TPh-Hp-n4i" firstAttribute="leading" secondItem="bIx-G7-3Ei" secondAttribute="trailing" constant="27" id="HhP-qO-ApJ"/>
+                            <constraint firstItem="HTM-Kd-UNe" firstAttribute="leading" secondItem="DJj-E9-Jyj" secondAttribute="leadingMargin" constant="-6" id="KSw-pg-t9c"/>
+                            <constraint firstItem="doz-xp-tks" firstAttribute="top" secondItem="QTW-2L-sES" secondAttribute="bottom" constant="8" symbolic="YES" id="N8j-AB-U5A"/>
+                            <constraint firstAttribute="trailing" secondItem="FgF-pl-b0z" secondAttribute="trailing" id="O1X-OC-lTX"/>
+                            <constraint firstItem="G0S-LH-PnS" firstAttribute="top" secondItem="FgF-pl-b0z" secondAttribute="bottom" constant="81" id="PZI-Fg-7xz"/>
+                            <constraint firstItem="doz-xp-tks" firstAttribute="top" secondItem="TPh-Hp-n4i" secondAttribute="bottom" constant="8" symbolic="YES" id="QAD-jI-PQN"/>
+                            <constraint firstItem="HTM-Kd-UNe" firstAttribute="leading" secondItem="bIx-G7-3Ei" secondAttribute="leading" id="TAw-M7-6eR"/>
+                            <constraint firstItem="QTW-2L-sES" firstAttribute="leading" secondItem="TPh-Hp-n4i" secondAttribute="trailing" constant="8" symbolic="YES" id="TaG-M5-M7f"/>
                             <constraint firstItem="QTW-2L-sES" firstAttribute="width" secondItem="TPh-Hp-n4i" secondAttribute="width" id="UEY-0x-5X7"/>
+                            <constraint firstItem="G0S-LH-PnS" firstAttribute="leading" secondItem="QTW-2L-sES" secondAttribute="trailing" constant="8" symbolic="YES" id="Y4W-Cv-fco"/>
+                            <constraint firstItem="HTM-Kd-UNe" firstAttribute="top" secondItem="MDz-kW-hHF" secondAttribute="bottom" constant="16" id="egn-2v-d57"/>
+                            <constraint firstItem="FgF-pl-b0z" firstAttribute="top" secondItem="HTM-Kd-UNe" secondAttribute="bottom" constant="25" id="ieH-O5-tlX"/>
+                            <constraint firstItem="FgF-pl-b0z" firstAttribute="leading" secondItem="DJj-E9-Jyj" secondAttribute="leading" id="rs9-Jh-85q"/>
+                            <constraint firstItem="TPh-Hp-n4i" firstAttribute="centerY" secondItem="bIx-G7-3Ei" secondAttribute="centerY" id="u4R-72-Ve1"/>
                         </constraints>
                     </view>
                     <connections>
