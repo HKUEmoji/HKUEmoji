@@ -12,7 +12,7 @@ import MobileCoreServices
 
 class cameraTool :  UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    // @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var overlayView: UIImageView!
     // 初始化图片选择控制器
     let imagePicker: UIImagePickerController = UIImagePickerController()
     var isFullScreen: Bool = false
@@ -27,8 +27,8 @@ class cameraTool :  UIViewController, UIImagePickerControllerDelegate, UINavigat
         // Dispose of any resources that can be recreated.
     }
     @IBAction func takePhone(sender: UIButton) {
-        var alertView = UIAlertView(title: "标题", message: "这个是UIAlertView的默认样式", delegate: self, cancelButtonTitle: "取消")
-        alertView.show()
+       /*let alertView = UIAlertView(title: "标题", message: "这个是UIAlertView的默认样式", delegate: self, cancelButtonTitle: "取消")
+        alertView.show()*/
         
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
             imagePicker.delegate = self
@@ -36,13 +36,23 @@ class cameraTool :  UIViewController, UIImagePickerControllerDelegate, UINavigat
             imagePicker.mediaTypes = [kUTTypeImage as NSString as String]
             imagePicker.allowsEditing = false
             
-            //    imagePicker.showsCameraControls = NO;//默认是打开的这样才有拍照键，前后摄像头切换的控制，一半设置为NO的时候用于自定义ovelay
+            imagePicker.showsCameraControls = false//默认是打开的这样才有拍照键，前后摄像头切换的控制，一半设置为NO的时候用于自定义ovelay
             
-            //    UIImageView *overLayImg = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, 640)];
+            var overLayViews = NSBundle.mainBundle().loadNibNamed("cameraOverlayView", owner: self, options: nil)
+            var overlayView = overLayViews.last as! UIView
+            
+            imagePicker.cameraOverlayView = overlayView
             //    overLayImg.image = [UIImage imageNamed:@"overlay.png"];
             
             //    imagePicker.cameraOverlayView = overLayImg;//3.0以后可以直接设置cameraOverlayView为overlay
             //    imagePicker.wantsFullScreenLayout = YES;
+           /*
+            var views = NSBundle.mainBundle().loadNibNamed("XIBName", owner: self, options: nil)
+            var view = views.last as UIView
+            var r = view.frame
+            r.origin.y += 30
+            view.frame = r
+            self.view.addSubview(view)*/
             self.presentViewController(imagePicker, animated: true, completion: nil)
         }
         
