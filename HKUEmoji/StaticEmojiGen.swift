@@ -13,9 +13,9 @@ import ImageIO
 class StaticEmojiGen: UIViewController {
 
     @IBOutlet weak var imageShow: UIImageView!
-    @IBOutlet weak var leftEye: UIImageView!
-    @IBOutlet weak var rightEye: UIImageView!
-    @IBOutlet weak var mouth: UIImageView!
+    var leftEye: UIImageView!
+    var rightEye: UIImageView!
+    var mouth: UIImageView!
     
     lazy var originalImage: UIImage = {
         return UIImage(named: "test.png")
@@ -34,9 +34,6 @@ class StaticEmojiGen: UIViewController {
 //        let stillImageFilter:GPUImageSketchFilter = GPUImageSketchFilter()
         
 //        imageShow.image = stillImageFilter.imageByFilteringImage(image)
-        leftEye.image = UIImage(named: "eye.png")
-        rightEye.image = UIImage(named: "eye.png")
-        mouth.image = UIImage(named: "mouth.png")
         detecFace()
         view.sendSubviewToBack(imageShow)
     }
@@ -72,24 +69,22 @@ class StaticEmojiGen: UIViewController {
             faceViewBounds = CGRectApplyAffineTransform(faceViewBounds, CGAffineTransformMakeScale(scale, scale))
             faceViewBounds.origin.x += offsetX
             faceViewBounds.origin.y += offsetY
-            
-            let faceView = UIView(frame: faceViewBounds)
-            faceView.layer.borderColor = UIColor.orangeColor().CGColor
-            faceView.layer.borderWidth = 2
-            
-            imageShow.addSubview(faceView)
+
             if faceFeature.hasLeftEyePosition {
-//                leftEye.frame = CGRect(origin: faceFeature.leftEyePosition, size: mouth.frame.size)
+                leftEye = UIImageView(frame: CGRect(origin: faceFeature.leftEyePosition, size: CGSize(width: 50, height: 50)))
+                leftEye.image = UIImage(named: "eye.png")
                 imageShow.addSubview(leftEye)
             }
             
             if faceFeature.hasRightEyePosition {
-//                rightEye.frame = CGRect(origin: faceFeature.rightEyePosition, size: mouth.frame.size)
+                rightEye = UIImageView(frame: CGRect(origin: faceFeature.rightEyePosition, size: CGSize(width: 50, height: 50)))
+                rightEye.image = UIImage(named: "eye.png")
                 imageShow.addSubview(rightEye)
             }
             
             if faceFeature.hasMouthPosition {
-//                mouth.frame = CGRect(origin: faceFeature.mouthPosition, size: mouth.frame.size)
+                mouth = UIImageView(frame: CGRect(origin: faceFeature.mouthPosition, size: CGSize(width: 50, height: 50)))
+                mouth.image = UIImage(named: "mouth.png")
                 imageShow.addSubview(mouth)
             }
         }

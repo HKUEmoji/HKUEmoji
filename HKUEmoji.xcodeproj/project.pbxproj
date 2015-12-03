@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D41A81AF1C0DF88D00CF0511 /* eye.png in Resources */ = {isa = PBXBuildFile; fileRef = D41A81AC1C0DF88D00CF0511 /* eye.png */; };
-		D41A81B01C0DF88D00CF0511 /* mouth.png in Resources */ = {isa = PBXBuildFile; fileRef = D41A81AD1C0DF88D00CF0511 /* mouth.png */; };
-		D41A81B11C0DF88D00CF0511 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = D41A81AE1C0DF88D00CF0511 /* test.png */; };
+		D428F7CD1C1042E900D2DD51 /* eye.png in Resources */ = {isa = PBXBuildFile; fileRef = D428F7CA1C1042E900D2DD51 /* eye.png */; };
+		D428F7CE1C1042E900D2DD51 /* mouth.png in Resources */ = {isa = PBXBuildFile; fileRef = D428F7CB1C1042E900D2DD51 /* mouth.png */; };
+		D428F7CF1C1042E900D2DD51 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = D428F7CC1C1042E900D2DD51 /* test.png */; };
 		D477ABB71C0DF5F500A85A3B /* GPUImage.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D49F05371C0BED1A00E6EBA6 /* GPUImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D47C02611C0334CB00CDFDEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47C02601C0334CB00CDFDEB /* AppDelegate.swift */; };
 		D47C02631C0334CB00CDFDEB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47C02621C0334CB00CDFDEB /* ViewController.swift */; };
@@ -75,9 +75,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		D41A81AC1C0DF88D00CF0511 /* eye.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = eye.png; path = HKUEmoji/Assets.xcassets/eye.png; sourceTree = "<group>"; };
-		D41A81AD1C0DF88D00CF0511 /* mouth.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mouth.png; path = HKUEmoji/Assets.xcassets/mouth.png; sourceTree = "<group>"; };
-		D41A81AE1C0DF88D00CF0511 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = test.png; path = HKUEmoji/Assets.xcassets/test.png; sourceTree = "<group>"; };
+		D428F7CA1C1042E900D2DD51 /* eye.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = eye.png; path = HKUEmoji/Resourses/eye.png; sourceTree = "<group>"; };
+		D428F7CB1C1042E900D2DD51 /* mouth.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mouth.png; path = HKUEmoji/Resourses/mouth.png; sourceTree = "<group>"; };
+		D428F7CC1C1042E900D2DD51 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = test.png; path = HKUEmoji/Resourses/test.png; sourceTree = "<group>"; };
 		D47C025D1C0334CB00CDFDEB /* HKUEmoji.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HKUEmoji.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D47C02601C0334CB00CDFDEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D47C02621C0334CB00CDFDEB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -180,9 +180,9 @@
 		D49F050A1C0BE68800E6EBA6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				D41A81AC1C0DF88D00CF0511 /* eye.png */,
-				D41A81AD1C0DF88D00CF0511 /* mouth.png */,
-				D41A81AE1C0DF88D00CF0511 /* test.png */,
+				D428F7CA1C1042E900D2DD51 /* eye.png */,
+				D428F7CB1C1042E900D2DD51 /* mouth.png */,
+				D428F7CC1C1042E900D2DD51 /* test.png */,
 			);
 			name = Resources;
 			path = ..;
@@ -327,12 +327,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D41A81B01C0DF88D00CF0511 /* mouth.png in Resources */,
+				D428F7CE1C1042E900D2DD51 /* mouth.png in Resources */,
 				D47C026B1C0334CB00CDFDEB /* LaunchScreen.storyboard in Resources */,
-				D41A81AF1C0DF88D00CF0511 /* eye.png in Resources */,
+				D428F7CD1C1042E900D2DD51 /* eye.png in Resources */,
 				D47C02681C0334CB00CDFDEB /* Assets.xcassets in Resources */,
 				D47C02661C0334CB00CDFDEB /* Main.storyboard in Resources */,
-				D41A81B11C0DF88D00CF0511 /* test.png in Resources */,
+				D428F7CF1C1042E900D2DD51 /* test.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
