@@ -63,7 +63,7 @@
                                 <animations/>
                                 <state key="normal" title="Confirm"/>
                                 <connections>
-                                    <segue destination="VgB-n6-ZXO" kind="show" id="Hj4-xC-zfa"/>
+                                    <segue destination="VgB-n6-ZXO" kind="show" identifier="showGenerater" id="uVb-EQ-OqG"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -89,10 +89,10 @@
             </objects>
             <point key="canvasLocation" x="1704" y="-1716"/>
         </scene>
-        <!--View Controller-->
+        <!--Static Emoji GenII-->
         <scene sceneID="0q7-7P-pWF">
             <objects>
-                <viewController id="VgB-n6-ZXO" sceneMemberID="viewController">
+                <viewController id="VgB-n6-ZXO" customClass="StaticEmojiGenII" customModule="HKUEmoji" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="X3H-Ba-mSl"/>
                         <viewControllerLayoutGuide type="bottom" id="Tij-XW-Jw6"/>
@@ -106,7 +106,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3J4-yJ-5eB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2228" y="-1724"/>
+            <point key="canvasLocation" x="2536" y="-1784"/>
         </scene>
         <!--DynamicPhoto-->
         <scene sceneID="XgS-qW-fAy">

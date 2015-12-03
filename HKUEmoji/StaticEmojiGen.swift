@@ -79,7 +79,7 @@ class StaticEmojiGen: UIViewController {
             }
             
             if faceFeature.hasMouthPosition {
-                mouth = UIImageView(frame: CGRect(origin: faceFeature.mouthPosition, size: CGSize(width: faceFeature.bounds.size.width * 0.25, height: faceFeature.bounds.size.width * 0.15)))
+                mouth = UIImageView(frame: CGRect(origin: faceFeature.mouthPosition, size: CGSize(width: faceFeature.bounds.size.width * 0.45, height: faceFeature.bounds.size.width * 0.2)))
 
                 mouth.image = UIImage(named: "mouth")
                 mouth.tag = mouthTag
@@ -90,14 +90,30 @@ class StaticEmojiGen: UIViewController {
     }
     
     func adjustFaceFeatures(imageView: UIImageView, inputImage: CIImage) {
-        let inputImageSize = inputImage.extent.size
         var transform = CGAffineTransformIdentity
         transform = CGAffineTransformScale(transform, 1, -1)
-        transform = CGAffineTransformTranslate(transform, 0, -inputImageSize.height)
-        var newBound = CGRectApplyAffineTransform(imageView.frame, transform)
-        let offsetY = self.imageShow.bounds.height / 2.0
-        newBound.origin.y += offsetY
+        transform = CGAffineTransformTranslate(transform, 0, -imageShow.frame.height)
+        let newBound = CGRectApplyAffineTransform(imageView.frame, transform)
+//        let offsetY = self.imageShow.frame.origin.y / 2.0
+//        newBound.origin.y += offsetY
         imageView.frame = newBound
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showGenerater" {
+            var svc = segue.destinationViewController as! StaticEmojiGenII
+            if let bound1 = rightEye?.frame {
+                svc.rightEyeBound = bound1
+            }
+            
+            if let bound1 = leftEye?.frame {
+                svc.leftEyeBound = bound1
+            }
+            
+            if let bound1 = mouth?.frame {
+                svc.mouthBound = bound1
+            }
+        }
     }
 
     override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {

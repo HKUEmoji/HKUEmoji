@@ -19,6 +19,7 @@
 		D49553001C09E707003700B3 /* StaticCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49552FF1C09E707003700B3 /* StaticCamera.swift */; };
 		D49F05091C0BE2DE00E6EBA6 /* StaticEmojiGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49F05081C0BE2DE00E6EBA6 /* StaticEmojiGen.swift */; };
 		D49F05491C0BEF6600E6EBA6 /* GPUImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D49F05371C0BED1A00E6EBA6 /* GPUImage.framework */; };
+		D4BDAA631C10949700D0DFF9 /* StaticEmojiGenII.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BDAA621C10949700D0DFF9 /* StaticEmojiGenII.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,7 @@
 		D49552FF1C09E707003700B3 /* StaticCamera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticCamera.swift; sourceTree = "<group>"; };
 		D49F05081C0BE2DE00E6EBA6 /* StaticEmojiGen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticEmojiGen.swift; sourceTree = "<group>"; };
 		D49F052E1C0BED1A00E6EBA6 /* GPUImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GPUImage.xcodeproj; path = Submodules/GPUImage/framework/GPUImage.xcodeproj; sourceTree = "<group>"; };
+		D4BDAA621C10949700D0DFF9 /* StaticEmojiGenII.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticEmojiGenII.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 				D47C026C1C0334CB00CDFDEB /* Info.plist */,
 				D49552FF1C09E707003700B3 /* StaticCamera.swift */,
 				D49F05081C0BE2DE00E6EBA6 /* StaticEmojiGen.swift */,
+				D4BDAA621C10949700D0DFF9 /* StaticEmojiGenII.swift */,
 			);
 			path = HKUEmoji;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 				D47C02631C0334CB00CDFDEB /* ViewController.swift in Sources */,
 				D49F05091C0BE2DE00E6EBA6 /* StaticEmojiGen.swift in Sources */,
 				D49553001C09E707003700B3 /* StaticCamera.swift in Sources */,
+				D4BDAA631C10949700D0DFF9 /* StaticEmojiGenII.swift in Sources */,
 				D47C02611C0334CB00CDFDEB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
