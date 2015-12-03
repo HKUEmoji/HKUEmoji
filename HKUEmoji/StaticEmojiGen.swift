@@ -16,6 +16,7 @@ class StaticEmojiGen: UIViewController {
     var leftEye: UIImageView!
     var rightEye: UIImageView!
     var mouth: UIImageView!
+    var location = CGPoint(x: 0, y: 0)
     
     lazy var originalImage: UIImage = {
         return UIImage(named: "test.png")
@@ -58,36 +59,40 @@ class StaticEmojiGen: UIViewController {
         
         if let faceFeature = faceFeatures.first as CIFaceFeature! {
             
-            var faceViewBounds = CGRectApplyAffineTransform(faceFeature.bounds, transform)
-            
-            // 2.
-            let scale = min(imageShow.bounds.size.width / inputImageSize!.width,
-                imageShow.bounds.size.height / inputImageSize!.height)
-            let offsetX = (imageShow.bounds.size.width - inputImageSize!.width * scale) / 2
-            let offsetY = (imageShow.bounds.size.height - inputImageSize!.height * scale) / 2
-            
-            faceViewBounds = CGRectApplyAffineTransform(faceViewBounds, CGAffineTransformMakeScale(scale, scale))
-            faceViewBounds.origin.x += offsetX
-            faceViewBounds.origin.y += offsetY
+//            var faceViewBounds = CGRectApplyAffineTransform(faceFeature.bounds, transform)
+//            
+//            // 2.
+//            let scale = min(imageShow.bounds.size.width / inputImageSize!.width,
+//                imageShow.bounds.size.height / inputImageSize!.height)
+//            let offsetX = (imageShow.bounds.size.width - inputImageSize!.width * scale) / 2
+//            let offsetY = (imageShow.bounds.size.height - inputImageSize!.height * scale) / 2
+//            
+//            faceViewBounds = CGRectApplyAffineTransform(faceViewBounds, CGAffineTransformMakeScale(scale, scale))
+//            faceViewBounds.origin.x += offsetX
+//            faceViewBounds.origin.y += offsetY
 
             if faceFeature.hasLeftEyePosition {
                 leftEye = UIImageView(frame: CGRect(origin: faceFeature.leftEyePosition, size: CGSize(width: 50, height: 50)))
-                leftEye.image = UIImage(named: "eye.png")
+                leftEye.image = UIImage(named: "eye")
                 imageShow.addSubview(leftEye)
             }
             
             if faceFeature.hasRightEyePosition {
                 rightEye = UIImageView(frame: CGRect(origin: faceFeature.rightEyePosition, size: CGSize(width: 50, height: 50)))
-                rightEye.image = UIImage(named: "eye.png")
+                rightEye.image = UIImage(named: "eye")
                 imageShow.addSubview(rightEye)
             }
             
             if faceFeature.hasMouthPosition {
                 mouth = UIImageView(frame: CGRect(origin: faceFeature.mouthPosition, size: CGSize(width: 50, height: 50)))
-                mouth.image = UIImage(named: "mouth.png")
+                mouth.image = UIImage(named: "mouth")
                 imageShow.addSubview(mouth)
             }
         }
+    }
+
+    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        super.touchesMoved(touches, withEvent: event)
     }
     
     override func viewWillAppear(animated: Bool) {

@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D428F7CD1C1042E900D2DD51 /* eye.png in Resources */ = {isa = PBXBuildFile; fileRef = D428F7CA1C1042E900D2DD51 /* eye.png */; };
-		D428F7CE1C1042E900D2DD51 /* mouth.png in Resources */ = {isa = PBXBuildFile; fileRef = D428F7CB1C1042E900D2DD51 /* mouth.png */; };
 		D428F7CF1C1042E900D2DD51 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = D428F7CC1C1042E900D2DD51 /* test.png */; };
 		D477ABB71C0DF5F500A85A3B /* GPUImage.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D49F05371C0BED1A00E6EBA6 /* GPUImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D47C02611C0334CB00CDFDEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47C02601C0334CB00CDFDEB /* AppDelegate.swift */; };
@@ -75,8 +73,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		D428F7CA1C1042E900D2DD51 /* eye.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = eye.png; path = HKUEmoji/Resourses/eye.png; sourceTree = "<group>"; };
-		D428F7CB1C1042E900D2DD51 /* mouth.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mouth.png; path = HKUEmoji/Resourses/mouth.png; sourceTree = "<group>"; };
 		D428F7CC1C1042E900D2DD51 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = test.png; path = HKUEmoji/Resourses/test.png; sourceTree = "<group>"; };
 		D47C025D1C0334CB00CDFDEB /* HKUEmoji.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HKUEmoji.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D47C02601C0334CB00CDFDEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -180,8 +176,6 @@
 		D49F050A1C0BE68800E6EBA6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				D428F7CA1C1042E900D2DD51 /* eye.png */,
-				D428F7CB1C1042E900D2DD51 /* mouth.png */,
 				D428F7CC1C1042E900D2DD51 /* test.png */,
 			);
 			name = Resources;
@@ -327,9 +321,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D428F7CE1C1042E900D2DD51 /* mouth.png in Resources */,
 				D47C026B1C0334CB00CDFDEB /* LaunchScreen.storyboard in Resources */,
-				D428F7CD1C1042E900D2DD51 /* eye.png in Resources */,
 				D47C02681C0334CB00CDFDEB /* Assets.xcassets in Resources */,
 				D47C02661C0334CB00CDFDEB /* Main.storyboard in Resources */,
 				D428F7CF1C1042E900D2DD51 /* test.png in Resources */,
