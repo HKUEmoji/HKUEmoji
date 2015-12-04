@@ -38,7 +38,7 @@ class StaticEmojiGen: UIViewController {
         
 //        imageShow.image = stillImageFilter.imageByFilteringImage(image)
         detecFace()
-        view.sendSubviewToBack(imageShow)
+//        view.sendSubviewToBack(imageShow)
     }
     
     func detecFace() {
@@ -53,11 +53,6 @@ class StaticEmojiGen: UIViewController {
         } else {
             faceFeatures = detector.featuresInImage(inputImage!) as! [CIFaceFeature]
         }
-        
-        let inputImageSize = inputImage?.extent.size
-        var transform = CGAffineTransformIdentity
-        transform = CGAffineTransformScale(transform, 1, -1)
-        transform = CGAffineTransformTranslate(transform, 0, -(inputImageSize?.height)!)
         
         if let faceFeature = faceFeatures.first as CIFaceFeature! {
 
@@ -101,7 +96,7 @@ class StaticEmojiGen: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showGenerater" {
-            var svc = segue.destinationViewController as! StaticEmojiGenII
+            let svc = segue.destinationViewController as! StaticEmojiGenII
             if let bound1 = rightEye?.frame {
                 svc.rightEyeBound = bound1
             }
@@ -113,6 +108,8 @@ class StaticEmojiGen: UIViewController {
             if let bound1 = mouth?.frame {
                 svc.mouthBound = bound1
             }
+            
+            svc.faceImage = originalImage
         }
     }
 

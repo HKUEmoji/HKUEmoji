@@ -63,7 +63,7 @@
                                 <animations/>
                                 <state key="normal" title="Confirm"/>
                                 <connections>
-                                    <segue destination="VgB-n6-ZXO" kind="show" identifier="showGenerater" id="uVb-EQ-OqG"/>
+                                    <segue destination="VgB-n6-ZXO" kind="show" identifier="showGenerater" id="bW8-9K-iLv"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -89,7 +89,7 @@
             </objects>
             <point key="canvasLocation" x="1704" y="-1716"/>
         </scene>
-        <!--Static Emoji GenII-->
+        <!--Item-->
         <scene sceneID="0q7-7P-pWF">
             <objects>
                 <viewController id="VgB-n6-ZXO" customClass="StaticEmojiGenII" customModule="HKUEmoji" customModuleProvider="target" sceneMemberID="viewController">
@@ -100,13 +100,23 @@
                     <view key="view" contentMode="scaleToFill" id="G6z-6I-xN3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rAv-Ku-adF">
+                                <rect key="frame" x="0.0" y="123" width="375" height="405"/>
+                                <animations/>
+                            </imageView>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="Bw8-Ev-8pU"/>
+                    <connections>
+                        <outlet property="imageView" destination="rAv-Ku-adF" id="ATS-ys-SuM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3J4-yJ-5eB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2536" y="-1784"/>
+            <point key="canvasLocation" x="3083.5" y="-1716.5"/>
         </scene>
         <!--DynamicPhoto-->
         <scene sceneID="XgS-qW-fAy">
