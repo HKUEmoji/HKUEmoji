@@ -19,8 +19,7 @@ class cameraTool :  UIViewController, UIImagePickerControllerDelegate, UINavigat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
+        // Do any additional setup after loading the view, typically from a nib.        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -36,12 +35,15 @@ class cameraTool :  UIViewController, UIImagePickerControllerDelegate, UINavigat
             imagePicker.mediaTypes = [kUTTypeImage as NSString as String]
             imagePicker.allowsEditing = false
             
-            imagePicker.showsCameraControls = false//默认是打开的这样才有拍照键，前后摄像头切换的控制，一半设置为NO的时候用于自定义ovelay
+            imagePicker.showsCameraControls = true//默认是打开的这样才有拍照键，前后摄像头切换的控制，一半设置为NO的时候用于自定义ovelay
             
-            var overLayViews = NSBundle.mainBundle().loadNibNamed("cameraOverlayView", owner: self, options: nil)
-            var overlayView = overLayViews.last as! UIView
+            //var overLayViews = NSBundle.mainBundle().loadNibNamed("cameraOverlayView", owner: nil, options: nil)
+            //var overlayView = overLayViews.last as! UIView
+            let overLayView: UIView = UIView(frame: imagePicker.cameraOverlayView!.bounds )
+            let overLayImg : UIImageView = UIImageView(image: UIImage(named: "background.png"))
+            overLayView.addSubview(overLayImg)
             
-            imagePicker.cameraOverlayView = overlayView
+            imagePicker.cameraOverlayView = overLayView
             //    overLayImg.image = [UIImage imageNamed:@"overlay.png"];
             
             //    imagePicker.cameraOverlayView = overLayImg;//3.0以后可以直接设置cameraOverlayView为overlay
