@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		905DBE781C11454A00F181D6 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 905DBE771C11454A00F181D6 /* background.png */; };
+		905DBE7C1C1146C900F181D6 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 905DBE7B1C1146C900F181D6 /* background.png */; };
 		907672FB1C0F16BB00E9FF36 /* DynamicCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907672FA1C0F16BB00E9FF36 /* DynamicCamera.swift */; };
 		907672FF1C0FE4DF00E9FF36 /*  cameraOverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 907672FE1C0FE4DF00E9FF36 /*  cameraOverlayView.xib */; };
 		907673011C0FF32C00E9FF36 /* cameraOverLay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907673001C0FF32C00E9FF36 /* cameraOverLay.swift */; };
@@ -79,7 +79,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		905DBE771C11454A00F181D6 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background.png; path = ../../Downloads/background.png; sourceTree = "<group>"; };
+		905DBE7B1C1146C900F181D6 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		907672FA1C0F16BB00E9FF36 /* DynamicCamera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicCamera.swift; sourceTree = "<group>"; };
 		907672FE1C0FE4DF00E9FF36 /*  cameraOverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = " cameraOverlayView.xib"; sourceTree = "<group>"; };
 		907673001C0FF32C00E9FF36 /* cameraOverLay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cameraOverLay.swift; sourceTree = "<group>"; };
@@ -191,8 +191,8 @@
 		D49F050A1C0BE68800E6EBA6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				905DBE771C11454A00F181D6 /* background.png */,
 				D41A81AC1C0DF88D00CF0511 /* eye.png */,
+				905DBE7B1C1146C900F181D6 /* background.png */,
 				D41A81AD1C0DF88D00CF0511 /* mouth.png */,
 				D41A81AE1C0DF88D00CF0511 /* test.png */,
 			);
@@ -340,7 +340,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D41A81B01C0DF88D00CF0511 /* mouth.png in Resources */,
-				905DBE781C11454A00F181D6 /* background.png in Resources */,
+				905DBE7C1C1146C900F181D6 /* background.png in Resources */,
 				D47C026B1C0334CB00CDFDEB /* LaunchScreen.storyboard in Resources */,
 				D41A81AF1C0DF88D00CF0511 /* eye.png in Resources */,
 				D47C02681C0334CB00CDFDEB /* Assets.xcassets in Resources */,
