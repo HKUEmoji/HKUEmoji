@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		98845F7B1C148A0B001D4799 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98845F7A1C148A0B001D4799 /* ShareViewController.swift */; };
 		D41A81AF1C0DF88D00CF0511 /* eye.png in Resources */ = {isa = PBXBuildFile; fileRef = D41A81AC1C0DF88D00CF0511 /* eye.png */; };
 		D41A81B01C0DF88D00CF0511 /* mouth.png in Resources */ = {isa = PBXBuildFile; fileRef = D41A81AD1C0DF88D00CF0511 /* mouth.png */; };
 		D41A81B11C0DF88D00CF0511 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = D41A81AE1C0DF88D00CF0511 /* test.png */; };
@@ -75,6 +76,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		98845F7A1C148A0B001D4799 /* ShareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		D41A81AC1C0DF88D00CF0511 /* eye.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = eye.png; path = HKUEmoji/Assets.xcassets/eye.png; sourceTree = "<group>"; };
 		D41A81AD1C0DF88D00CF0511 /* mouth.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mouth.png; path = HKUEmoji/Assets.xcassets/mouth.png; sourceTree = "<group>"; };
 		D41A81AE1C0DF88D00CF0511 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = test.png; path = HKUEmoji/Assets.xcassets/test.png; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				D47C026C1C0334CB00CDFDEB /* Info.plist */,
 				D49552FF1C09E707003700B3 /* StaticCamera.swift */,
 				D49F05081C0BE2DE00E6EBA6 /* StaticEmojiGen.swift */,
+				98845F7A1C148A0B001D4799 /* ShareViewController.swift */,
 			);
 			path = HKUEmoji;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 			files = (
 				D47C02631C0334CB00CDFDEB /* ViewController.swift in Sources */,
 				D49F05091C0BE2DE00E6EBA6 /* StaticEmojiGen.swift in Sources */,
+				98845F7B1C148A0B001D4799 /* ShareViewController.swift in Sources */,
 				D49553001C09E707003700B3 /* StaticCamera.swift in Sources */,
 				D47C02611C0334CB00CDFDEB /* AppDelegate.swift in Sources */,
 			);
