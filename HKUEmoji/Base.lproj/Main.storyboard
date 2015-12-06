@@ -152,6 +152,9 @@
                                     <action selector="facebookButtonPushed:" destination="QxD-dD-uZ4" eventType="touchUpInside" id="XmO-IJ-MW7"/>
                                 </connections>
                             </button>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="eye.png" translatesAutoresizingMaskIntoConstraints="NO" id="9Jh-c7-z2x">
+                                <rect key="frame" x="98" y="399" width="102" height="102"/>
+                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -311,4 +314,7 @@
             <point key="canvasLocation" x="-152" y="-696"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="eye.png" width="102" height="102"/>
+    </resources>
 </document>
