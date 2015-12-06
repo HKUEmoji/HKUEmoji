@@ -32,14 +32,18 @@ class StaticEmojiGen: UIViewController {
 
         // Do any additional setup after loading the view.
         imageShow.image = originalImage
+        imageShow.userInteractionEnabled = false
         mouth.image = UIImage(named: "mouth")
+        mouth.userInteractionEnabled = true
         leftEye.image = UIImage(named: "eye")
+        leftEye.userInteractionEnabled = true
         rightEye.image = UIImage(named: "eye")
+        rightEye.userInteractionEnabled = true
     }
     
     override func viewDidAppear(animated: Bool) {
+//        detecFace()
         super.viewDidAppear(animated)
-        detecFace()
     }
     
     func detecFace() {
@@ -59,9 +63,7 @@ class StaticEmojiGen: UIViewController {
 //            print(faceFeature.bounds)
 
             if faceFeature.hasLeftEyePosition {
-                print(leftEye.frame)
                 leftEye.frame = adjustFaceFeatures(CGRect(origin: faceFeature.leftEyePosition, size: CGSize(width: faceFeature.bounds.size.width * 0.25, height: faceFeature.bounds.size.width * 0.15)))
-                print(leftEye.frame)
             }
             
             if faceFeature.hasRightEyePosition {
@@ -122,14 +124,16 @@ class StaticEmojiGen: UIViewController {
         let touch = touches.first!
         let location = touch.locationInView(self.view)
         if let node = touch.view {
-//            print(node.frame)
-            let newLocation = CGPoint(x: location.x, y: location.y)
-            node.center = newLocation 
+            if node.tag == 1024 {
+                let newLocation = CGPoint(x: location.x, y: location.y)
+                node.center = newLocation
+            }
         }
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+//        detecFace()
 //        navigationController?.hidesBarsOnTap = true
     }
     
@@ -143,6 +147,11 @@ class StaticEmojiGen: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        detecFace()
+        self.view.sendSubviewToBack(background)
+    }
 
     /*
     // MARK: - Navigation
