@@ -19,7 +19,7 @@ class StaticEmojiGenII: UIViewController {
     var currentImage: (String, Int)!
     var trueEmojiNames = ["CP3 2": 0,
                           "CP3": 0,
-                          "curry1": 0,]
+                          "curry1": 1,]
 
     lazy var context: CIContext = {
         return CIContext(options: nil)
@@ -28,19 +28,18 @@ class StaticEmojiGenII: UIViewController {
     var backgroundImage: UIImage!
     
     @IBOutlet weak var imageView: UIImageView!
+    @IBAction func chooseBackground(sender: AnyObject) {
+        displayBackGround()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
         currentImage = trueEmojiNames.first!
-        backgroundImage = UIImage(named: self.currentImage.0)
-        let backgroundbond = faceBoundDetection(backgroundImage!)
-        backgroundImage = addFaceToBackGround(backgroundbond, backgroundImage: backgroundImage, faceImage: faceImage!)
-        imageView.image = backgroundImage
+        changeBackground(UIAlertAction(title: currentImage.0, style: .Default, handler: nil))
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Action, target: self, action: "saveOrShare")
-        
     }
     
     override func viewDidLayoutSubviews() {
@@ -81,11 +80,9 @@ class StaticEmojiGenII: UIViewController {
         transform = CGAffineTransformMakeScale(1, -1)
         transform = CGAffineTransformTranslate(transform, 0, -originPic.size.height)
         bounds = CGRectApplyAffineTransform(bounds, transform)
+        bounds.size.height *= 1.25
+        bounds.size.width *= 1.1
         return bounds
-    }
-    
-    func cutOutOriginalFace(originPic: UIImage) -> UIImage? {
-        return nil
     }
     
     func saveOrShare() {
@@ -104,6 +101,23 @@ class StaticEmojiGenII: UIViewController {
             ac.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
             presentViewController(ac, animated: true, completion: nil)
         }
+    }
+    
+    func displayBackGround() {
+        let ac = UIAlertController(title: "Choose Background", message: "Please choose a image as your background", preferredStyle: .Alert)
+        for background in trueEmojiNames {
+            ac.addAction(UIAlertAction(title: background.0, style: .Default, handler: changeBackground))
+        }
+        ac.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
+        presentViewController(ac, animated: true, completion: nil)
+    }
+    
+    func changeBackground(action: UIAlertAction) {
+        currentImage = (action.title!, self.trueEmojiNames[action.title!]!)
+        backgroundImage = UIImage(named: self.currentImage.0)
+        let backgroundbond = faceBoundDetection(backgroundImage!)
+        backgroundImage = addFaceToBackGround(backgroundbond, backgroundImage: backgroundImage, faceImage: faceImage!)
+        imageView.image = backgroundImage
     }
     
     /*

@@ -118,7 +118,7 @@
             </objects>
             <point key="canvasLocation" x="1703.5" y="-1716.5"/>
         </scene>
-        <!--changeBackGround-->
+        <!--Static Emoji GenII-->
         <scene sceneID="0q7-7P-pWF">
             <objects>
                 <viewController id="VgB-n6-ZXO" customClass="StaticEmojiGenII" customModule="HKUEmoji" customModuleProvider="target" sceneMemberID="viewController">
@@ -139,7 +139,7 @@
                                     </imageView>
                                 </subviews>
                                 <animations/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="u3h-77-EkL" firstAttribute="centerY" secondItem="QDb-9Y-A1B" secondAttribute="centerY" id="9Jo-Z3-6Eg"/>
                                     <constraint firstItem="u3h-77-EkL" firstAttribute="width" relation="lessThanOrEqual" secondItem="QDb-9Y-A1B" secondAttribute="width" id="AVy-RH-r45"/>
@@ -147,17 +147,31 @@
                                     <constraint firstItem="u3h-77-EkL" firstAttribute="centerX" secondItem="QDb-9Y-A1B" secondAttribute="centerX" id="vTg-Xa-iwg"/>
                                 </constraints>
                             </view>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mqc-er-4PX">
+                                <rect key="frame" x="0.0" y="579" width="375" height="44"/>
+                                <animations/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="camera" id="tEY-sK-KFn">
+                                        <connections>
+                                            <action selector="chooseBackground:" destination="VgB-n6-ZXO" id="7FX-5s-plS"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Tij-XW-Jw6" firstAttribute="top" secondItem="QDb-9Y-A1B" secondAttribute="bottom" constant="100" id="04P-Y3-Qwh"/>
+                            <constraint firstItem="Mqc-er-4PX" firstAttribute="width" secondItem="G6z-6I-xN3" secondAttribute="width" id="AUq-SK-M5t"/>
+                            <constraint firstItem="Mqc-er-4PX" firstAttribute="top" relation="greaterThanOrEqual" secondItem="QDb-9Y-A1B" secondAttribute="bottom" constant="20" id="JZz-Dc-io8"/>
+                            <constraint firstItem="Tij-XW-Jw6" firstAttribute="top" secondItem="Mqc-er-4PX" secondAttribute="bottom" id="M6K-yj-NTA"/>
+                            <constraint firstItem="Mqc-er-4PX" firstAttribute="centerX" secondItem="G6z-6I-xN3" secondAttribute="centerX" id="TD6-5e-X5U"/>
                             <constraint firstItem="QDb-9Y-A1B" firstAttribute="top" secondItem="X3H-Ba-mSl" secondAttribute="bottom" constant="50" id="jX4-6X-DLv"/>
                             <constraint firstItem="QDb-9Y-A1B" firstAttribute="centerX" secondItem="G6z-6I-xN3" secondAttribute="centerX" id="x1E-25-GBe"/>
                             <constraint firstItem="QDb-9Y-A1B" firstAttribute="width" secondItem="G6z-6I-xN3" secondAttribute="width" id="xaa-TB-KjP"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="changeBackGround" badgeValue="LIVE" id="Bw8-Ev-8pU"/>
                     <toolbarItems/>
                     <connections>
                         <outlet property="imageView" destination="u3h-77-EkL" id="IAI-sL-t7N"/>
