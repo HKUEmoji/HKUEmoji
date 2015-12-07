@@ -59,7 +59,7 @@
                                 <animations/>
                                 <state key="normal" title="Confirm"/>
                                 <connections>
-                                    <segue destination="VgB-n6-ZXO" kind="show" id="M3c-3S-8hf"/>
+                                    <segue destination="VgB-n6-ZXO" kind="show" identifier="showGenerater" id="M3c-3S-8hf"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VYH-k5-EmQ">
@@ -118,7 +118,7 @@
             </objects>
             <point key="canvasLocation" x="1703.5" y="-1716.5"/>
         </scene>
-        <!--Item-->
+        <!--changeBackGround-->
         <scene sceneID="0q7-7P-pWF">
             <objects>
                 <viewController id="VgB-n6-ZXO" customClass="StaticEmojiGenII" customModule="HKUEmoji" customModuleProvider="target" sceneMemberID="viewController">
@@ -130,22 +130,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rAv-Ku-adF">
-                                <rect key="frame" x="0.0" y="123" width="375" height="405"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QDb-9Y-A1B">
+                                <rect key="frame" x="0.0" y="131" width="375" height="356"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u3h-77-EkL">
+                                        <rect key="frame" x="67" y="114" width="240" height="128"/>
+                                        <animations/>
+                                    </imageView>
+                                </subviews>
                                 <animations/>
-                            </imageView>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="u3h-77-EkL" firstAttribute="centerY" secondItem="QDb-9Y-A1B" secondAttribute="centerY" id="9Jo-Z3-6Eg"/>
+                                    <constraint firstItem="u3h-77-EkL" firstAttribute="width" relation="lessThanOrEqual" secondItem="QDb-9Y-A1B" secondAttribute="width" id="AVy-RH-r45"/>
+                                    <constraint firstItem="u3h-77-EkL" firstAttribute="height" relation="lessThanOrEqual" secondItem="QDb-9Y-A1B" secondAttribute="height" id="ETC-hT-BWK"/>
+                                    <constraint firstItem="u3h-77-EkL" firstAttribute="centerX" secondItem="QDb-9Y-A1B" secondAttribute="centerX" id="vTg-Xa-iwg"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Tij-XW-Jw6" firstAttribute="top" secondItem="QDb-9Y-A1B" secondAttribute="bottom" constant="100" id="04P-Y3-Qwh"/>
+                            <constraint firstItem="QDb-9Y-A1B" firstAttribute="top" secondItem="X3H-Ba-mSl" secondAttribute="bottom" constant="50" id="jX4-6X-DLv"/>
+                            <constraint firstItem="QDb-9Y-A1B" firstAttribute="centerX" secondItem="G6z-6I-xN3" secondAttribute="centerX" id="x1E-25-GBe"/>
+                            <constraint firstItem="QDb-9Y-A1B" firstAttribute="width" secondItem="G6z-6I-xN3" secondAttribute="width" id="xaa-TB-KjP"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="Bw8-Ev-8pU"/>
+                    <tabBarItem key="tabBarItem" title="changeBackGround" badgeValue="LIVE" id="Bw8-Ev-8pU"/>
+                    <toolbarItems/>
                     <connections>
-                        <outlet property="imageView" destination="rAv-Ku-adF" id="ATS-ys-SuM"/>
+                        <outlet property="imageView" destination="u3h-77-EkL" id="IAI-sL-t7N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3J4-yJ-5eB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2798" y="-1693"/>
+            <point key="canvasLocation" x="2620.5" y="-1857.5"/>
         </scene>
         <!--DynamicPhoto-->
         <scene sceneID="XgS-qW-fAy">

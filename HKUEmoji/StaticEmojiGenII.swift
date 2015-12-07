@@ -15,29 +15,36 @@ class StaticEmojiGenII: UIViewController {
     var rightEyeBound: CGRect?
     var mouthBound: CGRect?
     var faceImage: UIImage?
+    
+    var currentImage: (String, Int)!
+    var trueEmojiNames = ["CP3 2": 0,
+                          "CP3": 0,
+                          "curry1": 0,]
 
     lazy var context: CIContext = {
         return CIContext(options: nil)
     } ()
     
-    @IBOutlet weak var imageView: UIImageView!
+    var backgroundImage: UIImage!
     
-    lazy var backgroundImage: UIImage = {
-        return UIImage(named: "superdad.png")
-    } ()!
+    @IBOutlet weak var imageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController?.setNavigationBarHidden(false, animated: true)
-
         // Do any additional setup after loading the view.
+        currentImage = trueEmojiNames.first!
+        backgroundImage = UIImage(named: self.currentImage.0)
+        let backgroundbond = faceBoundDetection(backgroundImage!)
+        backgroundImage = addFaceToBackGround(backgroundbond, backgroundImage: backgroundImage, faceImage: faceImage!)
         imageView.image = backgroundImage
-        let backgroundbond = faceBoundDetection(backgroundImage)
         
-        let newFace = UIImageView(image: faceImage)
-        newFace.frame = adjustFaceBound(backgroundbond, backgroundImage: backgroundImage)
-        imageView.addSubview(newFace)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Action, target: self, action: "saveOrShare")
+        
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
     }
 
     override func didReceiveMemoryWarning() {
@@ -45,25 +52,14 @@ class StaticEmojiGenII: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func adjustFaceBound(bound: CGRect, backgroundImage: UIImage) -> CGRect {
-        let imageSize = backgroundImage.size
-        let imageViewSize = imageView.frame.size
-        let scale = imageViewSize.height / imageSize.height
+    func addFaceToBackGround(bound: CGRect, backgroundImage: UIImage, faceImage: UIImage) -> UIImage {
+        UIGraphicsBeginImageContextWithOptions(backgroundImage.size, false, 0.0)
+        backgroundImage.drawInRect(CGRect(origin: CGPointZero, size: backgroundImage.size))
+        faceImage.drawInRect(bound)
         
-        
-        var transform = CGAffineTransformIdentity
-        transform = CGAffineTransformScale(transform, 1, -1)
-        transform = CGAffineTransformTranslate(transform, 0, -imageView.frame.height)
-        var newBound = CGRectApplyAffineTransform(bound, transform)
-
-        let offsetX = (imageViewSize.width - imageSize.width * scale) / 2
-        let offsetY = (imageViewSize.height - imageSize.height * scale) / 2
-        
-        newBound = CGRectApplyAffineTransform(newBound, CGAffineTransformMakeScale(scale, scale))
-        newBound.origin.x += offsetX
-        newBound.origin.y += offsetY
-
-        return newBound
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return newImage
     }
     
     func faceBoundDetection(originPic: UIImage) -> CGRect {
@@ -78,15 +74,38 @@ class StaticEmojiGenII: UIViewController {
         } else {
             faceFeatures = detector.featuresInImage(inputImage!) as! [CIFaceFeature]
         }
-        return faceFeatures.first!.bounds
+        
+        var transform = CGAffineTransformMakeScale(1 / originPic.scale, 1 / originPic.scale)
+        var bounds = CGRectApplyAffineTransform(faceFeatures[self.currentImage.1].bounds, transform)
+        
+        transform = CGAffineTransformMakeScale(1, -1)
+        transform = CGAffineTransformTranslate(transform, 0, -originPic.size.height)
+        bounds = CGRectApplyAffineTransform(bounds, transform)
+        return bounds
     }
     
     func cutOutOriginalFace(originPic: UIImage) -> UIImage? {
-//        let faceBound = faceBoundDetection(originPic)
-        
         return nil
     }
-
+    
+    func saveOrShare() {
+        if let currentImage = backgroundImage {
+            UIImageWriteToSavedPhotosAlbum(currentImage, self, "image:didFinishSavingWithError:contextInfo:", nil)
+        }
+    }
+    
+    func image(image: UIImage, didFinishSavingWithError error: NSError?, contextInfo:UnsafePointer<Void>) {
+        if error == nil {
+            let ac = UIAlertController(title: "Saved!", message: "Your altered image has been saved to your photos.", preferredStyle: .Alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+            presentViewController(ac, animated: true, completion: nil)
+        } else {
+            let ac = UIAlertController(title: "Save error", message: error?.localizedDescription, preferredStyle: .Alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+            presentViewController(ac, animated: true, completion: nil)
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -96,5 +115,4 @@ class StaticEmojiGenII: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }
