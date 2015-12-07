@@ -62,10 +62,20 @@ class cameraTool :  UIViewController, UIImagePickerControllerDelegate, UINavigat
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         imagePicker.dismissViewControllerAnimated(true, completion: nil)
-        print("i've got an image")
+        let alertView = UIAlertView(title: "标题", message: "这个是UIAlertView的默认样式", delegate: self, cancelButtonTitle: "取消")
+        alertView.show()
+        
     }
     
     
+    
+    @IBAction func searchFromLib(sender: UIButton) {
+        
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary) {
+            
+        }
+        
+    }
     
     
 }
