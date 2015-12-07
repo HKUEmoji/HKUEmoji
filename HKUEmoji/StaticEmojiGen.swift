@@ -18,6 +18,7 @@ class StaticEmojiGen: UIViewController {
     @IBOutlet weak var background: UIView!
     @IBOutlet weak var mouth: UIImageView!
 
+    var faceBound: CGRect!
     
     lazy var originalImage: UIImage = {
         return UIImage(named: "test.png")
@@ -64,6 +65,7 @@ class StaticEmojiGen: UIViewController {
         if let faceFeature = faceFeatures.first as CIFaceFeature! {
 //            print(faceFeature.bounds)
 
+            faceBound = faceFeature.bounds
             if faceFeature.hasLeftEyePosition {
                 leftEye.frame = adjustFaceFeatures(CGRect(origin: faceFeature.leftEyePosition, size: CGSize(width: faceFeature.bounds.size.width * 0.25, height: faceFeature.bounds.size.width * 0.15)))
             }
@@ -148,6 +150,12 @@ class StaticEmojiGen: UIViewController {
             if let bound1 = mouth?.frame {
                 svc.mouthBound = CGRect(origin: CGPoint(x: bound1.origin.x - offsetX, y: bound1.origin.y - offsetY), size: bound1.size)
             }
+            UIGraphicsBeginImageContextWithOptions(faceBound.size, false, 0.0)
+            let pointY = -faceBound.origin.y
+            originalImage.drawInRect(CGRect(origin: CGPoint(x: -faceBound.origin.x, y: pointY), size: originalImage.size))
+            
+            originalImage = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
             
             svc.faceImage = resizeImageFromRatio(originalImage, ratio: Double(scale))
         }
