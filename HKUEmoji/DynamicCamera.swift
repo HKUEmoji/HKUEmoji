@@ -12,6 +12,7 @@ import MobileCoreServices
 
 class cameraTool :  UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    @IBOutlet var testview: UIImageView!
     @IBOutlet weak var overlayView: UIImageView!
     // 初始化图片选择控制器
     let imagePicker: UIImagePickerController = UIImagePickerController()
@@ -65,6 +66,8 @@ class cameraTool :  UIViewController, UIImagePickerControllerDelegate, UINavigat
         let alertView = UIAlertView(title: "标题", message: "这个是UIAlertView的默认样式", delegate: self, cancelButtonTitle: "取消")
         alertView.show()
         
+        //testview = UIImage(info)
+        
     }
     
     
@@ -72,6 +75,11 @@ class cameraTool :  UIViewController, UIImagePickerControllerDelegate, UINavigat
     @IBAction func searchFromLib(sender: UIButton) {
         
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary) {
+            imagePicker.delegate = self
+            imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+            imagePicker.mediaTypes = [kUTTypeImage as NSString as String]
+            imagePicker.allowsEditing = false
+            self.presentViewController(imagePicker, animated: true, completion: nil)
             
         }
         

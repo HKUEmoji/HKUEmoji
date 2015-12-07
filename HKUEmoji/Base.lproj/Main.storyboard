@@ -115,6 +115,9 @@
                                     <action selector="searchFromLib:" destination="wf8-8W-TF0" eventType="touchUpInside" id="jy4-q0-fhe"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Gf-QO-6Fm">
+                                <rect key="frame" x="20" y="147" width="240" height="128"/>
+                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -129,6 +132,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="searchFromLib" destination="ajZ-bV-Qwj" id="B5y-sX-jjP"/>
+                        <outlet property="testview" destination="0Gf-QO-6Fm" id="EXt-d4-0dT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YVd-Eh-QpE" userLabel="First Responder" sceneMemberID="firstResponder"/>
