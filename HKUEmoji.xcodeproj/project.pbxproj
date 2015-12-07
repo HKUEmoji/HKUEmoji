@@ -25,6 +25,9 @@
 		D49553001C09E707003700B3 /* StaticCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49552FF1C09E707003700B3 /* StaticCamera.swift */; };
 		D49F05091C0BE2DE00E6EBA6 /* StaticEmojiGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49F05081C0BE2DE00E6EBA6 /* StaticEmojiGen.swift */; };
 		D49F05491C0BEF6600E6EBA6 /* GPUImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D49F05371C0BED1A00E6EBA6 /* GPUImage.framework */; };
+		D4BDAA631C10949700D0DFF9 /* StaticEmojiGenII.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BDAA621C10949700D0DFF9 /* StaticEmojiGenII.swift */; };
+		D4BDAA711C112E7800D0DFF9 /* superdad.png in Resources */ = {isa = PBXBuildFile; fileRef = D4BDAA701C112E7800D0DFF9 /* superdad.png */; };
+		D4BDAA731C1133D400D0DFF9 /* curry.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D4BDAA721C1133D400D0DFF9 /* curry.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +105,9 @@
 		D49552FF1C09E707003700B3 /* StaticCamera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticCamera.swift; sourceTree = "<group>"; };
 		D49F05081C0BE2DE00E6EBA6 /* StaticEmojiGen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticEmojiGen.swift; sourceTree = "<group>"; };
 		D49F052E1C0BED1A00E6EBA6 /* GPUImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GPUImage.xcodeproj; path = Submodules/GPUImage/framework/GPUImage.xcodeproj; sourceTree = "<group>"; };
+		D4BDAA621C10949700D0DFF9 /* StaticEmojiGenII.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticEmojiGenII.swift; sourceTree = "<group>"; };
+		D4BDAA701C112E7800D0DFF9 /* superdad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = superdad.png; path = HKUEmoji/Resourses/superdad.png; sourceTree = "<group>"; };
+		D4BDAA721C1133D400D0DFF9 /* curry.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = curry.jpeg; path = HKUEmoji/Resourses/curry.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -342,7 +348,7 @@
 				D41A81B01C0DF88D00CF0511 /* mouth.png in Resources */,
 				905DBE7C1C1146C900F181D6 /* background.png in Resources */,
 				D47C026B1C0334CB00CDFDEB /* LaunchScreen.storyboard in Resources */,
-				D41A81AF1C0DF88D00CF0511 /* eye.png in Resources */,
+				D4BDAA731C1133D400D0DFF9 /* curry.jpeg in Resources */,
 				D47C02681C0334CB00CDFDEB /* Assets.xcassets in Resources */,
 				D47C02661C0334CB00CDFDEB /* Main.storyboard in Resources */,
 				D41A81B11C0DF88D00CF0511 /* test.png in Resources */,
@@ -521,6 +527,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = HKUEmoji/Info.plist;
@@ -528,6 +535,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = HKUEmoji.HKUEmoji;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -535,6 +543,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = HKUEmoji/Info.plist;
