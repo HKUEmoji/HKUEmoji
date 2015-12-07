@@ -12,7 +12,6 @@
 		D47C02611C0334CB00CDFDEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47C02601C0334CB00CDFDEB /* AppDelegate.swift */; };
 		D47C02631C0334CB00CDFDEB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47C02621C0334CB00CDFDEB /* ViewController.swift */; };
 		D47C02661C0334CB00CDFDEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D47C02641C0334CB00CDFDEB /* Main.storyboard */; };
-		D47C02681C0334CB00CDFDEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D47C02671C0334CB00CDFDEB /* Assets.xcassets */; };
 		D47C026B1C0334CB00CDFDEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D47C02691C0334CB00CDFDEB /* LaunchScreen.storyboard */; };
 		D47C02761C0334CB00CDFDEB /* HKUEmojiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47C02751C0334CB00CDFDEB /* HKUEmojiTests.swift */; };
 		D47C02811C0334CB00CDFDEB /* HKUEmojiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47C02801C0334CB00CDFDEB /* HKUEmojiUITests.swift */; };
@@ -20,6 +19,7 @@
 		D49F05091C0BE2DE00E6EBA6 /* StaticEmojiGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49F05081C0BE2DE00E6EBA6 /* StaticEmojiGen.swift */; };
 		D49F05491C0BEF6600E6EBA6 /* GPUImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D49F05371C0BED1A00E6EBA6 /* GPUImage.framework */; };
 		D4BDAA631C10949700D0DFF9 /* StaticEmojiGenII.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BDAA621C10949700D0DFF9 /* StaticEmojiGenII.swift */; };
+		D4FFC2831C15699500B7B35B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4FFC2821C15699500B7B35B /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,7 +79,6 @@
 		D47C02601C0334CB00CDFDEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D47C02621C0334CB00CDFDEB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D47C02651C0334CB00CDFDEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D47C02671C0334CB00CDFDEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D47C026A1C0334CB00CDFDEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D47C026C1C0334CB00CDFDEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D47C02711C0334CB00CDFDEB /* HKUEmojiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HKUEmojiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,6 +91,7 @@
 		D49F05081C0BE2DE00E6EBA6 /* StaticEmojiGen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticEmojiGen.swift; sourceTree = "<group>"; };
 		D49F052E1C0BED1A00E6EBA6 /* GPUImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GPUImage.xcodeproj; path = Submodules/GPUImage/framework/GPUImage.xcodeproj; sourceTree = "<group>"; };
 		D4BDAA621C10949700D0DFF9 /* StaticEmojiGenII.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticEmojiGenII.swift; sourceTree = "<group>"; };
+		D4FFC2821C15699500B7B35B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,7 +148,7 @@
 				D47C02601C0334CB00CDFDEB /* AppDelegate.swift */,
 				D47C02621C0334CB00CDFDEB /* ViewController.swift */,
 				D47C02641C0334CB00CDFDEB /* Main.storyboard */,
-				D47C02671C0334CB00CDFDEB /* Assets.xcassets */,
+				D4FFC2821C15699500B7B35B /* Assets.xcassets */,
 				D47C02691C0334CB00CDFDEB /* LaunchScreen.storyboard */,
 				D47C026C1C0334CB00CDFDEB /* Info.plist */,
 				D49552FF1C09E707003700B3 /* StaticCamera.swift */,
@@ -325,8 +325,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D47C026B1C0334CB00CDFDEB /* LaunchScreen.storyboard in Resources */,
-				D47C02681C0334CB00CDFDEB /* Assets.xcassets in Resources */,
 				D47C02661C0334CB00CDFDEB /* Main.storyboard in Resources */,
+				D4FFC2831C15699500B7B35B /* Assets.xcassets in Resources */,
 				D428F7CF1C1042E900D2DD51 /* test.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
