@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZPY-9R-5Tk">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--DynamicEmojiPage-->
@@ -235,8 +236,8 @@
                                 <rect key="frame" x="-5" y="64" width="325" height="460"/>
                                 <animations/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="860-wY-hd5">
-                                <rect key="frame" x="134" y="477" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="860-wY-hd5">
+                                <rect key="frame" x="134" y="532" width="46" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Catch"/>
                                 <connections>
@@ -246,6 +247,10 @@
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="860-wY-hd5" firstAttribute="centerX" secondItem="HXc-2h-BqH" secondAttribute="centerX" id="PK3-hy-fwo"/>
+                            <constraint firstItem="kR9-Gx-3jP" firstAttribute="top" secondItem="860-wY-hd5" secondAttribute="bottom" constant="30" id="yIJ-Z8-agk"/>
+                        </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Camera" id="8De-Ry-zgV"/>

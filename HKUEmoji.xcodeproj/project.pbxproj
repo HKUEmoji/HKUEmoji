@@ -9,11 +9,9 @@
 /* Begin PBXBuildFile section */
 		905DBE7C1C1146C900F181D6 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 905DBE7B1C1146C900F181D6 /* background.png */; };
 		907672FB1C0F16BB00E9FF36 /* DynamicCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907672FA1C0F16BB00E9FF36 /* DynamicCamera.swift */; };
-		907672FF1C0FE4DF00E9FF36 /*  cameraOverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 907672FE1C0FE4DF00E9FF36 /*  cameraOverlayView.xib */; };
 		907673011C0FF32C00E9FF36 /* cameraOverLay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907673001C0FF32C00E9FF36 /* cameraOverLay.swift */; };
-		D41A81AF1C0DF88D00CF0511 /* eye.png in Resources */ = {isa = PBXBuildFile; fileRef = D41A81AC1C0DF88D00CF0511 /* eye.png */; };
+		909372581C15A311001407F1 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 909372571C15A311001407F1 /* background.png */; };
 		D41A81B01C0DF88D00CF0511 /* mouth.png in Resources */ = {isa = PBXBuildFile; fileRef = D41A81AD1C0DF88D00CF0511 /* mouth.png */; };
-		D41A81B11C0DF88D00CF0511 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = D41A81AE1C0DF88D00CF0511 /* test.png */; };
 		D477ABB71C0DF5F500A85A3B /* GPUImage.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D49F05371C0BED1A00E6EBA6 /* GPUImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D47C02611C0334CB00CDFDEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47C02601C0334CB00CDFDEB /* AppDelegate.swift */; };
 		D47C02631C0334CB00CDFDEB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47C02621C0334CB00CDFDEB /* ViewController.swift */; };
@@ -86,9 +84,8 @@
 		907672FA1C0F16BB00E9FF36 /* DynamicCamera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicCamera.swift; sourceTree = "<group>"; };
 		907672FE1C0FE4DF00E9FF36 /*  cameraOverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = " cameraOverlayView.xib"; sourceTree = "<group>"; };
 		907673001C0FF32C00E9FF36 /* cameraOverLay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cameraOverLay.swift; sourceTree = "<group>"; };
-		D41A81AC1C0DF88D00CF0511 /* eye.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = eye.png; path = HKUEmoji/Assets.xcassets/eye.png; sourceTree = "<group>"; };
+		909372571C15A311001407F1 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		D41A81AD1C0DF88D00CF0511 /* mouth.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mouth.png; path = HKUEmoji/Assets.xcassets/mouth.png; sourceTree = "<group>"; };
-		D41A81AE1C0DF88D00CF0511 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = test.png; path = HKUEmoji/Assets.xcassets/test.png; sourceTree = "<group>"; };
 		D47C025D1C0334CB00CDFDEB /* HKUEmoji.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HKUEmoji.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D47C02601C0334CB00CDFDEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D47C02621C0334CB00CDFDEB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -197,10 +194,9 @@
 		D49F050A1C0BE68800E6EBA6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				D41A81AC1C0DF88D00CF0511 /* eye.png */,
-				905DBE7B1C1146C900F181D6 /* background.png */,
-				D41A81AD1C0DF88D00CF0511 /* mouth.png */,
-				D41A81AE1C0DF88D00CF0511 /* test.png */,
+				909372571C15A311001407F1 /* background.png */,
+				D4BDAA721C1133D400D0DFF9 /* curry.jpeg */,
+				D4BDAA701C112E7800D0DFF9 /* superdad.png */,
 			);
 			name = Resources;
 			path = ..;
@@ -346,13 +342,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D41A81B01C0DF88D00CF0511 /* mouth.png in Resources */,
+				909372581C15A311001407F1 /* background.png in Resources */,
 				905DBE7C1C1146C900F181D6 /* background.png in Resources */,
 				D47C026B1C0334CB00CDFDEB /* LaunchScreen.storyboard in Resources */,
 				D4BDAA731C1133D400D0DFF9 /* curry.jpeg in Resources */,
 				D47C02681C0334CB00CDFDEB /* Assets.xcassets in Resources */,
 				D47C02661C0334CB00CDFDEB /* Main.storyboard in Resources */,
-				D41A81B11C0DF88D00CF0511 /* test.png in Resources */,
-				907672FF1C0FE4DF00E9FF36 /*  cameraOverlayView.xib in Resources */,
+				D4BDAA711C112E7800D0DFF9 /* superdad.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,6 +377,7 @@
 				D49F05091C0BE2DE00E6EBA6 /* StaticEmojiGen.swift in Sources */,
 				D49553001C09E707003700B3 /* StaticCamera.swift in Sources */,
 				907672FB1C0F16BB00E9FF36 /* DynamicCamera.swift in Sources */,
+				D4BDAA631C10949700D0DFF9 /* StaticEmojiGenII.swift in Sources */,
 				D47C02611C0334CB00CDFDEB /* AppDelegate.swift in Sources */,
 				907673011C0FF32C00E9FF36 /* cameraOverLay.swift in Sources */,
 			);

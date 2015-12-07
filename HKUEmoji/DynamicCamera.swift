@@ -41,7 +41,7 @@ class cameraTool :  UIViewController, UIImagePickerControllerDelegate, UINavigat
             //var overLayViews = NSBundle.mainBundle().loadNibNamed("cameraOverlayView", owner: nil, options: nil)
             //var overlayView = overLayViews.last as! UIView
             let overLayView: UIView = UIView(frame: imagePicker.cameraOverlayView!.bounds )
-            let overLayImg : UIImageView = UIImageView(image: UIImage(named: "background.png"))
+            let overLayImg : UIImageView = UIImageView(image: UIImage(named: "superdad.png"))
             overLayView.addSubview(overLayImg)
             
             imagePicker.cameraOverlayView = overLayView
