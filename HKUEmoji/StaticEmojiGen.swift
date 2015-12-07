@@ -8,7 +8,7 @@
 
 import UIKit
 import ImageIO
-//import GPUImage
+import GPUImage
 
 class StaticEmojiGen: UIViewController {
 
@@ -30,7 +30,7 @@ class StaticEmojiGen: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // Give the following view initial image and change the touchable information
         imageShow.image = originalImage
         imageShow.userInteractionEnabled = false
         mouth.image = UIImage(named: "mouth")
@@ -42,10 +42,12 @@ class StaticEmojiGen: UIViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
-//        detecFace()
         super.viewDidAppear(animated)
     }
     
+    /**
+     this function used to detect the face feature of a picture, include eyes and others
+     */
     func detecFace() {
         let inputImage = CIImage(image: originalImage)
         let detector = CIDetector(ofType: CIDetectorTypeFace, context: context,
@@ -76,6 +78,13 @@ class StaticEmojiGen: UIViewController {
         }
     }
     
+    /**
+     This function used to adjust the eye and mouth location
+     
+     - parameter frameRec: a CGRect that used to locate the original location and size of mouth or eye
+     
+     - returns: the location and size of image
+     */
     func adjustFaceFeatures(frameRec: CGRect) -> CGRect {
         let originalImageSize = originalImage.size
         let scale = min(imageShow.bounds.height / originalImageSize.height, imageShow.bounds.width / originalImageSize.width)
@@ -94,28 +103,53 @@ class StaticEmojiGen: UIViewController {
         
         newBound.origin.x += offsetX
         newBound.origin.y += offsetY
-//        print("after: \(newBound.size) \(newBound.origin)")
-//        print("bounds: \(imageShow.bounds.size) frame: \(imageShow.frame.origin) \(imageShow.frame.size)")
-//        imageView.frame = newBound
+        
         return newBound
+    }
+    
+    /**
+     This function used to compress the image to the ratio
+     
+     - parameter originalImage: original image
+     - parameter ratio:         the size of the image after compressed
+     
+     - returns: a new image after compressed
+     */
+    private func resizeImageFromRatio(originalImage: UIImage, ratio: Double) -> (UIImage) {
+        let image = CIImage(image: originalImage)
+        
+        let filter = CIFilter(name: "CILanczosScaleTransform")!
+        filter.setValue(image, forKey: kCIInputImageKey)
+        filter.setValue(ratio, forKey: kCIInputScaleKey)
+        filter.setValue(1.0, forKey: kCIInputAspectRatioKey)
+        let outputImage = filter.valueForKey(kCIOutputImageKey) as! CIImage
+        
+        let context = CIContext(options: [kCIContextUseSoftwareRenderer: false])
+        let scaledImage = UIImage(CGImage: context.createCGImage(outputImage, fromRect: outputImage.extent))
+        return scaledImage
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showGenerater" {
             let svc = segue.destinationViewController as! StaticEmojiGenII
+            let scale = min(imageShow.bounds.height / originalImage.size.height, imageShow.bounds.width / originalImage.size.width)
+            let offsetX = background.frame.origin.x + imageShow.frame.origin.x
+            let offsetY = background.frame.origin.y + imageShow.frame.origin.y
+            
+            // transfer the bound info of this imageview to next function.
             if let bound1 = rightEye?.frame {
-                svc.rightEyeBound = bound1
+                svc.rightEyeBound = CGRect(origin: CGPoint(x: bound1.origin.x - offsetX, y: bound1.origin.y - offsetY), size: bound1.size)
             }
             
             if let bound1 = leftEye?.frame {
-                svc.leftEyeBound = bound1
+                svc.leftEyeBound = CGRect(origin: CGPoint(x: bound1.origin.x - offsetX, y: bound1.origin.y - offsetY), size: bound1.size)
             }
             
             if let bound1 = mouth?.frame {
-                svc.mouthBound = bound1
+                svc.mouthBound = CGRect(origin: CGPoint(x: bound1.origin.x - offsetX, y: bound1.origin.y - offsetY), size: bound1.size)
             }
             
-            svc.faceImage = originalImage
+            svc.faceImage = resizeImageFromRatio(originalImage, ratio: Double(scale))
         }
     }
 
