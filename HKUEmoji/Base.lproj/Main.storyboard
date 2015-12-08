@@ -2,6 +2,8 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZPY-9R-5Tk">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -159,26 +161,61 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UAd-8g-nSI">
-                                <rect key="frame" x="162" y="370" width="51" height="30"/>
+                            <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2gq-dw-KnO">
+                                <rect key="frame" x="70" y="158" width="223" height="292"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="2gq-dw-KnO" secondAttribute="height" multiplier="223:292" id="GXz-GT-YKM"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UAd-8g-nSI">
+                                <rect key="frame" x="165" y="489" width="51" height="30"/>
                                 <state key="normal" title="camera"/>
                                 <connections>
                                     <action selector="takePhone:" destination="wf8-8W-TF0" eventType="touchUpInside" id="Oml-bA-YQV"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Gf-QO-6Fm">
+                                <rect key="frame" x="0.0" y="102" width="375" height="362"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ajZ-bV-Qwj">
-                                <rect key="frame" x="162" y="319" width="43" height="30"/>
+                                <rect key="frame" x="166" y="548" width="51" height="30"/>
                                 <state key="normal" title="library"/>
                                 <connections>
                                     <action selector="searchFromLib:" destination="wf8-8W-TF0" eventType="touchUpInside" id="jy4-q0-fhe"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Gf-QO-6Fm">
-                                <rect key="frame" x="20" y="147" width="240" height="128"/>
-                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bmp-Th-Di7">
+                                <rect key="frame" x="166" y="600" width="53" height="30"/>
+                                <state key="normal" title="capture"/>
+                                <connections>
+                                    <action selector="captureFace:" destination="wf8-8W-TF0" eventType="touchUpInside" id="IPy-oI-q1x"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0Gf-QO-6Fm" firstAttribute="width" secondItem="jVm-7M-Xoo" secondAttribute="width" id="3yU-qc-acb"/>
+                            <constraint firstItem="2gq-dw-KnO" firstAttribute="width" secondItem="jVm-7M-Xoo" secondAttribute="width" multiplier="0.6" id="C6y-lm-Pvb"/>
+                            <constraint firstItem="2gq-dw-KnO" firstAttribute="leading" secondItem="jVm-7M-Xoo" secondAttribute="leadingMargin" constant="54" id="C7e-x9-8Xn"/>
+                            <constraint firstItem="0Gf-QO-6Fm" firstAttribute="centerX" secondItem="jVm-7M-Xoo" secondAttribute="centerX" id="GYh-js-iFY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2gq-dw-KnO" secondAttribute="trailing" constant="66" id="N6h-qL-alD"/>
+                            <constraint firstItem="UAd-8g-nSI" firstAttribute="leading" secondItem="jVm-7M-Xoo" secondAttribute="leading" constant="165" id="a14-5x-oAh"/>
+                            <constraint firstItem="2gq-dw-KnO" firstAttribute="top" secondItem="Ub4-bh-6yR" secondAttribute="bottom" constant="94" id="eGc-Al-Ovy"/>
+                            <constraint firstItem="UAd-8g-nSI" firstAttribute="top" secondItem="2gq-dw-KnO" secondAttribute="bottom" constant="39" id="gcV-zw-nMA"/>
+                            <constraint firstItem="UAd-8g-nSI" firstAttribute="centerY" secondItem="jVm-7M-Xoo" secondAttribute="centerY" id="lsG-sU-tHW"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="GYh-js-iFY"/>
+                                <exclude reference="C7e-x9-8Xn"/>
+                                <exclude reference="N6h-qL-alD"/>
+                                <exclude reference="eGc-Al-Ovy"/>
+                                <exclude reference="a14-5x-oAh"/>
+                                <exclude reference="gcV-zw-nMA"/>
+                                <exclude reference="lsG-sU-tHW"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Camera" id="7hr-ck-kd5" colorLabel="IBBuiltInLabel-Red">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="bAy-an-6Xg">
@@ -189,13 +226,13 @@
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="searchFromLib" destination="ajZ-bV-Qwj" id="B5y-sX-jjP"/>
-                        <outlet property="testview" destination="0Gf-QO-6Fm" id="EXt-d4-0dT"/>
+                        <outlet property="overlayView" destination="2gq-dw-KnO" id="fHE-kq-8PU"/>
+                        <outlet property="pickView" destination="0Gf-QO-6Fm" id="oNR-fD-Bua"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YVd-Eh-QpE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="15" y="-1415"/>
+            <point key="canvasLocation" x="-257.5" y="-1553.5"/>
         </scene>
         <!--About-->
         <scene sceneID="cEB-e6-uDU">
