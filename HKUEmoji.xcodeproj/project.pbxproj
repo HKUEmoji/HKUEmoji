@@ -192,8 +192,8 @@
 		D47C025F1C0334CB00CDFDEB /* HKUEmoji */ = {
 			isa = PBXGroup;
 			children = (
-				9093725B1C15A38F001407F1 /* StaticEmojiGenII.swift */,
 				D49F050A1C0BE68800E6EBA6 /* Resources */,
+				9093725B1C15A38F001407F1 /* StaticEmojiGenII.swift */,
 				D47C02601C0334CB00CDFDEB /* AppDelegate.swift */,
 				D47C02621C0334CB00CDFDEB /* ViewController.swift */,
 				D47C02641C0334CB00CDFDEB /* Main.storyboard */,

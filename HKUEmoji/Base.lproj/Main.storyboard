@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZPY-9R-5Tk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZPY-9R-5Tk">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
@@ -161,31 +160,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2gq-dw-KnO">
-                                <rect key="frame" x="70" y="158" width="223" height="292"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="2gq-dw-KnO" secondAttribute="height" multiplier="223:292" id="GXz-GT-YKM"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Gf-QO-6Fm">
+                                <rect key="frame" x="0.0" y="89" width="375" height="362"/>
+                                <animations/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UAd-8g-nSI">
-                                <rect key="frame" x="165" y="489" width="51" height="30"/>
+                                <rect key="frame" x="20" y="512" width="51" height="30"/>
+                                <animations/>
                                 <state key="normal" title="camera"/>
                                 <connections>
                                     <action selector="takePhone:" destination="wf8-8W-TF0" eventType="touchUpInside" id="Oml-bA-YQV"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Gf-QO-6Fm">
-                                <rect key="frame" x="0.0" y="102" width="375" height="362"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ajZ-bV-Qwj">
-                                <rect key="frame" x="166" y="548" width="51" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ajZ-bV-Qwj">
+                                <rect key="frame" x="162" y="512" width="51" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="51" id="3rf-F2-e1s"/>
+                                </constraints>
                                 <state key="normal" title="library"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="3rf-F2-e1s"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <action selector="searchFromLib:" destination="wf8-8W-TF0" eventType="touchUpInside" id="jy4-q0-fhe"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bmp-Th-Di7">
-                                <rect key="frame" x="166" y="600" width="53" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bmp-Th-Di7">
+                                <rect key="frame" x="302" y="512" width="53" height="30"/>
+                                <animations/>
                                 <state key="normal" title="capture"/>
                                 <connections>
                                     <action selector="captureFace:" destination="wf8-8W-TF0" eventType="touchUpInside" id="IPy-oI-q1x"/>
@@ -195,27 +200,17 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="0Gf-QO-6Fm" firstAttribute="width" secondItem="jVm-7M-Xoo" secondAttribute="width" id="3yU-qc-acb"/>
-                            <constraint firstItem="2gq-dw-KnO" firstAttribute="width" secondItem="jVm-7M-Xoo" secondAttribute="width" multiplier="0.6" id="C6y-lm-Pvb"/>
-                            <constraint firstItem="2gq-dw-KnO" firstAttribute="leading" secondItem="jVm-7M-Xoo" secondAttribute="leadingMargin" constant="54" id="C7e-x9-8Xn"/>
-                            <constraint firstItem="0Gf-QO-6Fm" firstAttribute="centerX" secondItem="jVm-7M-Xoo" secondAttribute="centerX" id="GYh-js-iFY"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="2gq-dw-KnO" secondAttribute="trailing" constant="66" id="N6h-qL-alD"/>
-                            <constraint firstItem="UAd-8g-nSI" firstAttribute="leading" secondItem="jVm-7M-Xoo" secondAttribute="leading" constant="165" id="a14-5x-oAh"/>
-                            <constraint firstItem="2gq-dw-KnO" firstAttribute="top" secondItem="Ub4-bh-6yR" secondAttribute="bottom" constant="94" id="eGc-Al-Ovy"/>
-                            <constraint firstItem="UAd-8g-nSI" firstAttribute="top" secondItem="2gq-dw-KnO" secondAttribute="bottom" constant="39" id="gcV-zw-nMA"/>
-                            <constraint firstItem="UAd-8g-nSI" firstAttribute="centerY" secondItem="jVm-7M-Xoo" secondAttribute="centerY" id="lsG-sU-tHW"/>
+                            <constraint firstItem="UAd-8g-nSI" firstAttribute="centerY" secondItem="ajZ-bV-Qwj" secondAttribute="centerY" id="9iD-aL-HES"/>
+                            <constraint firstItem="0Gf-QO-6Fm" firstAttribute="centerX" secondItem="jVm-7M-Xoo" secondAttribute="centerX" id="9nT-hd-4jp"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="UAd-8g-nSI" secondAttribute="leading" constant="10" id="AvO-t1-QkY"/>
+                            <constraint firstItem="ajZ-bV-Qwj" firstAttribute="centerX" secondItem="0Gf-QO-6Fm" secondAttribute="centerX" id="ExF-bq-N3O"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bmp-Th-Di7" secondAttribute="trailing" constant="10" id="Mfi-Uh-n7r"/>
+                            <constraint firstItem="bmp-Th-Di7" firstAttribute="centerY" secondItem="ajZ-bV-Qwj" secondAttribute="centerY" id="RUF-kh-wr4"/>
+                            <constraint firstItem="Cw8-F7-U3U" firstAttribute="top" relation="greaterThanOrEqual" secondItem="ajZ-bV-Qwj" secondAttribute="bottom" constant="30" id="Vgy-9n-b4V"/>
+                            <constraint firstItem="ajZ-bV-Qwj" firstAttribute="top" relation="greaterThanOrEqual" secondItem="0Gf-QO-6Fm" secondAttribute="bottom" constant="40" id="hyx-yZ-3lF"/>
+                            <constraint firstItem="0Gf-QO-6Fm" firstAttribute="top" secondItem="Ub4-bh-6yR" secondAttribute="bottom" constant="25" id="oNh-ne-G8q"/>
+                            <constraint firstItem="0Gf-QO-6Fm" firstAttribute="width" relation="lessThanOrEqual" secondItem="jVm-7M-Xoo" secondAttribute="width" id="riK-Ds-3f1"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="GYh-js-iFY"/>
-                                <exclude reference="C7e-x9-8Xn"/>
-                                <exclude reference="N6h-qL-alD"/>
-                                <exclude reference="eGc-Al-Ovy"/>
-                                <exclude reference="a14-5x-oAh"/>
-                                <exclude reference="gcV-zw-nMA"/>
-                                <exclude reference="lsG-sU-tHW"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Camera" id="7hr-ck-kd5" colorLabel="IBBuiltInLabel-Red">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="bAy-an-6Xg">
@@ -226,7 +221,6 @@
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="overlayView" destination="2gq-dw-KnO" id="fHE-kq-8PU"/>
                         <outlet property="pickView" destination="0Gf-QO-6Fm" id="oNR-fD-Bua"/>
                     </connections>
                 </viewController>

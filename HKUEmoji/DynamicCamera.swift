@@ -13,30 +13,43 @@ import Toucan
 
 class cameraTool :  UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    @IBOutlet var pickView: UIImageView!
-    @IBOutlet weak var overlayView: UIImageView!
+    @IBOutlet weak var pickView: UIImageView!
+    
+    var overlayView: UIImageView!
+//    @IBOutlet weak var overlayView: UIImageView!
+    
     // 初始化图片选择控制器
     let imagePicker: UIImagePickerController = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view, typically from a nib.
         pickView.image = UIImage(named:"superdad.png")
         pickView.userInteractionEnabled = false
-        overlayView.image = UIImage(named: "background.png")
-        overlayView.userInteractionEnabled = true
+        overlayView = UIImageView(image: UIImage(named: "background.png"))
+//        overlayView.userInteractionEnabled = true
         //overlayView.frame=CGRectMake(70, 140, 200, 200)
         
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+        
         self.view.sendSubviewToBack(pickView)
+        if !self.view.subviews.contains(overlayView) {
+            overlayView.frame = CGRect(x: 70, y: 140, width: 200, height: 200)
+            overlayView.userInteractionEnabled = true
+            overlayView.tag = 10
+            self.view.addSubview(overlayView)
+        }
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     @IBAction func takePhone(sender: UIButton) {
        /*let alertView = UIAlertView(title: "标题", message: "这个是UIAlertView的默认样式", delegate: self, cancelButtonTitle: "取消")
         alertView.show()*/
@@ -58,8 +71,6 @@ class cameraTool :  UIViewController, UIImagePickerControllerDelegate, UINavigat
             //overLayImg.frame = overLayView.frame
             //overLayView.addSubview(overLayImg)
             //imagePicker.cameraOverlayView = overLayView
-            
-            
             
             self.presentViewController(imagePicker, animated: true, completion: nil)
         }
@@ -90,26 +101,25 @@ class cameraTool :  UIViewController, UIImagePickerControllerDelegate, UINavigat
     
     
     @IBAction func captureFace(sender: UIButton) {
-        var offsetX=overlayView.frame.origin.x - pickView.frame.origin.x
-        var offsetY=overlayView.frame.origin.y - pickView.frame.origin.y
-        var ratioX = (pickView.image?.size.width)!/pickView.frame.size.width
-        var ratioY = (pickView.image?.size.height)!/pickView.frame.size.height
-        var ratio = min(ratioX,ratioY)
-        print(offsetX,",",offsetY)
-        print("Imagesize",pickView.image?.size.width,",",pickView.image?.size.height)
-        print("Viewsize",pickView.frame.size.width,",",pickView.frame.size.height)
+        let offsetX = overlayView.frame.origin.x - pickView.frame.origin.x
+        let offsetY = overlayView.frame.origin.y - pickView.frame.origin.y
+        let ratioX = (pickView.image?.size.width)!/pickView.frame.size.width
+        let ratioY = (pickView.image?.size.height)!/pickView.frame.size.height
+        let ratio = min(ratioX,ratioY)
+//        print(offsetX,",",offsetY)
+//        print("Imagesize",pickView.image?.size.width,",",pickView.image?.size.height)
+//        print("Viewsize",pickView.frame.size.width,",",pickView.frame.size.height)
         let path = UIBezierPath()
-        path.moveToPoint(CGPointMake(offsetX*ratio,offsetY*ratio))
-        path.addLineToPoint(CGPointMake(offsetX*ratio,(offsetY+overlayView.frame.size.height)*ratio))
-        path.addLineToPoint(CGPointMake((offsetX+overlayView.frame.size.width)*ratio,(offsetY+overlayView.frame.size.height)*ratio))
+        path.moveToPoint(CGPointMake(offsetX * ratio,offsetY * ratio))
+        path.addLineToPoint(CGPointMake(offsetX * ratio, (offsetY + overlayView.frame.size.height)*ratio))
+        path.addLineToPoint(CGPointMake((offsetX+overlayView.frame.size.width) * ratio,(offsetY+overlayView.frame.size.height)*ratio))
         path.addLineToPoint(CGPointMake((offsetX+overlayView.frame.size.width)*ratio,offsetY*ratio))
         path.closePath()
-        
-        var faceImage = Toucan(image: pickView.image!).maskWithPath(path: path).image
+        let faceImage = Toucan(image: pickView.image!).maskWithPath(path: path).image
         //faceImage=Toucan(image: faceImage).maskWithImage(maskImage: overlayView.image!).image
        // var faceImage=Toucan(image: pickView.image!).maskWithImage(maskImage: overlayView.image!).image
 
-        pickView.image=faceImage
+        pickView.image = faceImage
         
     }
     
@@ -118,7 +128,7 @@ class cameraTool :  UIViewController, UIImagePickerControllerDelegate, UINavigat
         let touch = touches.first!
         let location = touch.locationInView(self.view)
         if let node = touch.view {
-            if node.tag == 1 {
+            if node.tag == 10 {
                 let newLocation = CGPoint(x: location.x, y: location.y)
                 node.center = newLocation
             }
