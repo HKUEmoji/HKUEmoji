@@ -16,6 +16,7 @@ class cameraTool :  UIViewController, UIImagePickerControllerDelegate, UINavigat
     @IBOutlet weak var pickView: UIImageView!
     
     var overlayView: UIImageView!
+    var choosedPicture: UIImage!
 //    @IBOutlet weak var overlayView: UIImageView!
     
     // 初始化图片选择控制器
@@ -25,7 +26,8 @@ class cameraTool :  UIViewController, UIImagePickerControllerDelegate, UINavigat
         super.viewDidLoad()
         
         // Do any additional setup after loading the view, typically from a nib.
-        pickView.image = UIImage(named:"superdad.png")
+        choosedPicture = UIImage(named: "curry.jpeg")
+        pickView.image = choosedPicture
         pickView.userInteractionEnabled = false
         overlayView = UIImageView(image: UIImage(named: "background.png"))
 //        overlayView.userInteractionEnabled = true
@@ -103,19 +105,30 @@ class cameraTool :  UIViewController, UIImagePickerControllerDelegate, UINavigat
     @IBAction func captureFace(sender: UIButton) {
         let offsetX = overlayView.frame.origin.x - pickView.frame.origin.x
         let offsetY = overlayView.frame.origin.y - pickView.frame.origin.y
-        let ratioX = (pickView.image?.size.width)!/pickView.frame.size.width
-        let ratioY = (pickView.image?.size.height)!/pickView.frame.size.height
-        let ratio = min(ratioX,ratioY)
+        let ratioX = (pickView.image?.size.width)! / pickView.frame.size.width
+        let ratioY = (pickView.image?.size.height)! / pickView.frame.size.height
+        let ratio = min(ratioX, ratioY)
+        var space = CGRectMake(0, 0, overlayView.frame.width / 2, overlayView.frame.height / 2)
+//        let transform = CGAffineTransformMakeScale(ratio, ratio)
+//        space = CGRectApplyAffineTransform(space, transform)
 //        print(offsetX,",",offsetY)
 //        print("Imagesize",pickView.image?.size.width,",",pickView.image?.size.height)
 //        print("Viewsize",pickView.frame.size.width,",",pickView.frame.size.height)
         let path = UIBezierPath()
-        path.moveToPoint(CGPointMake(offsetX * ratio,offsetY * ratio))
-        path.addLineToPoint(CGPointMake(offsetX * ratio, (offsetY + overlayView.frame.size.height)*ratio))
-        path.addLineToPoint(CGPointMake((offsetX+overlayView.frame.size.width) * ratio,(offsetY+overlayView.frame.size.height)*ratio))
-        path.addLineToPoint(CGPointMake((offsetX+overlayView.frame.size.width)*ratio,offsetY*ratio))
+//        path.moveToPoint(CGPointMake(offsetX * ratio, offsetY * ratio))
+//        path.addLineToPoint(CGPointMake(offsetX * ratio, (offsetY + overlayView.frame.size.height)*ratio))
+//        path.addLineToPoint(CGPointMake((offsetX+overlayView.frame.size.width) * ratio,(offsetY+overlayView.frame.size.height)*ratio))
+//        path.addLineToPoint(CGPointMake((offsetX+overlayView.frame.size.width)*ratio,offsetY*ratio))
+//        path.closePath()
+        let pathLength = 0.01
+        path.moveToPoint(CGPoint(x: 0, y: 0))
+        path.addLineToPoint(CGPoint(x: pathLength, y: 0))
+//        path.moveToPoint(CGPoint(x: 0, y: 100))
+        path.addLineToPoint(CGPoint(x: pathLength,y: pathLength))
+//        path.moveToPoint(CGPoint(x: 100, y: 50))
+        path.addLineToPoint(CGPoint(x: 0,y: pathLength))
         path.closePath()
-        let faceImage = Toucan(image: pickView.image!).maskWithPath(path: path).image
+        let faceImage = Toucan(image: choosedPicture).maskWithPath(path: path).image
         //faceImage=Toucan(image: faceImage).maskWithImage(maskImage: overlayView.image!).image
        // var faceImage=Toucan(image: pickView.image!).maskWithImage(maskImage: overlayView.image!).image
 
