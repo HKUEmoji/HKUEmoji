@@ -155,7 +155,7 @@ class cameraTool :  UIViewController, UIImagePickerControllerDelegate, UINavigat
     
     //捏的手势，使图片放大和缩小，捏的动作是一个连续的动作
     func handlePinchGesture(sender: UIPinchGestureRecognizer){
-        var factor = sender.scale
+        let factor = sender.scale
         if factor > 1{
             //图片放大
              overlayView.transform = CGAffineTransformMakeScale(lastScaleFactor+factor-1, lastScaleFactor+factor-1)

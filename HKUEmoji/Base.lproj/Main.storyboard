@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZPY-9R-5Tk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZPY-9R-5Tk">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
@@ -20,13 +20,11 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dynamic Emoji" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n5I-MR-ONt">
                                 <rect key="frame" x="86" y="274" width="148" height="21"/>
-                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Dynamic Emoji" id="FEz-7a-ekq"/>
@@ -50,14 +48,12 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Locate your eye and mouth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HTM-Kd-UNe">
                                 <rect key="frame" x="84" y="84" width="208" height="21"/>
-                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bIx-G7-3Ei">
                                 <rect key="frame" x="161" y="583" width="55" height="30"/>
-                                <animations/>
                                 <state key="normal" title="Confirm"/>
                                 <connections>
                                     <segue destination="VgB-n6-ZXO" kind="show" identifier="showGenerater" id="M3c-3S-8hf"/>
@@ -68,10 +64,8 @@
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KoR-Vg-ahi">
                                         <rect key="frame" x="67" y="167" width="240" height="128"/>
-                                        <animations/>
                                     </imageView>
                                 </subviews>
-                                <animations/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="KoR-Vg-ahi" firstAttribute="height" relation="lessThanOrEqual" secondItem="VYH-k5-EmQ" secondAttribute="height" multiplier="0.8" id="11H-Wn-dVX"/>
@@ -82,18 +76,14 @@
                             </view>
                             <imageView userInteractionEnabled="NO" tag="1024" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iJA-7E-vXV">
                                 <rect key="frame" x="65" y="577" width="54" height="33"/>
-                                <animations/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" tag="1024" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BqP-S7-XpV">
                                 <rect key="frame" x="224" y="577" width="72" height="32"/>
-                                <animations/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" tag="1024" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kcY-1s-olx">
                                 <rect key="frame" x="0.0" y="580" width="52" height="36"/>
-                                <animations/>
                             </imageView>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="bIx-G7-3Ei" firstAttribute="top" secondItem="VYH-k5-EmQ" secondAttribute="bottom" constant="8" symbolic="YES" id="SRE-Go-WuF"/>
@@ -136,10 +126,8 @@
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u3h-77-EkL">
                                         <rect key="frame" x="67" y="114" width="240" height="128"/>
-                                        <animations/>
                                     </imageView>
                                 </subviews>
-                                <animations/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="u3h-77-EkL" firstAttribute="centerY" secondItem="QDb-9Y-A1B" secondAttribute="centerY" id="9Jo-Z3-6Eg"/>
@@ -150,7 +138,6 @@
                             </view>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mqc-er-4PX">
                                 <rect key="frame" x="0.0" y="579" width="375" height="44"/>
-                                <animations/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="camera" id="tEY-sK-KFn">
                                         <connections>
@@ -160,7 +147,6 @@
                                 </items>
                             </toolbar>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Tij-XW-Jw6" firstAttribute="top" secondItem="QDb-9Y-A1B" secondAttribute="bottom" constant="100" id="04P-Y3-Qwh"/>
@@ -196,11 +182,9 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Gf-QO-6Fm">
                                 <rect key="frame" x="0.0" y="89" width="375" height="362"/>
-                                <animations/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UAd-8g-nSI">
                                 <rect key="frame" x="20" y="512" width="51" height="30"/>
-                                <animations/>
                                 <state key="normal" title="camera"/>
                                 <connections>
                                     <action selector="takePhone:" destination="wf8-8W-TF0" eventType="touchUpInside" id="Oml-bA-YQV"/>
@@ -208,7 +192,6 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ajZ-bV-Qwj">
                                 <rect key="frame" x="162" y="512" width="51" height="30"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="51" id="3rf-F2-e1s"/>
                                 </constraints>
@@ -224,14 +207,12 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bmp-Th-Di7">
                                 <rect key="frame" x="302" y="512" width="53" height="30"/>
-                                <animations/>
                                 <state key="normal" title="capture"/>
                                 <connections>
                                     <action selector="captureFace:" destination="wf8-8W-TF0" eventType="touchUpInside" id="IPy-oI-q1x"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="UAd-8g-nSI" firstAttribute="centerY" secondItem="ajZ-bV-Qwj" secondAttribute="centerY" id="9iD-aL-HES"/>
@@ -269,7 +250,6 @@
                     <view key="view" contentMode="scaleToFill" id="qdI-uS-ooY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="About" id="NfZ-Nz-9CS">
@@ -295,18 +275,15 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TPL-WB-eb9">
                                 <rect key="frame" x="-5" y="64" width="325" height="460"/>
-                                <animations/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="860-wY-hd5">
                                 <rect key="frame" x="134" y="532" width="46" height="30"/>
-                                <animations/>
                                 <state key="normal" title="Catch"/>
                                 <connections>
                                     <segue destination="91b-1G-Psu" kind="show" id="woE-X8-lEP"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="860-wY-hd5" firstAttribute="centerX" secondItem="HXc-2h-BqH" secondAttribute="centerX" id="PK3-hy-fwo"/>
@@ -339,7 +316,6 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bkH-CB-vwe">
                                 <rect key="frame" x="113" y="316" width="94" height="30"/>
-                                <animations/>
                                 <state key="normal" title="Static Emoji"/>
                                 <connections>
                                     <segue destination="txh-ek-kSn" kind="show" id="t62-C8-y0f"/>
@@ -347,7 +323,6 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vhv-gQ-MnA">
                                 <rect key="frame" x="102" y="247" width="117" height="30"/>
-                                <animations/>
                                 <state key="normal" title="Dynamic Emoji"/>
                                 <connections>
                                     <segue destination="wf8-8W-TF0" kind="show" id="0ZR-PF-FBR"/>
@@ -355,7 +330,6 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdA-Vh-Pjd">
                                 <rect key="frame" x="113" y="384" width="94" height="30"/>
-                                <animations/>
                                 <state key="normal" title="Local Emoji"/>
                                 <connections>
                                     <segue destination="HZO-Pe-3tg" kind="show" id="Yod-Pc-Mtt"/>
@@ -363,7 +337,6 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m2O-Op-8E3">
                                 <rect key="frame" x="137" y="447" width="46" height="30"/>
-                                <animations/>
                                 <state key="normal" title="About"/>
                                 <connections>
                                     <segue destination="QxD-dD-uZ4" kind="show" id="jr2-oV-h7c"/>
@@ -371,13 +344,11 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HKUEmoji" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WzC-h1-hJj">
                                 <rect key="frame" x="103" y="115" width="114" height="46"/>
-                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="WlY-ze-Utg"/>
@@ -398,7 +369,6 @@
                     <view key="view" contentMode="scaleToFill" id="6Vi-PO-tkE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Local Emoji" id="2h4-Cc-rYT"/>
@@ -416,7 +386,6 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="CMU-en-Cux">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
