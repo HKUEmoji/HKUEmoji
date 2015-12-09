@@ -11,6 +11,7 @@
 		9093725C1C15A38F001407F1 /* StaticEmojiGenII.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9093725B1C15A38F001407F1 /* StaticEmojiGenII.swift */; };
 		9093727B1C15C48F001407F1 /* Toucan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 909372781C15C461001407F1 /* Toucan.framework */; };
 		9093727C1C15C49C001407F1 /* Toucan.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 909372781C15C461001407F1 /* Toucan.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D46AE9601C18258700C2F768 /* overlay.png in Resources */ = {isa = PBXBuildFile; fileRef = D46AE95F1C18258700C2F768 /* overlay.png */; };
 		D477ABB71C0DF5F500A85A3B /* GPUImage.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D49F05371C0BED1A00E6EBA6 /* GPUImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D47C02631C0334CB00CDFDEB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47C02621C0334CB00CDFDEB /* ViewController.swift */; };
 		D47C02661C0334CB00CDFDEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D47C02641C0334CB00CDFDEB /* Main.storyboard */; };
@@ -105,6 +106,7 @@
 		907673001C0FF32C00E9FF36 /* cameraOverLay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cameraOverLay.swift; sourceTree = "<group>"; };
 		9093725B1C15A38F001407F1 /* StaticEmojiGenII.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticEmojiGenII.swift; sourceTree = "<group>"; };
 		909372721C15C461001407F1 /* Toucan.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Toucan.xcodeproj; path = Submodules/Toucan/Toucan.xcodeproj; sourceTree = "<group>"; };
+		D46AE95F1C18258700C2F768 /* overlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = overlay.png; path = HKUEmoji/Resourses/overlay.png; sourceTree = "<group>"; };
 		D47C025D1C0334CB00CDFDEB /* HKUEmoji.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HKUEmoji.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D47C02601C0334CB00CDFDEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D47C02621C0334CB00CDFDEB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				D4DE04701C1819200085C3F0 /* test.png */,
+				D46AE95F1C18258700C2F768 /* overlay.png */,
 			);
 			name = Resources;
 			path = ..;
@@ -387,6 +390,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D46AE9601C18258700C2F768 /* overlay.png in Resources */,
 				D4DE04961C181A990085C3F0 /* Info.plist in Resources */,
 				D4DE04951C181A950085C3F0 /* test.png in Resources */,
 				D4DE04941C181A900085C3F0 /* Assets.xcassets in Resources */,
