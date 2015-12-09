@@ -35,6 +35,8 @@ class StaticCamera: UIViewController, UINavigationControllerDelegate, UIImagePic
                 imagePicker.sourceType = UIImagePickerControllerSourceType.Camera
                 imagePicker.mediaTypes = [kUTTypeImage as NSString as String]
                 imagePicker.allowsEditing = false
+            
+                
                 
                 self.presentViewController(imagePicker, animated: true, completion: nil)
                 newMedia = true
