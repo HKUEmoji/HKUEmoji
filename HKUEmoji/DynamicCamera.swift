@@ -17,6 +17,8 @@ class cameraTool :  UIViewController, UIImagePickerControllerDelegate, UINavigat
     
     var overlayView: UIImageView!
     var choosedPicture: UIImage!
+    var resizeImage : UIImage!
+    var lastScaleFactor : CGFloat! = 1  //放大、缩小
 //    @IBOutlet weak var overlayView: UIImageView!
     
     // 初始化图片选择控制器
@@ -27,12 +29,20 @@ class cameraTool :  UIViewController, UIImagePickerControllerDelegate, UINavigat
         
         // Do any additional setup after loading the view, typically from a nib.
         choosedPicture = UIImage(named: "curry.jpeg")
-        pickView.image = choosedPicture
-        pickView.userInteractionEnabled = false
-        overlayView = UIImageView(image: UIImage(named: "background.png"))
-//        overlayView.userInteractionEnabled = true
-        //overlayView.frame=CGRectMake(70, 140, 200, 200)
+        //let ratioX = ((pickView.frame.size.width)/(choosedPicture.size.width))
+        //let ratioY = ((pickView.frame.size.height)/(choosedPicture.size.height))
+        //let ratio = min(ratioX, ratioY)
+        resizeImage = resizeImageFromFrame(choosedPicture)
+        pickView.frame = CGRect(x: 0, y: 0, width: resizeImage.size.width, height: resizeImage.size.height)
+        pickView.image = resizeImage
         
+        //pickView.image = choosedPicture
+        pickView.userInteractionEnabled = false
+        overlayView = UIImageView(image: UIImage(named: "overlay.png"))
+        
+        //gesture
+        let pinchGesture = UIPinchGestureRecognizer(target: self, action: "handlePinchGesture:")
+        self.view.addGestureRecognizer(pinchGesture)
     }
     
     override func viewDidLayoutSubviews() {
@@ -40,7 +50,7 @@ class cameraTool :  UIViewController, UIImagePickerControllerDelegate, UINavigat
         
         self.view.sendSubviewToBack(pickView)
         if !self.view.subviews.contains(overlayView) {
-            overlayView.frame = CGRect(x: 70, y: 140, width: 200, height: 200)
+            overlayView.frame = CGRect(x: 70, y: 140, width: 100, height: 135)
             overlayView.userInteractionEnabled = true
             overlayView.tag = 10
             self.view.addSubview(overlayView)
@@ -96,42 +106,21 @@ class cameraTool :  UIViewController, UIImagePickerControllerDelegate, UINavigat
         
         imagePicker.dismissViewControllerAnimated(true, completion: nil)
         let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage
-        /*ToucanImage.layerWithOverlayImage(overlay,overlayFrame: CGRectMake(0,0,testview.frame.size.width*10,testview.frame.size.height*10))*/
-    
-        pickView.image = pickedImage
+        resizeImage = resizeImageFromFrame(pickedImage!)
+        pickView.frame = CGRect(x: 0, y: 0, width: resizeImage.size.width, height: resizeImage.size.height)
+        pickView.image = resizeImage
     }
     
     
     @IBAction func captureFace(sender: UIButton) {
         let offsetX = overlayView.frame.origin.x - pickView.frame.origin.x
         let offsetY = overlayView.frame.origin.y - pickView.frame.origin.y
-        let ratioX = (pickView.image?.size.width)! / pickView.frame.size.width
-        let ratioY = (pickView.image?.size.height)! / pickView.frame.size.height
-        let ratio = min(ratioX, ratioY)
-        var space = CGRectMake(0, 0, overlayView.frame.width / 2, overlayView.frame.height / 2)
-//        let transform = CGAffineTransformMakeScale(ratio, ratio)
-//        space = CGRectApplyAffineTransform(space, transform)
-//        print(offsetX,",",offsetY)
-//        print("Imagesize",pickView.image?.size.width,",",pickView.image?.size.height)
-//        print("Viewsize",pickView.frame.size.width,",",pickView.frame.size.height)
-        let path = UIBezierPath()
-//        path.moveToPoint(CGPointMake(offsetX * ratio, offsetY * ratio))
-//        path.addLineToPoint(CGPointMake(offsetX * ratio, (offsetY + overlayView.frame.size.height)*ratio))
-//        path.addLineToPoint(CGPointMake((offsetX+overlayView.frame.size.width) * ratio,(offsetY+overlayView.frame.size.height)*ratio))
-//        path.addLineToPoint(CGPointMake((offsetX+overlayView.frame.size.width)*ratio,offsetY*ratio))
-//        path.closePath()
-        let pathLength = 0.01
-        path.moveToPoint(CGPoint(x: 0, y: 0))
-        path.addLineToPoint(CGPoint(x: pathLength, y: 0))
-//        path.moveToPoint(CGPoint(x: 0, y: 100))
-        path.addLineToPoint(CGPoint(x: pathLength,y: pathLength))
-//        path.moveToPoint(CGPoint(x: 100, y: 50))
-        path.addLineToPoint(CGPoint(x: 0,y: pathLength))
-        path.closePath()
-        let faceImage = Toucan(image: choosedPicture).maskWithPath(path: path).image
-        //faceImage=Toucan(image: faceImage).maskWithImage(maskImage: overlayView.image!).image
-       // var faceImage=Toucan(image: pickView.image!).maskWithImage(maskImage: overlayView.image!).image
-
+        
+        
+        let cgRef = resizeImage.CGImage;
+        let imageRef = CGImageCreateWithImageInRect(cgRef, CGRectMake(offsetX,offsetY, overlayView.frame.size.width, overlayView.frame.size.height))
+        var faceImage = UIImage(CGImage: imageRef!)
+        faceImage=Toucan(image: faceImage).maskWithImage(maskImage: UIImage(named: "cut.png")!).image
         pickView.image = faceImage
         
     }
@@ -148,9 +137,11 @@ class cameraTool :  UIViewController, UIImagePickerControllerDelegate, UINavigat
         }
     }
     
-    private func resizeImageFromRatio(originalImage: UIImage, ratio: Double) -> (UIImage) {
+    private func resizeImageFromFrame(originalImage: UIImage) -> (UIImage) {
         let image = CIImage(image: originalImage)
-        
+        let ratioW = Double((self.view.frame.size.width)/(originalImage.size.width))
+        let ratioH = Double((self.view.frame.size.height)/(originalImage.size.height))
+        let ratio = min(ratioH, ratioW)
         let filter = CIFilter(name: "CILanczosScaleTransform")!
         filter.setValue(image, forKey: kCIInputImageKey)
         filter.setValue(ratio, forKey: kCIInputScaleKey)
@@ -160,6 +151,26 @@ class cameraTool :  UIViewController, UIImagePickerControllerDelegate, UINavigat
         let context = CIContext(options: [kCIContextUseSoftwareRenderer: false])
         let scaledImage = UIImage(CGImage: context.createCGImage(outputImage, fromRect: outputImage.extent))
         return scaledImage
+    }
+    
+    //捏的手势，使图片放大和缩小，捏的动作是一个连续的动作
+    func handlePinchGesture(sender: UIPinchGestureRecognizer){
+        var factor = sender.scale
+        if factor > 1{
+            //图片放大
+             overlayView.transform = CGAffineTransformMakeScale(lastScaleFactor+factor-1, lastScaleFactor+factor-1)
+        }else{
+            //缩小
+            overlayView.transform = CGAffineTransformMakeScale(lastScaleFactor*factor, lastScaleFactor*factor)
+        }
+        //状态是否结束，如果结束保存数据
+        if sender.state == UIGestureRecognizerState.Ended{
+            if factor > 1{
+                lastScaleFactor = lastScaleFactor + factor - 1
+            }else{
+                lastScaleFactor = lastScaleFactor * factor
+            }
+        }
     }
     
     
