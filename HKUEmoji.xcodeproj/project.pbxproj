@@ -22,6 +22,9 @@
 		D4DE04931C181A720085C3F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47C02601C0334CB00CDFDEB /* AppDelegate.swift */; };
 		D4DE04941C181A900085C3F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4FFC2821C15699500B7B35B /* Assets.xcassets */; };
 		D4DE04951C181A950085C3F0 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = D4DE04701C1819200085C3F0 /* test.png */; };
+		D4E148191C19A41C00F49A36 /* ChooseStaticEmojiBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E148181C19A41C00F49A36 /* ChooseStaticEmojiBackground.swift */; };
+		D4E1481D1C19A5E700F49A36 /* ChooseStaticEmojiShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E1481C1C19A5E700F49A36 /* ChooseStaticEmojiShow.swift */; };
+		D4E1481F1C19AF2E00F49A36 /* erkangface.png in Resources */ = {isa = PBXBuildFile; fileRef = D4E1481E1C19AF2E00F49A36 /* erkangface.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +98,9 @@
 		D49F05081C0BE2DE00E6EBA6 /* StaticEmojiGen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticEmojiGen.swift; sourceTree = "<group>"; };
 		D49F052E1C0BED1A00E6EBA6 /* GPUImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GPUImage.xcodeproj; path = Submodules/GPUImage/framework/GPUImage.xcodeproj; sourceTree = "<group>"; };
 		D4DE04701C1819200085C3F0 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = test.png; path = HKUEmoji/Resourses/test.png; sourceTree = "<group>"; };
+		D4E148181C19A41C00F49A36 /* ChooseStaticEmojiBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseStaticEmojiBackground.swift; sourceTree = "<group>"; };
+		D4E1481C1C19A5E700F49A36 /* ChooseStaticEmojiShow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseStaticEmojiShow.swift; sourceTree = "<group>"; };
+		D4E1481E1C19AF2E00F49A36 /* erkangface.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = erkangface.png; path = HKUEmoji/Resourses/erkangface.png; sourceTree = "<group>"; };
 		D4FFC2821C15699500B7B35B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -149,7 +155,6 @@
 			isa = PBXGroup;
 			children = (
 				D49F050A1C0BE68800E6EBA6 /* Resources */,
-				9093725B1C15A38F001407F1 /* StaticEmojiGenII.swift */,
 				D47C02601C0334CB00CDFDEB /* AppDelegate.swift */,
 				D47C02621C0334CB00CDFDEB /* ViewController.swift */,
 				D47C02641C0334CB00CDFDEB /* Main.storyboard */,
@@ -159,6 +164,9 @@
 				907672FA1C0F16BB00E9FF36 /* DynamicCamera.swift */,
 				D49552FF1C09E707003700B3 /* StaticCamera.swift */,
 				D49F05081C0BE2DE00E6EBA6 /* StaticEmojiGen.swift */,
+				9093725B1C15A38F001407F1 /* StaticEmojiGenII.swift */,
+				D4E148181C19A41C00F49A36 /* ChooseStaticEmojiBackground.swift */,
+				D4E1481C1C19A5E700F49A36 /* ChooseStaticEmojiShow.swift */,
 			);
 			path = HKUEmoji;
 			sourceTree = "<group>";
@@ -185,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				D4DE04701C1819200085C3F0 /* test.png */,
+				D4E1481E1C19AF2E00F49A36 /* erkangface.png */,
 				D46AE95F1C18258700C2F768 /* overlay.png */,
 			);
 			name = Resources;
@@ -330,6 +339,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4E1481F1C19AF2E00F49A36 /* erkangface.png in Resources */,
 				D46AE9601C18258700C2F768 /* overlay.png in Resources */,
 				D4DE04951C181A950085C3F0 /* test.png in Resources */,
 				D4DE04941C181A900085C3F0 /* Assets.xcassets in Resources */,
@@ -360,11 +370,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4DE04931C181A720085C3F0 /* AppDelegate.swift in Sources */,
+				D4E148191C19A41C00F49A36 /* ChooseStaticEmojiBackground.swift in Sources */,
 				D47C02631C0334CB00CDFDEB /* ViewController.swift in Sources */,
 				9093725C1C15A38F001407F1 /* StaticEmojiGenII.swift in Sources */,
 				D49F05091C0BE2DE00E6EBA6 /* StaticEmojiGen.swift in Sources */,
 				D49553001C09E707003700B3 /* StaticCamera.swift in Sources */,
 				907672FB1C0F16BB00E9FF36 /* DynamicCamera.swift in Sources */,
+				D4E1481D1C19A5E700F49A36 /* ChooseStaticEmojiShow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
