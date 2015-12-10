@@ -154,7 +154,7 @@
                                 <items>
                                     <barButtonItem style="plain" systemItem="camera" id="tEY-sK-KFn">
                                         <connections>
-                                            <action selector="chooseBackground:" destination="VgB-n6-ZXO" id="7FX-5s-plS"/>
+                                            <segue destination="HYg-EU-htr" kind="show" identifier="Show background choice" id="i7E-TT-jdk"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -180,7 +180,92 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3J4-yJ-5eB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2620.5" y="-1857.5"/>
+            <point key="canvasLocation" x="2240.5" y="-1716.5"/>
+        </scene>
+        <!--Choose Static Emoji Background-->
+        <scene sceneID="nAe-qf-ab4">
+            <objects>
+                <viewController id="HYg-EU-htr" customClass="ChooseStaticEmojiBackground" customModule="HKUEmoji" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="z3o-pz-kEb"/>
+                        <viewControllerLayoutGuide type="bottom" id="PVr-td-LBK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QOc-nR-5ua" customClass="ChooseStaticEmojiBackground" customModule="HKUEmoji" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="tig-m1-dQW">
+                                <rect key="frame" x="124" y="72" width="127" height="29"/>
+                                <animations/>
+                                <segments>
+                                    <segment title="Cartoon"/>
+                                    <segment title="Real"/>
+                                </segments>
+                            </segmentedControl>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="E0t-fo-9w1">
+                                <rect key="frame" x="0.0" y="110" width="375" height="483"/>
+                                <animations/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1q2-Gn-Zb0">
+                                    <size key="itemSize" width="90" height="109"/>
+                                    <size key="headerReferenceSize" width="10" height="10"/>
+                                    <size key="footerReferenceSize" width="10" height="10"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="EmojiBackground" id="O0N-Q0-tLs" customClass="ChooseStaticEmojiShow" customModule="HKUEmoji" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="10" width="90" height="109"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="90" height="109"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jJ7-O4-9I6">
+                                                    <rect key="frame" x="0.0" y="0.0" width="90" height="109"/>
+                                                    <animations/>
+                                                </imageView>
+                                            </subviews>
+                                            <animations/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstItem="jJ7-O4-9I6" firstAttribute="height" secondItem="O0N-Q0-tLs" secondAttribute="height" id="7kR-Gd-TW6"/>
+                                            <constraint firstItem="jJ7-O4-9I6" firstAttribute="width" secondItem="O0N-Q0-tLs" secondAttribute="width" id="aGF-v3-h0Z"/>
+                                            <constraint firstItem="jJ7-O4-9I6" firstAttribute="centerY" secondItem="O0N-Q0-tLs" secondAttribute="centerY" id="fZ9-4y-ZdT"/>
+                                            <constraint firstItem="jJ7-O4-9I6" firstAttribute="centerX" secondItem="O0N-Q0-tLs" secondAttribute="centerX" id="vo0-5q-WqL"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="a" destination="jJ7-O4-9I6" id="dAN-cQ-eZo"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="3FL-Mw-IbD">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="10"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                </collectionReusableView>
+                                <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="1sH-yP-JEa">
+                                    <rect key="frame" x="0.0" y="119" width="375" height="10"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                </collectionReusableView>
+                            </collectionView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="E0t-fo-9w1" firstAttribute="centerX" secondItem="tig-m1-dQW" secondAttribute="centerX" id="1gU-KQ-6uv"/>
+                            <constraint firstItem="PVr-td-LBK" firstAttribute="top" secondItem="E0t-fo-9w1" secondAttribute="bottom" constant="30" id="5gJ-wn-KJj"/>
+                            <constraint firstItem="E0t-fo-9w1" firstAttribute="width" secondItem="QOc-nR-5ua" secondAttribute="width" id="Qfq-yP-tTr"/>
+                            <constraint firstItem="tig-m1-dQW" firstAttribute="top" secondItem="z3o-pz-kEb" secondAttribute="bottom" constant="8" id="Yv2-vM-EZe"/>
+                            <constraint firstItem="tig-m1-dQW" firstAttribute="centerX" secondItem="QOc-nR-5ua" secondAttribute="centerX" id="dFY-cg-kxu"/>
+                            <constraint firstItem="E0t-fo-9w1" firstAttribute="top" secondItem="tig-m1-dQW" secondAttribute="bottom" constant="10" id="rfC-gI-ejV"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CLJ-4i-Lku" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2691.5" y="-1716.5"/>
         </scene>
         <!--DynamicPhoto-->
         <scene sceneID="XgS-qW-fAy">

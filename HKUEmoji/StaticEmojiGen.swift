@@ -66,17 +66,35 @@ class StaticEmojiGen: UIViewController {
 			//            print(faceFeature.bounds)
 
 			faceBound = faceFeature.bounds
+            var newFaceBound = faceBound
+            var eyeHeight: CGFloat?
 			if faceFeature.hasLeftEyePosition {
+                newFaceBound.origin.x = faceFeature.leftEyePosition.x
+                eyeHeight = faceFeature.leftEyePosition.y
+                newFaceBound.size.width -= -newFaceBound.origin.x + faceBound.origin.x
 				leftEye.frame = adjustFaceFeatures(CGRect(origin: faceFeature.leftEyePosition, size: CGSize(width: faceFeature.bounds.size.width * 0.25, height: faceFeature.bounds.size.width * 0.15)))
 			}
 
 			if faceFeature.hasRightEyePosition {
+                if let temp = eyeHeight {
+                    eyeHeight = (temp + faceFeature.rightEyePosition.y) / 2
+                } else {
+                    eyeHeight = faceFeature.rightEyePosition.y
+                }
+                newFaceBound.size.width -= (faceBound.origin.x + faceBound.size.width) - (faceFeature.rightEyePosition.x + faceFeature.bounds.size.width * 0.25)
 				rightEye.frame = adjustFaceFeatures(CGRect(origin: faceFeature.rightEyePosition, size: CGSize(width: faceFeature.bounds.size.width * 0.25, height: faceFeature.bounds.size.width * 0.15)))
 			}
 
 			if faceFeature.hasMouthPosition {
+                if let test = eyeHeight {
+                    newFaceBound.size.height = test - faceFeature.mouthPosition.y
+                } else {
+                    newFaceBound.size.height -= faceFeature.mouthPosition.y - faceBound.origin.y
+                }
+                newFaceBound.origin.y = faceFeature.mouthPosition.y
 				mouth.frame = adjustFaceFeatures(CGRect(origin: faceFeature.mouthPosition, size: CGSize(width: faceFeature.bounds.size.width * 0.45, height: faceFeature.bounds.size.width * 0.2)))
 			}
+            faceBound = newFaceBound
 		}
 	}
 
@@ -123,7 +141,7 @@ class StaticEmojiGen: UIViewController {
 
 	 - returns: a new image after compressed
 	 */
-	private func resizeImageFromRatio(originalImage: UIImage, ratio: Double) -> (UIImage) {
+    func resizeImageFromRatio(originalImage: UIImage, ratio: Double) -> (UIImage) {
 		let image = CIImage(image: originalImage)
 
 		let filter = CIFilter(name: "CILanczosScaleTransform")!

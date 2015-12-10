@@ -120,8 +120,8 @@ class cameraTool : UIViewController, UIImagePickerControllerDelegate, UINavigati
 
 		let cgRef = resizeImage.CGImage;
 		let imageRef = CGImageCreateWithImageInRect(cgRef, CGRectMake(offsetX, offsetY, overlayView.frame.size.width, overlayView.frame.size.height))
-		var faceImage = UIImage(CGImage: imageRef!)
-		faceImage = Toucan(image: faceImage).maskWithImage(maskImage: UIImage(named: "cut.png")!).image
+		let faceImage = UIImage(CGImage: imageRef!)
+//		faceImage = Toucan(image: faceImage).maskWithImage(maskImage: UIImage(named: "cut.png")!).image
 		pickView.image = faceImage
 
 	}
