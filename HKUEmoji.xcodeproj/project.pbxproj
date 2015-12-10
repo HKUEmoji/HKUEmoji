@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		907672FB1C0F16BB00E9FF36 /* DynamicCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907672FA1C0F16BB00E9FF36 /* DynamicCamera.swift */; };
 		9093725C1C15A38F001407F1 /* StaticEmojiGenII.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9093725B1C15A38F001407F1 /* StaticEmojiGenII.swift */; };
-		9093727B1C15C48F001407F1 /* Toucan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 909372781C15C461001407F1 /* Toucan.framework */; };
-		9093727C1C15C49C001407F1 /* Toucan.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 909372781C15C461001407F1 /* Toucan.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D46AE9601C18258700C2F768 /* overlay.png in Resources */ = {isa = PBXBuildFile; fileRef = D46AE95F1C18258700C2F768 /* overlay.png */; };
 		D477ABB71C0DF5F500A85A3B /* GPUImage.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D49F05371C0BED1A00E6EBA6 /* GPUImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D47C02631C0334CB00CDFDEB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47C02621C0334CB00CDFDEB /* ViewController.swift */; };
@@ -28,27 +26,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		909372771C15C461001407F1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 909372721C15C461001407F1 /* Toucan.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 740AC3EA1999799900AB9A86;
-			remoteInfo = Toucan;
-		};
-		909372791C15C461001407F1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 909372721C15C461001407F1 /* Toucan.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 740AC3F51999799900AB9A86;
-			remoteInfo = ToucanTests;
-		};
-		9093727D1C15C4A8001407F1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 909372721C15C461001407F1 /* Toucan.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 740AC3E91999799900AB9A86;
-			remoteInfo = Toucan;
-		};
 		D47C02721C0334CB00CDFDEB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D47C02551C0334CB00CDFDEB /* Project object */;
@@ -93,7 +70,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				9093727C1C15C49C001407F1 /* Toucan.framework in CopyFiles */,
 				D477ABB71C0DF5F500A85A3B /* GPUImage.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -102,10 +78,7 @@
 
 /* Begin PBXFileReference section */
 		907672FA1C0F16BB00E9FF36 /* DynamicCamera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicCamera.swift; sourceTree = "<group>"; };
-		907672FE1C0FE4DF00E9FF36 /*  cameraOverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = " cameraOverlayView.xib"; sourceTree = "<group>"; };
-		907673001C0FF32C00E9FF36 /* cameraOverLay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cameraOverLay.swift; sourceTree = "<group>"; };
 		9093725B1C15A38F001407F1 /* StaticEmojiGenII.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticEmojiGenII.swift; sourceTree = "<group>"; };
-		909372721C15C461001407F1 /* Toucan.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Toucan.xcodeproj; path = Submodules/Toucan/Toucan.xcodeproj; sourceTree = "<group>"; };
 		D46AE95F1C18258700C2F768 /* overlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = overlay.png; path = HKUEmoji/Resourses/overlay.png; sourceTree = "<group>"; };
 		D47C025D1C0334CB00CDFDEB /* HKUEmoji.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HKUEmoji.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D47C02601C0334CB00CDFDEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -131,7 +104,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9093727B1C15C48F001407F1 /* Toucan.framework in Frameworks */,
 				D49F05491C0BEF6600E6EBA6 /* GPUImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -153,19 +125,9 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		909372731C15C461001407F1 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				909372781C15C461001407F1 /* Toucan.framework */,
-				9093727A1C15C461001407F1 /* ToucanTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		D47C02541C0334CB00CDFDEB = {
 			isa = PBXGroup;
 			children = (
-				909372721C15C461001407F1 /* Toucan.xcodeproj */,
 				D49F052E1C0BED1A00E6EBA6 /* GPUImage.xcodeproj */,
 				D47C025F1C0334CB00CDFDEB /* HKUEmoji */,
 				D47C02741C0334CB00CDFDEB /* HKUEmojiTests */,
@@ -198,8 +160,6 @@
 				907672FA1C0F16BB00E9FF36 /* DynamicCamera.swift */,
 				D49552FF1C09E707003700B3 /* StaticCamera.swift */,
 				D49F05081C0BE2DE00E6EBA6 /* StaticEmojiGen.swift */,
-				907672FE1C0FE4DF00E9FF36 /*  cameraOverlayView.xib */,
-				907673001C0FF32C00E9FF36 /* cameraOverLay.swift */,
 			);
 			path = HKUEmoji;
 			sourceTree = "<group>";
@@ -256,7 +216,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				9093727E1C15C4A8001407F1 /* PBXTargetDependency */,
 				D49F05481C0BEF4800E6EBA6 /* PBXTargetDependency */,
 			);
 			name = HKUEmoji;
@@ -340,10 +299,6 @@
 					ProductGroup = D49F052F1C0BED1A00E6EBA6 /* Products */;
 					ProjectRef = D49F052E1C0BED1A00E6EBA6 /* GPUImage.xcodeproj */;
 				},
-				{
-					ProductGroup = 909372731C15C461001407F1 /* Products */;
-					ProjectRef = 909372721C15C461001407F1 /* Toucan.xcodeproj */;
-				},
 			);
 			projectRoot = "";
 			targets = (
@@ -355,20 +310,6 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		909372781C15C461001407F1 /* Toucan.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Toucan.framework;
-			remoteRef = 909372771C15C461001407F1 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		9093727A1C15C461001407F1 /* ToucanTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = ToucanTests.xctest;
-			remoteRef = 909372791C15C461001407F1 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		D49F05351C0BED1A00E6EBA6 /* libGPUImage.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -448,11 +389,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		9093727E1C15C4A8001407F1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Toucan;
-			targetProxy = 9093727D1C15C4A8001407F1 /* PBXContainerItemProxy */;
-		};
 		D47C02731C0334CB00CDFDEB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D47C025C1C0334CB00CDFDEB /* HKUEmoji */;
