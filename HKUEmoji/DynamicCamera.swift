@@ -11,6 +11,42 @@ import MobileCoreServices
 import Toucan
 
 
+extension UIImage {
+    
+    func fixOrientation(orientation:UIImageOrientation) -> UIImage {
+        if (self.imageOrientation == orientation) {
+            return self
+        }
+        
+        var transform = CGAffineTransformIdentity
+        
+        switch (orientation) {
+        case .Left:
+            transform = CGAffineTransformTranslate(transform, self.size.height,0)
+            transform = CGAffineTransformRotate(transform, CGFloat(M_PI_2))
+            
+        case .Right:
+            transform = CGAffineTransformTranslate(transform, 0,self.size.width)
+            transform = CGAffineTransformRotate(transform, CGFloat(-M_PI_2))
+            
+        default:
+            return self
+        }
+        
+        let ctx = CGBitmapContextCreate(nil, Int(self.size.width), Int(self.size.height),
+            CGImageGetBitsPerComponent(self.CGImage), 0,
+            CGImageGetColorSpace(self.CGImage),
+            CGImageGetBitmapInfo(self.CGImage).rawValue)
+        CGContextConcatCTM(ctx, transform)
+        CGContextDrawImage(ctx, CGRectMake(0,0,self.size.height,self.size.width), self.CGImage )
+        // And now we just create a new UIImage from the drawing context
+        let cgimg = CGBitmapContextCreateImage(ctx)
+        return UIImage(CGImage: cgimg!)
+    }
+}
+
+
+
 class cameraTool :  UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var pickView: UIImageView!
@@ -28,7 +64,7 @@ class cameraTool :  UIViewController, UIImagePickerControllerDelegate, UINavigat
         super.viewDidLoad()
         
         // Do any additional setup after loading the view, typically from a nib.
-        choosedPicture = UIImage(named: "curry.jpeg")
+        choosedPicture = UIImage(named: "pickFace.jpg")
         //let ratioX = ((pickView.frame.size.width)/(choosedPicture.size.width))
         //let ratioY = ((pickView.frame.size.height)/(choosedPicture.size.height))
         //let ratio = min(ratioX, ratioY)
@@ -38,7 +74,7 @@ class cameraTool :  UIViewController, UIImagePickerControllerDelegate, UINavigat
         
         //pickView.image = choosedPicture
         pickView.userInteractionEnabled = false
-        overlayView = UIImageView(image: UIImage(named: "overlay.png"))
+        overlayView = UIImageView(image: UIImage(named: "overlay"))
         
         //gesture
         let pinchGesture = UIPinchGestureRecognizer(target: self, action: "handlePinchGesture:")
@@ -105,11 +141,16 @@ class cameraTool :  UIViewController, UIImagePickerControllerDelegate, UINavigat
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         
         imagePicker.dismissViewControllerAnimated(true, completion: nil)
-        let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage
-        resizeImage = resizeImageFromFrame(pickedImage!)
-        pickView.frame = CGRect(x: 0, y: 0, width: resizeImage.size.width, height: resizeImage.size.height)
+        let pickedImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+        //pickedImage.fixOrientation(pickedImage.imageOrientation)
+        resizeImage = resizeImageFromFrame(pickedImage)
+        resizeImage = resizeImage.fixOrientation(pickedImage.imageOrientation)
+        pickView.frame = CGRect(x: pickView.frame.origin.x, y:pickView.frame.origin.y , width: resizeImage.size.width, height: resizeImage.size.height)
         pickView.image = resizeImage
+        
+        
     }
+    
     
     
     @IBAction func captureFace(sender: UIButton) {
@@ -136,6 +177,7 @@ class cameraTool :  UIViewController, UIImagePickerControllerDelegate, UINavigat
             }
         }
     }
+                
     
     private func resizeImageFromFrame(originalImage: UIImage) -> (UIImage) {
         let image = CIImage(image: originalImage)

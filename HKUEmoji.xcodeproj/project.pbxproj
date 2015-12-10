@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9065127B1C198B8C00515540 /* pickFace.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9065127A1C198B8C00515540 /* pickFace.jpg */; };
 		907672FB1C0F16BB00E9FF36 /* DynamicCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907672FA1C0F16BB00E9FF36 /* DynamicCamera.swift */; };
 		907673011C0FF32C00E9FF36 /* cameraOverLay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907673001C0FF32C00E9FF36 /* cameraOverLay.swift */; };
 		909372581C15A311001407F1 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 909372571C15A311001407F1 /* background.png */; };
@@ -17,8 +18,6 @@
 		9093727B1C15C48F001407F1 /* Toucan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 909372781C15C461001407F1 /* Toucan.framework */; };
 		9093727C1C15C49C001407F1 /* Toucan.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 909372781C15C461001407F1 /* Toucan.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		909372961C1802FF001407F1 /* overlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 909372951C1802FF001407F1 /* overlay.png */; };
-		909372981C180535001407F1 /* cut.png in Resources */ = {isa = PBXBuildFile; fileRef = 909372971C180535001407F1 /* cut.png */; };
-		9093729A1C180881001407F1 /* cut2.png in Resources */ = {isa = PBXBuildFile; fileRef = 909372991C180881001407F1 /* cut2.png */; };
 		D477ABB71C0DF5F500A85A3B /* GPUImage.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D49F05371C0BED1A00E6EBA6 /* GPUImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D47C02611C0334CB00CDFDEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47C02601C0334CB00CDFDEB /* AppDelegate.swift */; };
 		D47C02631C0334CB00CDFDEB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47C02621C0334CB00CDFDEB /* ViewController.swift */; };
@@ -106,6 +105,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9065127A1C198B8C00515540 /* pickFace.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pickFace.jpg; sourceTree = "<group>"; };
 		907672FA1C0F16BB00E9FF36 /* DynamicCamera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicCamera.swift; sourceTree = "<group>"; };
 		907672FE1C0FE4DF00E9FF36 /*  cameraOverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = " cameraOverlayView.xib"; sourceTree = "<group>"; };
 		907673001C0FF32C00E9FF36 /* cameraOverLay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cameraOverLay.swift; sourceTree = "<group>"; };
@@ -113,8 +113,6 @@
 		9093725B1C15A38F001407F1 /* StaticEmojiGenII.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticEmojiGenII.swift; sourceTree = "<group>"; };
 		909372721C15C461001407F1 /* Toucan.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Toucan.xcodeproj; path = Submodules/Toucan/Toucan.xcodeproj; sourceTree = "<group>"; };
 		909372951C1802FF001407F1 /* overlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = overlay.png; sourceTree = "<group>"; };
-		909372971C180535001407F1 /* cut.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cut.png; sourceTree = "<group>"; };
-		909372991C180881001407F1 /* cut2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cut2.png; sourceTree = "<group>"; };
 		D47C025D1C0334CB00CDFDEB /* HKUEmoji.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HKUEmoji.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D47C02601C0334CB00CDFDEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D47C02621C0334CB00CDFDEB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -236,8 +234,7 @@
 			children = (
 				909372571C15A311001407F1 /* background.png */,
 				D4BDAA721C1133D400D0DFF9 /* curry.jpeg */,
-				909372991C180881001407F1 /* cut2.png */,
-				909372971C180535001407F1 /* cut.png */,
+				9065127A1C198B8C00515540 /* pickFace.jpg */,
 				909372951C1802FF001407F1 /* overlay.png */,
 				D4BDAA701C112E7800D0DFF9 /* superdad.png */,
 			);
@@ -404,14 +401,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9093725F1C15A477001407F1 /*  cameraOverlayView.xib in Resources */,
+				9065127B1C198B8C00515540 /* pickFace.jpg in Resources */,
 				9093725E1C15A473001407F1 /* LaunchScreen.storyboard in Resources */,
 				9093725D1C15A468001407F1 /* Main.storyboard in Resources */,
 				909372581C15A311001407F1 /* background.png in Resources */,
 				D4BDAA731C1133D400D0DFF9 /* curry.jpeg in Resources */,
 				D47C02681C0334CB00CDFDEB /* Assets.xcassets in Resources */,
-				909372981C180535001407F1 /* cut.png in Resources */,
 				909372961C1802FF001407F1 /* overlay.png in Resources */,
-				9093729A1C180881001407F1 /* cut2.png in Resources */,
 				D4BDAA711C112E7800D0DFF9 /* superdad.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
