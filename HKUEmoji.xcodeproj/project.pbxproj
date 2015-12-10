@@ -22,7 +22,6 @@
 		D4DE04931C181A720085C3F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47C02601C0334CB00CDFDEB /* AppDelegate.swift */; };
 		D4DE04941C181A900085C3F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4FFC2821C15699500B7B35B /* Assets.xcassets */; };
 		D4DE04951C181A950085C3F0 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = D4DE04701C1819200085C3F0 /* test.png */; };
-		D4DE04961C181A990085C3F0 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D47C026C1C0334CB00CDFDEB /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -332,7 +331,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D46AE9601C18258700C2F768 /* overlay.png in Resources */,
-				D4DE04961C181A990085C3F0 /* Info.plist in Resources */,
 				D4DE04951C181A950085C3F0 /* test.png in Resources */,
 				D4DE04941C181A900085C3F0 /* Assets.xcassets in Resources */,
 				D47C026B1C0334CB00CDFDEB /* LaunchScreen.storyboard in Resources */,
