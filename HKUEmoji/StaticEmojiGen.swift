@@ -108,6 +108,12 @@ class StaticEmojiGen: UIViewController {
 
 		return newBound
 	}
+    
+    func adjustFaceBound(frameRec: CGRect) -> CGRect {
+        var transform = CGAffineTransformMakeScale(1, -1)
+        transform = CGAffineTransformTranslate(transform, 0, -originalImage.size.height)
+        return CGRectApplyAffineTransform(frameRec, transform)
+    }
 
 	/**
 	 This function used to compress the image to the ratio
@@ -130,11 +136,17 @@ class StaticEmojiGen: UIViewController {
 		let scaledImage = UIImage(CGImage: context.createCGImage(outputImage, fromRect: outputImage.extent))
 		return scaledImage
 	}
+    
+    private func keepImageNeededPart(originImage image:UIImage, keepPart frame:CGRect) -> UIImage {
+        let cgRef = image.CGImage
+        let imageRef = CGImageCreateWithImageInRect(cgRef, frame)
+        return UIImage(CGImage: imageRef!)
+    }
 
 	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 		if segue.identifier == "showGenerater" {
 			let svc = segue.destinationViewController as! StaticEmojiGenII
-			let scale = min(imageShow.bounds.height / originalImage.size.height, imageShow.bounds.width / originalImage.size.width)
+//			let scale = min(imageShow.bounds.height / originalImage.size.height, imageShow.bounds.width / originalImage.size.width)
 			let offsetX = background.frame.origin.x + imageShow.frame.origin.x
 			let offsetY = background.frame.origin.y + imageShow.frame.origin.y
 
@@ -150,14 +162,14 @@ class StaticEmojiGen: UIViewController {
 			if let bound1 = mouth?.frame {
 				svc.mouthBound = CGRect(origin: CGPoint(x: bound1.origin.x - offsetX, y: bound1.origin.y - offsetY), size: bound1.size)
 			}
-			UIGraphicsBeginImageContextWithOptions(faceBound.size, false, 0.0)
-			let pointY = -faceBound.origin.y
-			originalImage.drawInRect(CGRect(origin: CGPoint(x: -faceBound.origin.x, y: pointY), size: originalImage.size))
+//			UIGraphicsBeginImageContextWithOptions(faceBound.size, false, 0.0)
+//			let pointY = -faceBound.origin.y
+//			originalImage.drawInRect(CGRect(origin: CGPoint(x: -faceBound.origin.x, y: pointY), size: originalImage.size))
+//
+//			originalImage = UIGraphicsGetImageFromCurrentImageContext()
+//			UIGraphicsEndImageContext()
 
-			originalImage = UIGraphicsGetImageFromCurrentImageContext()
-			UIGraphicsEndImageContext()
-
-			svc.faceImage = resizeImageFromRatio(originalImage, ratio: Double(scale))
+			svc.faceImage = keepImageNeededPart(originImage: originalImage, keepPart: adjustFaceBound(faceBound))
 		}
 	}
 

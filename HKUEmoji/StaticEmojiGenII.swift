@@ -20,6 +20,8 @@ class StaticEmojiGenII: UIViewController {
 	var trueEmojiNames = ["CP3 2": 0,
 		"CP3": 0,
 		"curry1": 1,]
+    
+    var cartoonEmojiNames = ["erkangface": CGRect(x: 167, y: 144, width: 151, height: 188)]
 
 	lazy var context: CIContext = {
 		return CIContext(options: nil)
