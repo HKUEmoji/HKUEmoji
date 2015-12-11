@@ -21,7 +21,7 @@ class StaticEmojiGen: UIViewController {
 	var faceBound: CGRect!
 
 	lazy var originalImage: UIImage = {
-		return UIImage(named: "test.png")
+		return UIImage(named: "test3.png")
 	}()!
 
 	lazy var context: CIContext = {
@@ -69,29 +69,28 @@ class StaticEmojiGen: UIViewController {
             var newFaceBound = faceBound
             var eyeHeight: CGFloat?
 			if faceFeature.hasLeftEyePosition {
-                newFaceBound.origin.x = faceFeature.leftEyePosition.x
-                eyeHeight = faceFeature.leftEyePosition.y
-                newFaceBound.size.width -= -newFaceBound.origin.x + faceBound.origin.x
+                newFaceBound.origin.x = faceFeature.leftEyePosition.x - faceFeature.bounds.size.width * 0.15
+                eyeHeight = faceFeature.leftEyePosition.y + faceFeature.bounds.size.width * 0.1
 				leftEye.frame = adjustFaceFeatures(CGRect(origin: faceFeature.leftEyePosition, size: CGSize(width: faceFeature.bounds.size.width * 0.25, height: faceFeature.bounds.size.width * 0.15)))
 			}
 
 			if faceFeature.hasRightEyePosition {
                 if let temp = eyeHeight {
-                    eyeHeight = (temp + faceFeature.rightEyePosition.y) / 2
+                    eyeHeight = (temp + faceFeature.rightEyePosition.y + faceFeature.bounds.size.width * 0.1) / 2
                 } else {
-                    eyeHeight = faceFeature.rightEyePosition.y
+                    eyeHeight = faceFeature.rightEyePosition.y + faceFeature.bounds.size.width * 0.1
                 }
-                newFaceBound.size.width -= (faceBound.origin.x + faceBound.size.width) - (faceFeature.rightEyePosition.x + faceFeature.bounds.size.width * 0.25)
+                newFaceBound.size.width = faceFeature.rightEyePosition.x + faceFeature.bounds.size.width * 0.15 - newFaceBound.origin.x
 				rightEye.frame = adjustFaceFeatures(CGRect(origin: faceFeature.rightEyePosition, size: CGSize(width: faceFeature.bounds.size.width * 0.25, height: faceFeature.bounds.size.width * 0.15)))
 			}
 
 			if faceFeature.hasMouthPosition {
                 if let test = eyeHeight {
-                    newFaceBound.size.height = test - faceFeature.mouthPosition.y
+                    newFaceBound.size.height = test - faceFeature.mouthPosition.y + faceFeature.bounds.size.width * 0.1
                 } else {
-                    newFaceBound.size.height -= faceFeature.mouthPosition.y - faceBound.origin.y
+                    newFaceBound.size.height -= faceFeature.mouthPosition.y - faceBound.origin.y - faceFeature.bounds.size.width * 0.1
                 }
-                newFaceBound.origin.y = faceFeature.mouthPosition.y
+                newFaceBound.origin.y = faceFeature.mouthPosition.y - faceFeature.bounds.size.width * 0.1
 				mouth.frame = adjustFaceFeatures(CGRect(origin: faceFeature.mouthPosition, size: CGSize(width: faceFeature.bounds.size.width * 0.45, height: faceFeature.bounds.size.width * 0.2)))
 			}
             faceBound = newFaceBound
