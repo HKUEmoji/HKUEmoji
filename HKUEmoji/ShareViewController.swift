@@ -24,6 +24,7 @@ class ShareViewController: UIViewController {
         // Dispose of any resources that can be recreated.
 }
     @IBAction func twitterButtonPushed(sender: UIButton) {
+/*
         if SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter){
             let twitterSheet:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
             twitterSheet.setInitialText("Share on Twitter")
@@ -32,6 +33,27 @@ class ShareViewController: UIViewController {
             let alert = UIAlertController(title: "Accounts", message: "Please login to a Twitter account to share.", preferredStyle: UIAlertControllerStyle.Alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
             self.presentViewController(alert, animated: true, completion: nil)
+        }*/
+        
+        //1.创建分享参数
+        let shareParames = NSMutableDictionary()
+        shareParames.SSDKSetupShareParamsByText("分享内容",
+            images : UIImage(named: "eye.png"),
+            url : NSURL(string:"http://mob.com"),
+            title : "分享标题",
+            type : SSDKContentType.Auto)
+        //2.进行分享
+        ShareSDK.showShareActionSheet(self.view, items: nil, shareParams: shareParames) { (state : SSDKResponseState, platformType : SSDKPlatformType, userdata : [NSObject : AnyObject]!, contentEnity : SSDKContentEntity!, error : NSError!, Bool end) -> Void in
+            
+            switch state{
+                
+            case SSDKResponseState.Success: print("分享成功")
+            case SSDKResponseState.Fail:    print("分享失败,错误描述:\(error)")
+            case SSDKResponseState.Cancel:  print("分享取消")
+                
+            default:
+                break
+            }
         }
 
     }
