@@ -302,21 +302,13 @@
                                     <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
                                 </accessibility>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UAd-8g-nSI">
-                                <rect key="frame" x="20" y="512" width="51" height="30"/>
-                                <animations/>
-                                <state key="normal" title="camera"/>
-                                <connections>
-                                    <action selector="takePhone:" destination="wf8-8W-TF0" eventType="touchUpInside" id="Oml-bA-YQV"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ajZ-bV-Qwj">
-                                <rect key="frame" x="162" y="512" width="51" height="30"/>
+                                <rect key="frame" x="277" y="512" width="69" height="30"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="51" id="3rf-F2-e1s"/>
                                 </constraints>
-                                <state key="normal" title="library"/>
+                                <state key="normal" title="My Album"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="3rf-F2-e1s"/>
@@ -327,18 +319,19 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bmp-Th-Di7">
-                                <rect key="frame" x="302" y="512" width="53" height="30"/>
+                                <rect key="frame" x="163" y="512" width="66" height="30"/>
                                 <animations/>
-                                <state key="normal" title="capture"/>
+                                <state key="normal" title="Pick Face"/>
                                 <connections>
                                     <action selector="captureFace:" destination="wf8-8W-TF0" eventType="touchUpInside" id="IPy-oI-q1x"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sry-FP-baw">
-                                <rect key="frame" x="98" y="480" width="32" height="30"/>
-                                <state key="normal" title="save"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UAd-8g-nSI">
+                                <rect key="frame" x="23" y="512" width="89" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Take a Photo"/>
                                 <connections>
-                                    <action selector="save:" destination="wf8-8W-TF0" eventType="touchUpInside" id="x1Y-3o-0si"/>
+                                    <action selector="takePhone:" destination="wf8-8W-TF0" eventType="touchUpInside" id="Oml-bA-YQV"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -362,7 +355,10 @@
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="myAlbum" destination="ajZ-bV-Qwj" id="lVm-GA-GYY"/>
+                        <outlet property="pickFace" destination="bmp-Th-Di7" id="9lE-xk-9v4"/>
                         <outlet property="pickView" destination="0Gf-QO-6Fm" id="oNR-fD-Bua"/>
+                        <outlet property="takePhoto" destination="UAd-8g-nSI" id="qb1-AP-tGJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YVd-Eh-QpE" userLabel="First Responder" sceneMemberID="firstResponder"/>

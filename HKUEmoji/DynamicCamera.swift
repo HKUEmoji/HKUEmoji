@@ -50,6 +50,9 @@ class cameraTool :  UIViewController, UIImagePickerControllerDelegate, UINavigat
     
     @IBOutlet weak var pickView: UIImageView!
     
+    @IBOutlet weak var myAlbum: UIButton!
+    @IBOutlet weak var pickFace: UIButton!
+    @IBOutlet weak var takePhoto: UIButton!
     var overlayView: UIImageView!
     var choosedPicture: UIImage!
     var resizeImage : UIImage!
@@ -64,10 +67,10 @@ class cameraTool :  UIViewController, UIImagePickerControllerDelegate, UINavigat
         super.viewDidLoad()
         
         // Do any additional setup after loading the view, typically from a nib.
-        choosedPicture = UIImage(named: "pickFace.jpg")
+        /*choosedPicture = UIImage(named: "pickFace.jpg")
         resizeImage = resizeImageFromFrame(choosedPicture)
         pickView.frame = CGRect(x: 0, y: 0, width: resizeImage.size.width, height: resizeImage.size.height)
-        pickView.image = resizeImage
+        pickView.image = resizeImage*/
         
         //pickView.image = choosedPicture
         pickView.userInteractionEnabled = false
@@ -76,19 +79,15 @@ class cameraTool :  UIViewController, UIImagePickerControllerDelegate, UINavigat
         //gesture
         let pinchGesture = UIPinchGestureRecognizer(target: self, action: "handlePinchGesture:")
         self.view.addGestureRecognizer(pinchGesture)
+        pickFace.hidden = true
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        
-        self.view.sendSubviewToBack(pickView)
-        if !self.view.subviews.contains(overlayView) {
-            overlayView.frame = CGRect(x: 70, y: 140, width: 100, height: 135)
-            overlayView.userInteractionEnabled = true
-            overlayView.tag = 10
-            self.view.addSubview(overlayView)
-        }
     }
+    
+    
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -138,12 +137,23 @@ class cameraTool :  UIViewController, UIImagePickerControllerDelegate, UINavigat
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         
         imagePicker.dismissViewControllerAnimated(true, completion: nil)
+        self.view.sendSubviewToBack(pickView)
+        if !self.view.subviews.contains(overlayView) {
+            overlayView.frame = CGRect(x: 70, y: 140, width: 100, height: 135)
+            overlayView.userInteractionEnabled = true
+            overlayView.tag = 10
+            self.view.addSubview(overlayView)
+        }
+        
         let pickedImage = info[UIImagePickerControllerOriginalImage] as! UIImage
         //pickedImage.fixOrientation(pickedImage.imageOrientation)
         resizeImage = resizeImageFromFrame(pickedImage)
         resizeImage = resizeImage.fixOrientation(pickedImage.imageOrientation)
         pickView.frame = CGRect(x: pickView.frame.origin.x, y:pickView.frame.origin.y , width: resizeImage.size.width, height: resizeImage.size.height)
         pickView.image = resizeImage
+        pickFace.hidden = false
+        myAlbum.hidden = true
+        takePhoto.hidden = true
         
         
     }
