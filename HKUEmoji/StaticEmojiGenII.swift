@@ -99,6 +99,8 @@ class StaticEmojiGenII: UIViewController {
 		let share = UIBarButtonItem(barButtonSystemItem: .Action, target: self, action: "share")
 		let save = UIBarButtonItem(barButtonSystemItem: .Save, target: self, action: "save")
 		navigationItem.rightBarButtonItems = [share, save]
+
+
 	}
 
 	override func viewDidAppear(animated: Bool) {

@@ -33,6 +33,7 @@ class StaticEmojiGen: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
+
 		// Give the following view initial image and change the touchable information
 		imageShow.image = originalImage
 		imageShow.userInteractionEnabled = false

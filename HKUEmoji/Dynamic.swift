@@ -62,6 +62,9 @@ class Dynamic: UIViewController {
 		gifTemplate3.animationDuration = 1
 		gifTemplate3.animationRepeatCount = 0
 		gifTemplate3.startAnimating()
+        
+
+
 
 	}
 
