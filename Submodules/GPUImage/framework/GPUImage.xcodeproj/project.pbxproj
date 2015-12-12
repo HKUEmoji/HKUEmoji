@@ -47,6 +47,13 @@
 		96781B4715C3A6F1005FA0D7 /* GPUImageSoftEleganceFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 96781B4515C3A6F0005FA0D7 /* GPUImageSoftEleganceFilter.m */; };
 		96DD3C1415C2780500DF637E /* GPUImageLookupFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 96DD3C1215C2780500DF637E /* GPUImageLookupFilter.h */; };
 		96DD3C1515C2780500DF637E /* GPUImageLookupFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DD3C1315C2780500DF637E /* GPUImageLookupFilter.m */; };
+		9867D1C81C1AD17E000E8A95 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9867D1C71C1AD17E000E8A95 /* libicucore.tbd */; };
+		9867D1CA1C1AD18C000E8A95 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9867D1C91C1AD18C000E8A95 /* libz.tbd */; };
+		9867D1CC1C1AD1A2000E8A95 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9867D1CB1C1AD1A2000E8A95 /* libstdc++.tbd */; };
+		9867D1CE1C1AD1B0000E8A95 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9867D1CD1C1AD1B0000E8A95 /* JavaScriptCore.framework */; };
+		9867D1D01C1AD1C7000E8A95 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9867D1CF1C1AD1C7000E8A95 /* ImageIO.framework */; };
+		9867D1D21C1AD1D3000E8A95 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9867D1D11C1AD1D3000E8A95 /* AdSupport.framework */; };
+		9867D1D41C1AD1DF000E8A95 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9867D1D31C1AD1DF000E8A95 /* libsqlite3.tbd */; };
 		A4741D5019A91F87005EE1A4 /* GPUImageHistogramEqualizationFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = A4741D4E19A91F87005EE1A4 /* GPUImageHistogramEqualizationFilter.h */; };
 		A4741D5119A91F87005EE1A4 /* GPUImageHistogramEqualizationFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = A4741D4F19A91F87005EE1A4 /* GPUImageHistogramEqualizationFilter.m */; };
 		B80171E616311FCB001C8D16 /* GPUImageHueBlendFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = B80171E416311FCB001C8D16 /* GPUImageHueBlendFilter.h */; };
@@ -727,6 +734,13 @@
 		96781B4515C3A6F0005FA0D7 /* GPUImageSoftEleganceFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPUImageSoftEleganceFilter.m; path = Source/GPUImageSoftEleganceFilter.m; sourceTree = SOURCE_ROOT; };
 		96DD3C1215C2780500DF637E /* GPUImageLookupFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPUImageLookupFilter.h; path = Source/GPUImageLookupFilter.h; sourceTree = SOURCE_ROOT; };
 		96DD3C1315C2780500DF637E /* GPUImageLookupFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPUImageLookupFilter.m; path = Source/GPUImageLookupFilter.m; sourceTree = SOURCE_ROOT; };
+		9867D1C71C1AD17E000E8A95 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		9867D1C91C1AD18C000E8A95 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		9867D1CB1C1AD1A2000E8A95 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		9867D1CD1C1AD1B0000E8A95 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		9867D1CF1C1AD1C7000E8A95 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		9867D1D11C1AD1D3000E8A95 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		9867D1D31C1AD1DF000E8A95 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		A4741D4E19A91F87005EE1A4 /* GPUImageHistogramEqualizationFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPUImageHistogramEqualizationFilter.h; path = Source/GPUImageHistogramEqualizationFilter.h; sourceTree = SOURCE_ROOT; };
 		A4741D4F19A91F87005EE1A4 /* GPUImageHistogramEqualizationFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPUImageHistogramEqualizationFilter.m; path = Source/GPUImageHistogramEqualizationFilter.m; sourceTree = SOURCE_ROOT; };
 		B80171E416311FCB001C8D16 /* GPUImageHueBlendFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPUImageHueBlendFilter.h; path = Source/GPUImageHueBlendFilter.h; sourceTree = SOURCE_ROOT; };
@@ -1056,6 +1070,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9867D1D41C1AD1DF000E8A95 /* libsqlite3.tbd in Frameworks */,
+				9867D1D21C1AD1D3000E8A95 /* AdSupport.framework in Frameworks */,
+				9867D1D01C1AD1C7000E8A95 /* ImageIO.framework in Frameworks */,
+				9867D1CE1C1AD1B0000E8A95 /* JavaScriptCore.framework in Frameworks */,
+				9867D1CC1C1AD1A2000E8A95 /* libstdc++.tbd in Frameworks */,
+				9867D1CA1C1AD18C000E8A95 /* libz.tbd in Frameworks */,
+				9867D1C81C1AD17E000E8A95 /* libicucore.tbd in Frameworks */,
 				BCB5E77914E20BAF00701302 /* CoreMedia.framework in Frameworks */,
 				BCB5E77714E20BA800701302 /* CoreVideo.framework in Frameworks */,
 				BCB5E77514E20B9700701302 /* OpenGLES.framework in Frameworks */,
@@ -1470,6 +1491,13 @@
 		BCF1A33614DDB1EC00852800 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9867D1D31C1AD1DF000E8A95 /* libsqlite3.tbd */,
+				9867D1D11C1AD1D3000E8A95 /* AdSupport.framework */,
+				9867D1CF1C1AD1C7000E8A95 /* ImageIO.framework */,
+				9867D1CD1C1AD1B0000E8A95 /* JavaScriptCore.framework */,
+				9867D1CB1C1AD1A2000E8A95 /* libstdc++.tbd */,
+				9867D1C91C1AD18C000E8A95 /* libz.tbd */,
+				9867D1C71C1AD17E000E8A95 /* libicucore.tbd */,
 				BCB5E77814E20BAF00701302 /* CoreMedia.framework */,
 				BCB5E77614E20BA800701302 /* CoreVideo.framework */,
 				BCB5E77414E20B9700701302 /* OpenGLES.framework */,

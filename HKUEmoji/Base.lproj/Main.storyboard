@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZPY-9R-5Tk">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
@@ -372,7 +373,7 @@
         <!--About-->
         <scene sceneID="cEB-e6-uDU">
             <objects>
-                <viewController title="About" id="QxD-dD-uZ4" sceneMemberID="viewController">
+                <viewController title="About" id="QxD-dD-uZ4" customClass="ShareViewController" customModule="HKUEmoji" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="U3h-U2-TZe"/>
                         <viewControllerLayoutGuide type="bottom" id="e4W-gf-zD6"/>
@@ -380,8 +381,30 @@
                     <view key="view" contentMode="scaleToFill" id="qdI-uS-ooY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ng-tn-5gR">
+                                <rect key="frame" x="111" y="255" width="48" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Twitter"/>
+                                <connections>
+                                    <action selector="twitterButtonPushed:" destination="QxD-dD-uZ4" eventType="touchUpInside" id="Dgv-gi-VM7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cAa-MU-7nQ">
+                                <rect key="frame" x="218" y="255" width="67" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Facebook"/>
+                                <connections>
+                                    <action selector="facebookButtonPushed:" destination="QxD-dD-uZ4" eventType="touchUpInside" id="XmO-IJ-MW7"/>
+                                </connections>
+                            </button>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="eye.png" translatesAutoresizingMaskIntoConstraints="NO" id="9Jh-c7-z2x">
+                                <rect key="frame" x="98" y="399" width="102" height="102"/>
+                                <animations/>
+                            </imageView>
+                        </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="About" id="NfZ-Nz-9CS">
                         <barButtonItem key="backBarButtonItem" title="How to show" id="6to-cF-bDu"/>
@@ -389,8 +412,13 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ont-BP-fKm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="hku.png" id="jy1-hE-MTt">
+                    <rect key="frame" x="0.0" y="0.0" width="652" height="1024"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <animations/>
+                </imageView>
             </objects>
-            <point key="canvasLocation" x="903" y="-28"/>
+            <point key="canvasLocation" x="859.5" y="-83.5"/>
         </scene>
         <!--StaticCamera-->
         <scene sceneID="egf-8b-8mR">
@@ -444,59 +472,121 @@
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="center" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bkH-CB-vwe">
-                                <rect key="frame" x="113" y="316" width="94" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bkH-CB-vwe">
+                                <rect key="frame" x="154" y="502" width="66" height="85"/>
                                 <animations/>
-                                <state key="normal" title="Static Emoji"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="nhj-WN-Mao"/>
+                                    <constraint firstAttribute="width" secondItem="bkH-CB-vwe" secondAttribute="height" multiplier="11:14" id="ob1-OX-Uv9"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="static_logo"/>
                                 <connections>
                                     <segue destination="txh-ek-kSn" kind="show" id="t62-C8-y0f"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vhv-gQ-MnA">
-                                <rect key="frame" x="102" y="247" width="117" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Dynamic Emoji"/>
-                                <connections>
-                                    <segue destination="wf8-8W-TF0" kind="show" id="0ZR-PF-FBR"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdA-Vh-Pjd">
-                                <rect key="frame" x="113" y="384" width="94" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Local Emoji"/>
-                                <connections>
-                                    <segue destination="HZO-Pe-3tg" kind="show" id="Yod-Pc-Mtt"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m2O-Op-8E3">
-                                <rect key="frame" x="137" y="447" width="46" height="30"/>
-                                <animations/>
-                                <state key="normal" title="About"/>
-                                <connections>
-                                    <segue destination="QxD-dD-uZ4" kind="show" id="jr2-oV-h7c"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HKUEmoji" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WzC-h1-hJj">
-                                <rect key="frame" x="103" y="115" width="114" height="46"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WzC-h1-hJj">
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vhv-gQ-MnA">
+                                <rect key="frame" x="46" y="502" width="67" height="85"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="vhv-gQ-MnA" secondAttribute="height" multiplier="11:14" id="0ZG-t1-UPG"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="dynamic_logo"/>
+                                <connections>
+                                    <segue destination="wf8-8W-TF0" kind="show" id="0ZR-PF-FBR"/>
+                                </connections>
+                            </button>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Ewh-kh-9Fw">
+                                <rect key="frame" x="0.0" y="0.0" width="119" height="56"/>
+                                <animations/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HKUEmoji" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E5n-nY-461">
+                                <rect key="frame" x="112" y="149" width="150" height="99"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="E5n-nY-461" secondAttribute="height" multiplier="74:49" id="Bif-IX-4yt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdA-Vh-Pjd">
+                                <rect key="frame" x="263" y="502" width="66" height="85"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="66" id="Bsq-cG-gvk"/>
+                                    <constraint firstAttribute="width" secondItem="hdA-Vh-Pjd" secondAttribute="height" multiplier="11:14" id="EWn-NV-id7"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="local_emoji"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Bsq-cG-gvk"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <segue destination="HZO-Pe-3tg" kind="show" id="Yod-Pc-Mtt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="E5n-nY-461" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.4" id="25E-HL-Ek6"/>
+                            <constraint firstItem="hdA-Vh-Pjd" firstAttribute="bottom" secondItem="bkH-CB-vwe" secondAttribute="bottom" id="6s2-Ey-Zp5"/>
+                            <constraint firstItem="hdA-Vh-Pjd" firstAttribute="bottom" secondItem="vhv-gQ-MnA" secondAttribute="bottom" id="79m-dn-e09"/>
+                            <constraint firstItem="bkH-CB-vwe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="83N-Yb-F8N"/>
+                            <constraint firstItem="hdA-Vh-Pjd" firstAttribute="centerY" secondItem="bkH-CB-vwe" secondAttribute="centerY" id="C39-i5-2t0"/>
+                            <constraint firstItem="vhv-gQ-MnA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="IL9-88-jLf"/>
+                            <constraint firstItem="E5n-nY-461" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KMK-CR-jsZ"/>
+                            <constraint firstItem="hdA-Vh-Pjd" firstAttribute="top" secondItem="vhv-gQ-MnA" secondAttribute="top" id="Ump-uv-C0B"/>
+                            <constraint firstItem="E5n-nY-461" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="85" id="Ybm-oG-ZAO"/>
+                            <constraint firstItem="hdA-Vh-Pjd" firstAttribute="height" secondItem="bkH-CB-vwe" secondAttribute="height" id="eiw-sM-BNl"/>
+                            <constraint firstItem="vhv-gQ-MnA" firstAttribute="height" secondItem="bkH-CB-vwe" secondAttribute="height" id="eme-x6-LJA"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hdA-Vh-Pjd" secondAttribute="bottom" constant="123" id="imG-h5-Iv9"/>
+                            <constraint firstItem="hdA-Vh-Pjd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="396" id="jBs-R5-ncy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hdA-Vh-Pjd" secondAttribute="trailing" constant="31" id="lAb-Nv-lhp"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bkH-CB-vwe" secondAttribute="bottom" constant="80" id="qpa-sD-jsp"/>
+                            <constraint firstItem="hdA-Vh-Pjd" firstAttribute="leading" secondItem="bkH-CB-vwe" secondAttribute="trailing" constant="40" id="slb-eR-zu5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hdA-Vh-Pjd" secondAttribute="trailing" constant="30" id="zRS-Hf-jn6"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="6s2-Ey-Zp5"/>
+                                <exclude reference="79m-dn-e09"/>
+                                <exclude reference="jBs-R5-ncy"/>
+                                <exclude reference="lAb-Nv-lhp"/>
+                                <exclude reference="slb-eR-zu5"/>
+                                <exclude reference="imG-h5-Iv9"/>
+                            </mask>
+                        </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="WlY-ze-Utg"/>
+                    <navigationItem key="navigationItem" id="WlY-ze-Utg">
+                        <barButtonItem key="rightBarButtonItem" image="about_log" style="plain" id="Hxt-7X-fIn">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="m2O-Op-8E3">
+                                <rect key="frame" x="313" y="7" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <state key="normal" image="Setting 3.png"/>
+                                <connections>
+                                    <segue destination="QxD-dD-uZ4" kind="show" id="jr2-oV-h7c"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="721" y="-801"/>
+            <point key="canvasLocation" x="720.5" y="-801.5"/>
         </scene>
         <!--LocalEmoji-->
         <scene sceneID="60R-fY-xWu">
@@ -576,4 +666,14 @@
             <point key="canvasLocation" x="-152" y="-696"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Setting 3.png" width="16" height="10"/>
+        <image name="about_log" width="5" height="3"/>
+        <image name="dynamic_logo" width="27" height="36"/>
+        <image name="eye.png" width="102" height="102"/>
+        <image name="hku.png" width="50" height="56"/>
+        <image name="local_emoji" width="26" height="36"/>
+        <image name="logo" width="39" height="18"/>
+        <image name="static_logo" width="26" height="36"/>
+    </resources>
 </document>
