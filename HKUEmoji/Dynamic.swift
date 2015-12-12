@@ -20,7 +20,7 @@ class Dynamic: UIViewController {
 	@IBOutlet weak var gifTemplate3: UIImageView!
 
     var faceBound = CGRect(x: 196, y: 135, width: 230, height: 230)
-    var faceImage = UIImage(named: "test1.png")
+    var faceImage: UIImage!
 
 	override func viewDidLoad() {
 		super.viewDidLoad()

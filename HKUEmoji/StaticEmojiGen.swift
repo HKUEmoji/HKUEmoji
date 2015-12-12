@@ -19,10 +19,12 @@ class StaticEmojiGen: UIViewController {
 	@IBOutlet weak var mouth: UIImageView!
 
 	var faceBound: CGRect!
+    
+    var originalImage: UIImage!
 
-	lazy var originalImage: UIImage = {
-		return UIImage(named: "test.png")
-	}()!
+//	lazy var originalImage: UIImage = {
+//		return UIImage(named: "test.png")
+//	}()!
 
 	lazy var context: CIContext = {
 		return CIContext(options: nil)
@@ -186,7 +188,11 @@ class StaticEmojiGen: UIViewController {
 //			originalImage = UIGraphicsGetImageFromCurrentImageContext()
 //			UIGraphicsEndImageContext()
 
-			svc.faceImage = keepImageNeededPart(originImage: originalImage, keepPart: adjustFaceBound(faceBound))
+            if let bound = faceBound {
+                svc.faceImage = keepImageNeededPart(originImage: originalImage, keepPart: adjustFaceBound(bound))
+            } else {
+                svc.faceImage = originalImage
+            }
 		}
 	}
 
