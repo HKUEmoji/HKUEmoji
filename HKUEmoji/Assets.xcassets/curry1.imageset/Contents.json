@@ -3,16 +3,16 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "mouth.png"
+      "filename" : "curry1.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "mouth@2x.png"
+      "filename" : "curry1@2x.png"
     },
     {
       "idiom" : "universal",
-      "filename" : "mouth@3x.png",
+      "filename" : "curry1@3x.png",
       "scale" : "3x"
     }
   ],
