@@ -377,10 +377,8 @@
                     <navigationItem key="navigationItem" title="Camera" id="7hr-ck-kd5" colorLabel="IBBuiltInLabel-Red"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="myAlbum" destination="ajZ-bV-Qwj" id="lVm-GA-GYY"/>
-                        <outlet property="pickFace" destination="bmp-Th-Di7" id="9lE-xk-9v4"/>
+                        <outlet property="pickFace" destination="bmp-Th-Di7" id="cXx-Zy-gOD"/>
                         <outlet property="pickView" destination="0Gf-QO-6Fm" id="oNR-fD-Bua"/>
-                        <outlet property="takePhoto" destination="UAd-8g-nSI" id="qb1-AP-tGJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YVd-Eh-QpE" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -49,9 +49,7 @@ class cameraTool : UIViewController, UIImagePickerControllerDelegate, UINavigati
 
 	@IBOutlet weak var pickView: UIImageView!
 
-	@IBOutlet weak var myAlbum: UIButton!
 	@IBOutlet weak var pickFace: UIButton!
-	@IBOutlet weak var takePhoto: UIButton!
 	var overlayView: UIImageView!
 	var choosedPicture: UIImage!
 	var resizeImage : UIImage!
@@ -67,12 +65,6 @@ class cameraTool : UIViewController, UIImagePickerControllerDelegate, UINavigati
 		super.viewDidLoad()
 
 		// Do any additional setup after loading the view, typically from a nib.
-		/*choosedPicture = UIImage(named: "pickFace.jpg")
-		 resizeImage = resizeImageFromFrame(choosedPicture)
-		 pickView.frame = CGRect(x: 0, y: 0, width: resizeImage.size.width, height: resizeImage.size.height)
-		 pickView.image = resizeImage*/
-
-		//pickView.image = choosedPicture
 		pickView.userInteractionEnabled = false
 		overlayView = UIImageView(image: UIImage(named: "overlay"))
 
@@ -81,10 +73,12 @@ class cameraTool : UIViewController, UIImagePickerControllerDelegate, UINavigati
 		self.view.addGestureRecognizer(pinchGesture)
 		pickFace.hidden = true
 	}
-
-	override func viewDidLayoutSubviews() {
-		super.viewDidLayoutSubviews()
-	}
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        
+    }
 
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
@@ -137,10 +131,6 @@ class cameraTool : UIViewController, UIImagePickerControllerDelegate, UINavigati
 		pickView.frame = CGRect(x: pickView.frame.origin.x, y: pickView.frame.origin.y, width: resizeImage.size.width, height: resizeImage.size.height)
 		pickView.image = resizeImage
 		pickFace.hidden = false
-		myAlbum.hidden = true
-		takePhoto.hidden = true
-
-
 	}
 
 	@IBAction func captureFace(sender: UIButton) {
@@ -152,7 +142,6 @@ class cameraTool : UIViewController, UIImagePickerControllerDelegate, UINavigati
 		let imageRef = CGImageCreateWithImageInRect(cgRef, CGRectMake(offsetX, offsetY, overlayView.frame.size.width, overlayView.frame.size.height))
 		faceImage = UIImage(CGImage: imageRef!)
 		faceImage = Toucan(image: faceImage).maskWithImage(maskImage: UIImage(named: "cut.png")!).image
-		pickView.image = faceImage
 
 		if let fromPageInfo = fromPage {
 			let rootViewController = self.navigationController!
