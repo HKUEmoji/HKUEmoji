@@ -74,6 +74,7 @@ class cameraTool : UIViewController, UIImagePickerControllerDelegate, UINavigati
 		//gesture
 		let pinchGesture = UIPinchGestureRecognizer(target: self, action: "handlePinchGesture:")
 		self.view.addGestureRecognizer(pinchGesture)
+
 	}
 
 	override func viewDidLayoutSubviews() {

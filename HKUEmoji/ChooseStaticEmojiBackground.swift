@@ -52,6 +52,8 @@ class ChooseStaticEmojiBackground: UIViewController, UICollectionViewDataSource,
         backgroundChoice = .cartoonEmoji
         self.navigationController!.setNavigationBarHidden(false, animated:true)
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Confirm", style: .Done, target: self, action: "prepareForPopSugue")
+
+
     }
     
     override func didReceiveMemoryWarning() {

@@ -18,6 +18,8 @@ class ShareViewController: UIViewController {
         //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Wallpaper01.png")!)
 
         // Do any additional setup after loading the view.
+
+
     }
     
     override func didReceiveMemoryWarning() {

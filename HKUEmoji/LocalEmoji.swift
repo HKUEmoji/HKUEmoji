@@ -21,6 +21,7 @@ class localEmojiCtrl : UIViewController,UICollectionViewDelegate,UICollectionVie
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         //imageCollection.backgroundColor = UIColor.whiteColor()
+
     }
     
     override func didReceiveMemoryWarning() {
