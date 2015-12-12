@@ -153,6 +153,10 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ont-BP-fKm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="hku.png" id="jy1-hE-MTt">
+                    <rect key="frame" x="0.0" y="0.0" width="652" height="1024"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
             </objects>
             <point key="canvasLocation" x="859.5" y="-83.5"/>
         </scene>
@@ -209,7 +213,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bkH-CB-vwe">
-                                <rect key="frame" x="130" y="280" width="98" height="108"/>
+                                <rect key="frame" x="204" y="230" width="98" height="108"/>
                                 <state key="normal" backgroundImage="Numbers.png"/>
                                 <connections>
                                     <segue destination="txh-ek-kSn" kind="show" id="t62-C8-y0f"/>
@@ -221,18 +225,21 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdA-Vh-Pjd">
-                                <rect key="frame" x="130" y="436" width="98" height="109"/>
-                                <state key="normal" backgroundImage="Tips.png"/>
-                                <connections>
-                                    <segue destination="HZO-Pe-3tg" kind="show" id="Yod-Pc-Mtt"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vhv-gQ-MnA">
-                                <rect key="frame" x="130" y="126" width="98" height="111"/>
+                                <rect key="frame" x="60" y="230" width="98" height="111"/>
                                 <state key="normal" backgroundImage="iMovies.png"/>
                                 <connections>
                                     <segue destination="wf8-8W-TF0" kind="show" id="0ZR-PF-FBR"/>
+                                </connections>
+                            </button>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="Cell + hku.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ewh-kh-9Fw">
+                                <rect key="frame" x="17" y="78" width="119" height="56"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdA-Vh-Pjd">
+                                <rect key="frame" x="60" y="384" width="98" height="109"/>
+                                <state key="normal" backgroundImage="Tips.png"/>
+                                <connections>
+                                    <segue destination="HZO-Pe-3tg" kind="show" id="Yod-Pc-Mtt"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -296,10 +303,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Cell + hku.png" width="119" height="56"/>
         <image name="Numbers.png" width="80" height="108"/>
         <image name="Setting 3.png" width="16" height="10"/>
         <image name="Tips.png" width="79" height="109"/>
         <image name="eye.png" width="102" height="102"/>
+        <image name="hku.png" width="50" height="56"/>
         <image name="iMovies.png" width="81" height="109"/>
     </resources>
 </document>
