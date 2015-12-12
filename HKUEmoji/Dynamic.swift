@@ -34,8 +34,8 @@ class Dynamic: UIViewController{
         
         
         gifTemplate1.animationImages = NSArray() as! [UIImage];
-        gifTemplate1.animationImages?.append(UIImage(named: "dynamic1.jpg")!);
-        gifTemplate1.animationImages?.append(UIImage(named: "dynamic2.jpg")!);
+        gifTemplate1.animationImages?.append(UIImage(named: "hou2.png")!);
+        gifTemplate1.animationImages?.append(UIImage(named: "hou5.png")!);
  
         gifTemplate1.animationDuration = 1
         gifTemplate1.animationRepeatCount = 0
@@ -47,8 +47,8 @@ class Dynamic: UIViewController{
         
         
         gifTemplate2.animationImages = NSArray() as! [UIImage];
-        gifTemplate2.animationImages?.append(UIImage(named: "dynamic1.jpg")!);
-        gifTemplate2.animationImages?.append(UIImage(named: "eye.png")!);
+        gifTemplate2.animationImages?.append(UIImage(named: "hou1.png")!);
+        gifTemplate2.animationImages?.append(UIImage(named: "hou3.png")!);
         
         gifTemplate2.animationDuration = 1
         gifTemplate2.animationRepeatCount = 0
@@ -59,8 +59,8 @@ class Dynamic: UIViewController{
         
         
         gifTemplate3.animationImages = NSArray() as! [UIImage];
-        gifTemplate3.animationImages?.append(UIImage(named: "dynamic1.jpg")!);
-        gifTemplate3.animationImages?.append(UIImage(named: "mouth.png")!);
+        gifTemplate3.animationImages?.append(UIImage(named: "hou4.png")!);
+        gifTemplate3.animationImages?.append(UIImage(named: "hou6.png")!);
         
         gifTemplate3.animationDuration = 1
         gifTemplate3.animationRepeatCount = 0
@@ -112,8 +112,8 @@ class Dynamic: UIViewController{
     
     func tapHandler2(sender:UITapGestureRecognizer){
         gifImage.animationImages = NSArray() as! [UIImage];
-        gifImage.animationImages?.append(UIImage(named: "dynamic1.jpg")!);
-        gifImage.animationImages?.append(UIImage(named: "eye.png")!);
+        gifImage.animationImages?.append(UIImage(named: "hou1.png")!);
+        gifImage.animationImages?.append(UIImage(named: "hou2.png")!);
         
         
         
@@ -123,8 +123,10 @@ class Dynamic: UIViewController{
         
     }
     
-    func tapHandler3(sender:UITapGestureRecognizer){
+  /*  func tapHandler3(sender:UITapGestureRecognizer){
         gifImage.animationImages = NSArray() as! [UIImage];
+        
+        addFaceToBackGround(5, backgroundImage: <#T##UIImage#>, faceImage: <#T##UIImage#>)
         gifImage.animationImages?.append(UIImage(named: "dynamic1.jpg")!);
         gifImage.animationImages?.append(UIImage(named: "mouth.png")!);
         
@@ -173,7 +175,7 @@ class Dynamic: UIViewController{
         return bounds
     }
 
-    
+    */
 }
 
 
