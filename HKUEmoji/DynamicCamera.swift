@@ -54,6 +54,7 @@ class cameraTool :  UIViewController, UIImagePickerControllerDelegate, UINavigat
     var overlayView: UIImageView!
     var choosedPicture: UIImage!
     var resizeImage : UIImage!
+    var faceImage : UIImage!
     var lastScaleFactor : CGFloat! = 1  //放大、缩小
 //    @IBOutlet weak var overlayView: UIImageView!
     
@@ -65,9 +66,6 @@ class cameraTool :  UIViewController, UIImagePickerControllerDelegate, UINavigat
         
         // Do any additional setup after loading the view, typically from a nib.
         choosedPicture = UIImage(named: "pickFace.jpg")
-        //let ratioX = ((pickView.frame.size.width)/(choosedPicture.size.width))
-        //let ratioY = ((pickView.frame.size.height)/(choosedPicture.size.height))
-        //let ratio = min(ratioX, ratioY)
         resizeImage = resizeImageFromFrame(choosedPicture)
         pickView.frame = CGRect(x: 0, y: 0, width: resizeImage.size.width, height: resizeImage.size.height)
         pickView.image = resizeImage
@@ -160,7 +158,7 @@ class cameraTool :  UIViewController, UIImagePickerControllerDelegate, UINavigat
         
         let cgRef = resizeImage.CGImage;
         let imageRef = CGImageCreateWithImageInRect(cgRef, CGRectMake(offsetX,offsetY, overlayView.frame.size.width, overlayView.frame.size.height))
-        var faceImage = UIImage(CGImage: imageRef!)
+        faceImage = UIImage(CGImage: imageRef!)
         faceImage=Toucan(image: faceImage).maskWithImage(maskImage: UIImage(named: "cut.png")!).image
         pickView.image = faceImage
         
@@ -221,9 +219,29 @@ class cameraTool :  UIViewController, UIImagePickerControllerDelegate, UINavigat
         }
     }
         
-            
     
-     
+   
+    
+    @IBAction func save(sender: UIButton) {
+        if let currentImage = faceImage {
+            UIImageWriteToSavedPhotosAlbum(currentImage, self, "image:didFinishSavingWithError:contextInfo:", nil)
+        }
+
+    }
+    
+    func image(image: UIImage, didFinishSavingWithError error: NSError?, contextInfo: UnsafePointer<Void>) {
+    if error == nil {
+    let ac = UIAlertController(title: "Saved!", message: "Your altered image has been saved to your photos.", preferredStyle: .Alert)
+    ac.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+    presentViewController(ac, animated: true, completion: nil)
+    } else {
+    let ac = UIAlertController(title: "Save error", message: error?.localizedDescription, preferredStyle: .Alert)
+    ac.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+    presentViewController(ac, animated: true, completion: nil)
+    }
+    }
+    
+    
     
     
     
