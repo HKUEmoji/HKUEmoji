@@ -7,20 +7,41 @@
 //
 
 import UIKit
+import Photos
+import AssetsLibrary
 
 class localEmojiCtrl : UIViewController,UICollectionViewDelegate,UICollectionViewDataSource
 {
-    let images = [
-        ["pic":"cut"],
-        ["pic":"eye"],
-        ["pic":"mouth"]
-    ]
+    var images = [
+        UIImage(named: "cut"),
+        UIImage(named: "eye"),
+        UIImage(named: "mouth")
+        ]
     
-    @IBOutlet var imageCollection: UICollectionView!
+    
+    
+    let imageGroup :PHAssetCollection = CustomPhotoAlbum.sharedInstance.assetCollection
+    @IBOutlet var collectionView: UICollectionView!
+    
+    //var assetsLibrary : PHPhotoLibrary = PHPhotoLibrary()
+   // var assetsLibrary =  ALAssetsLibrary()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        //imageCollection.backgroundColor = UIColor.whiteColor()
+        collectionView.backgroundColor = UIColor.whiteColor()
+        let album = CustomPhotoAlbum.sharedInstance.assetCollection
+        let fetchOption = PHFetchOptions()
+        let collection = PHAsset.fetchAssetsInAssetCollection(album,options:fetchOption)
+        let imageManager = PHCachingImageManager()
+        for(var i=0;i<collection.count;i++){
+            let imageC = collection[i]
+            var imageOption = PHImageRequestOptions()
+            imageManager.requestImageForAsset(imageC as! PHAsset, targetSize: PHImageManagerMaximumSize, contentMode:  PHImageContentMode.AspectFit, options: imageOption, resultHandler: { (result, info) -> Void in
+                self.images.append(result!)
+            self.collectionView.reloadData()
+            })
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -28,8 +49,10 @@ class localEmojiCtrl : UIViewController,UICollectionViewDelegate,UICollectionVie
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        collectionView.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height)
+
     }
     
     
@@ -42,7 +65,7 @@ class localEmojiCtrl : UIViewController,UICollectionViewDelegate,UICollectionVie
     
 func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("defaultCell", forIndexPath: indexPath) as! localImageCell
-        cell.imageView.image=UIImage(named: images[indexPath.item]["pic"]!)
+        cell.imageView.image=images[indexPath.item]!
         cell.imageView.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 03).CGColor
         cell.imageView.layer.borderWidth = 2
         cell.imageView.layer.cornerRadius = 3

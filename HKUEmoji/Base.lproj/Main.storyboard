@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZPY-9R-5Tk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZPY-9R-5Tk">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -319,21 +319,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UAd-8g-nSI">
-                                <rect key="frame" x="20" y="512" width="51" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Gf-QO-6Fm">
+                                <rect key="frame" x="0.0" y="89" width="375" height="362"/>
                                 <animations/>
-                                <state key="normal" title="camera"/>
-                                <connections>
-                                    <action selector="takePhone:" destination="wf8-8W-TF0" eventType="touchUpInside" id="Oml-bA-YQV"/>
-                                </connections>
-                            </button>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
+                                </accessibility>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ajZ-bV-Qwj">
-                                <rect key="frame" x="162" y="512" width="51" height="30"/>
+                                <rect key="frame" x="277" y="512" width="69" height="30"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="51" id="3rf-F2-e1s"/>
                                 </constraints>
-                                <state key="normal" title="library"/>
+                                <state key="normal" title="My Album"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="3rf-F2-e1s"/>
@@ -343,29 +342,22 @@
                                     <action selector="searchFromLib:" destination="wf8-8W-TF0" eventType="touchUpInside" id="jy4-q0-fhe"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sry-FP-baw">
-                                <rect key="frame" x="32" y="571" width="32" height="30"/>
-                                <animations/>
-                                <state key="normal" title="save"/>
-                                <connections>
-                                    <action selector="save:" destination="wf8-8W-TF0" eventType="touchUpInside" id="x1Y-3o-0si"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bmp-Th-Di7">
-                                <rect key="frame" x="302" y="512" width="53" height="30"/>
+                                <rect key="frame" x="163" y="512" width="66" height="30"/>
                                 <animations/>
-                                <state key="normal" title="capture"/>
+                                <state key="normal" title="Pick Face"/>
                                 <connections>
                                     <action selector="captureFace:" destination="wf8-8W-TF0" eventType="touchUpInside" id="IPy-oI-q1x"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Gf-QO-6Fm">
-                                <rect key="frame" x="0.0" y="108" width="375" height="362"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UAd-8g-nSI">
+                                <rect key="frame" x="23" y="512" width="89" height="30"/>
                                 <animations/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
-                                </accessibility>
-                            </imageView>
+                                <state key="normal" title="Take a Photo"/>
+                                <connections>
+                                    <action selector="takePhone:" destination="wf8-8W-TF0" eventType="touchUpInside" id="Oml-bA-YQV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -385,7 +377,10 @@
                     <navigationItem key="navigationItem" title="Camera" id="7hr-ck-kd5" colorLabel="IBBuiltInLabel-Red"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="myAlbum" destination="ajZ-bV-Qwj" id="lVm-GA-GYY"/>
+                        <outlet property="pickFace" destination="bmp-Th-Di7" id="9lE-xk-9v4"/>
                         <outlet property="pickView" destination="0Gf-QO-6Fm" id="oNR-fD-Bua"/>
+                        <outlet property="takePhoto" destination="UAd-8g-nSI" id="qb1-AP-tGJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YVd-Eh-QpE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -553,7 +548,7 @@
                                 <rect key="frame" x="313" y="7" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
-                                <state key="normal" image="Setting 3.png"/>
+                                <state key="normal" title="About"/>
                                 <connections>
                                     <segue destination="QxD-dD-uZ4" kind="show" id="jr2-oV-h7c"/>
                                 </connections>
@@ -578,32 +573,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9An-J7-uhY">
-                                <rect key="frame" x="35" y="167" width="240" height="128"/>
-                                <animations/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9An-J7-uhY">
+                                <rect key="frame" x="20" y="77" width="335" height="570"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="7oK-5L-gc6">
-                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="itemSize" width="70" height="70"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="defaultCell" id="qED-dF-lfQ" customClass="localImageCell" customModule="HKUEmoji">
-                                        <rect key="frame" x="0.0" y="64" width="50" height="50"/>
+                                        <rect key="frame" x="0.0" y="64" width="70" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KjZ-Ii-Zbc">
-                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                                    <animations/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KjZ-Ii-Zbc">
+                                                    <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
                                                 </imageView>
                                             </subviews>
-                                            <animations/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="KjZ-Ii-Zbc" secondAttribute="trailing" id="IrN-C0-yRD"/>
+                                            <constraint firstItem="KjZ-Ii-Zbc" firstAttribute="leading" secondItem="qED-dF-lfQ" secondAttribute="leading" id="Wgz-v8-OeX"/>
+                                            <constraint firstAttribute="bottom" secondItem="KjZ-Ii-Zbc" secondAttribute="bottom" id="kRv-y2-8Za"/>
+                                            <constraint firstItem="KjZ-Ii-Zbc" firstAttribute="top" secondItem="qED-dF-lfQ" secondAttribute="top" id="oy2-Zh-HSl"/>
+                                        </constraints>
                                         <connections>
                                             <outlet property="imageView" destination="KjZ-Ii-Zbc" id="cja-lN-ELv"/>
                                         </connections>
@@ -617,16 +614,22 @@
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9An-J7-uhY" firstAttribute="top" secondItem="HtQ-G5-wMG" secondAttribute="bottom" constant="13" id="Exv-5w-GwI"/>
+                            <constraint firstAttribute="bottom" secondItem="9An-J7-uhY" secondAttribute="bottom" constant="20" symbolic="YES" id="Zyb-Vh-Y9o"/>
+                            <constraint firstItem="9An-J7-uhY" firstAttribute="centerX" secondItem="6Vi-PO-tkE" secondAttribute="centerX" id="gnL-M8-MMX"/>
+                            <constraint firstItem="9An-J7-uhY" firstAttribute="leading" secondItem="6Vi-PO-tkE" secondAttribute="leadingMargin" constant="4" id="sbA-r7-4Ld"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Local Emoji" id="2h4-Cc-rYT"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outletCollection property="imageCollection" destination="9An-J7-uhY" collectionClass="NSMutableArray" id="NQm-gO-WMv"/>
+                        <outlet property="collectionView" destination="9An-J7-uhY" id="HqQ-xA-ojD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qPk-7g-qcZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1308.5" y="-801.5"/>
+            <point key="canvasLocation" x="1352.5" y="-812.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4x2-jG-Qd2">
