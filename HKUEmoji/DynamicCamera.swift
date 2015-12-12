@@ -215,48 +215,15 @@ class cameraTool :  UIViewController, UIImagePickerControllerDelegate, UINavigat
         }
     }
     
-    
- /*   //完成拍照
-    -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
-    {
-    [picker dismissViewControllerAnimated:YES completion:^{}];
-    UIImage *image = [info objectForKey:UIImagePickerControllerEditedImage];
-    if (image == nil)
-    image = [info objectForKey:UIImagePickerControllerOriginalImage];
-    
-    [self performSelector:@selector(saveImage:) withObject:image];
-    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showGenerater" {
+            let svc = segue.destinationViewController as! StaticEmojiGenII
+        }
     }
-    //用户取消拍照
-    -(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
-    {
-    [picker dismissViewControllerAnimated:YES completion:nil];
-    }
+        
+            
     
-    //将照片保存到disk上
-    -(void)saveImage:(UIImage *)image
-    {
-    
-    NSData *imageData = UIImagePNGRepresentation(image);
-    if(imageData == nil)
-    {
-    imageData = UIImageJPEGRepresentation(image, 1.0);
-    }
-    
-    NSDate *date = [NSDate date];
-    
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"yyyyMMddHHmmss"];
-    _fileName = [[[formatter stringFromDate:date] stringByAppendingPathExtension:@"png"] retain];
-    
-    
-    NSURL *saveURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:_fileName];
-    
-    [imageData writeToURL:saveURL atomically:YES];
-    
-    
-    }*/
-    
+     
     
     
     
