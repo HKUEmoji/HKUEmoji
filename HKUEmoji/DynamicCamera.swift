@@ -10,7 +10,6 @@ import UIKit
 import MobileCoreServices
 import Toucan
 
-
 extension UIImage {
     
     func fixOrientation(orientation:UIImageOrientation) -> UIImage {
@@ -44,8 +43,6 @@ extension UIImage {
         return UIImage(CGImage: cgimg!)
     }
 }
-
-
 
 class cameraTool :  UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -150,8 +147,6 @@ class cameraTool :  UIViewController, UIImagePickerControllerDelegate, UINavigat
         
         
     }
-    
-    
     
     @IBAction func captureFace(sender: UIButton) {
         let offsetX = overlayView.frame.origin.x - pickView.frame.origin.x
