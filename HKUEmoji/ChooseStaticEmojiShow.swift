@@ -17,6 +17,5 @@ class ChooseStaticEmojiShow: UICollectionViewCell {
         // Drawing code
     }
     */
-    @IBOutlet weak var image: UIImageView!
-
+    @IBOutlet weak var imageView: UIImageView!
 }

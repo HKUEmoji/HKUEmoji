@@ -17,7 +17,7 @@ class StaticEmojiGenII: UIViewController {
 	var mouthBound: CGRect?
 	var faceImage: UIImage?
 
-	var currentImage: (String, Int)!
+    var currentImage: String = "" 
 	var trueEmojiNames = ["CP3 2": 0,
 		"CP3": 0,
 		"curry1": 1,]
@@ -33,11 +33,16 @@ class StaticEmojiGenII: UIViewController {
 	var backgroundImage: UIImage!
 
 	@IBOutlet weak var imageView: UIImageView!
+    
 	@IBAction func chooseBackground(sender: AnyObject) {
 		//		displayBackGround()
 		//        let chooseBackgroundView = UICollectionViewController()
 
 	}
+    
+    @IBAction func addText(sender: AnyObject) {
+    }
+    
 	@IBAction func changeThreshold(sender: AnyObject) {
 		//        let lowpassFilter = GPUImageLowPassFilter()
 		//        lowpassFilter.filterStrength = 0.7
@@ -80,12 +85,19 @@ class StaticEmojiGenII: UIViewController {
 		super.viewDidLoad()
 
 		// Do any additional setup after loading the view.
-		currentImage = trueEmojiNames.first!
+		if currentImage == ""{
+            currentImage = self.cartoonEmojiNames.first!.0
+        }
 		//        changeBackground(UIAlertAction(title: currentImage.0, style: .Default, handler: nil))
-		changeBackground(UIAlertAction(title: "erkangface", style: .Default, handler: nil))
 
 		navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Action, target: self, action: "saveOrShare")
 	}
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        self.changeBackground(UIAlertAction(title: self.currentImage, style: .Default, handler: nil))
+    }
 
 	override func viewDidLayoutSubviews() {
 		super.viewDidLayoutSubviews()
@@ -95,6 +107,14 @@ class StaticEmojiGenII: UIViewController {
 		super.didReceiveMemoryWarning()
 		// Dispose of any resources that can be recreated.
 	}
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "choose background" {
+            let svc = segue.destinationViewController as! ChooseStaticEmojiBackground
+            svc.cartoonEmojiBackground = Array(self.cartoonEmojiNames.keys)
+            svc.trueEmojiBackground = Array(self.trueEmojiNames.keys)
+        }
+    }
 
 	/**
 	 add face image to the background
@@ -138,7 +158,7 @@ class StaticEmojiGenII: UIViewController {
 		}
 
 		var transform = CGAffineTransformMakeScale(1 / originPic.scale, 1 / originPic.scale)
-		var bounds = CGRectApplyAffineTransform(faceFeatures[self.currentImage.1].bounds, transform)
+		var bounds = CGRectApplyAffineTransform(faceFeatures[self.trueEmojiNames[currentImage]!].bounds, transform)
 
 		transform = CGAffineTransformMakeScale(1, -1)
 		transform = CGAffineTransformTranslate(transform, 0, -originPic.size.height)
@@ -202,8 +222,8 @@ class StaticEmojiGenII: UIViewController {
 
 	func changeBackground(action: UIAlertAction) {
 		if self.trueEmojiNames.keys.contains(action.title!) {
-			currentImage = (action.title!, self.trueEmojiNames[action.title!]!)
-			backgroundImage = UIImage(named: self.currentImage.0)
+			currentImage = action.title!
+			backgroundImage = UIImage(named: self.currentImage)
 			let backgroundbond = faceBoundDetection(backgroundImage!)
 			backgroundImage = addFaceToBackGround(backgroundbond, backgroundImage: backgroundImage, faceImage: faceImage!)
 			imageView.image = backgroundImage
