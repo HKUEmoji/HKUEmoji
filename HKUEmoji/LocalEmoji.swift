@@ -20,9 +20,6 @@ class localEmojiCtrl : UIViewController,UICollectionViewDelegate,UICollectionVie
     
     let imageGroup :PHAssetCollection = CustomPhotoAlbum.sharedInstance.assetCollection
     @IBOutlet var collectionView: UICollectionView!
-    
-    //var assetsLibrary : PHPhotoLibrary = PHPhotoLibrary()
-   // var assetsLibrary =  ALAssetsLibrary()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -82,21 +79,5 @@ func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath ind
             type : SSDKContentType.Auto)
         
         ShareSDK.showShareActionSheet(self.view, items: nil, shareParams: shareParames, onShareStateChanged: nil)
-    
-       /* if let tabItem = BackgroundChoice.init(rawValue: backgroundChoice.rawValue){
-        switch tabItem{
-    case .trueEmoji:
-        selectedItem = self.trueEmojiBackground[indexPath.item]
-    default:
-        selectedItem = self.cartoonEmojiBackground[indexPath.item]
-        }
-        }
-        let vcs = self.navigationController!.viewControllers
-        let stgii = vcs[vcs.count - 2] as! StaticEmojiGenII
-        stgii.currentImage = selectedItem!
-        self.navigationController!.popViewControllerAnimated(true)*/
     }
-    
-
-
 }

@@ -60,5 +60,4 @@ class CustomPhotoAlbum{
                 print(success)
         })
     }
-
 }

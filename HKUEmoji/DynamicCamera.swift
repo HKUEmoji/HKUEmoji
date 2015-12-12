@@ -101,17 +101,7 @@ class cameraTool : UIViewController, UIImagePickerControllerDelegate, UINavigati
 			imagePicker.mediaTypes = [kUTTypeImage as NSString as String]
 			imagePicker.allowsEditing = false
 
-			imagePicker.showsCameraControls = true//默认是打开的这样才有拍照键，前后摄像头切换的控制，一半设置为NO的时候用于自定义ovelay
-
-			//自定义overlay
-			//var overLayViews = NSBundle.mainBundle().loadNibNamed("cameraOverlayView", owner: nil, options: nil)
-			//var overlayView = overLayViews.last as! UIView
-
-			//let overLayView: UIView = UIView(frame: CGRectMake(0, 100, imagePicker.cameraOverlayView!.bounds.size.width, 200) )
-			//let overLayImg : UIImageView = UIImageView(image: UIImage(named: "superdad.png"))
-			//overLayImg.frame = overLayView.frame
-			//overLayView.addSubview(overLayImg)
-			//imagePicker.cameraOverlayView = overLayView
+			imagePicker.showsCameraControls = true
 
 			self.presentViewController(imagePicker, animated: true, completion: nil)
 		}
@@ -126,9 +116,7 @@ class cameraTool : UIViewController, UIImagePickerControllerDelegate, UINavigati
 			imagePicker.mediaTypes = [kUTTypeImage as NSString as String]
 			imagePicker.allowsEditing = false
 			self.presentViewController(imagePicker, animated: true, completion: nil)
-
 		}
-
 	}
 
 	func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
@@ -218,10 +206,6 @@ class cameraTool : UIViewController, UIImagePickerControllerDelegate, UINavigati
 		}
 	}
 
-	@IBAction func save(sender: UIButton) {
-		CustomPhotoAlbum.sharedInstance.saveImage(faceImage)
-	}
-
 	override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
 		super.touchesMoved(touches, withEvent: event)
 		let touch = touches.first!
@@ -231,54 +215,6 @@ class cameraTool : UIViewController, UIImagePickerControllerDelegate, UINavigati
 				let newLocation = CGPoint(x: location.x, y: location.y)
 				node.center = newLocation
 			}
-		}
-	}
-
-	//    func resizeImageFromFrame(originalImage: UIImage) -> (UIImage) {
-	//		let image = CIImage(image: originalImage)
-	//		let ratioW = Double((self.view.frame.size.width) / (originalImage.size.width))
-	//		let ratioH = Double((self.view.frame.size.height) / (originalImage.size.height))
-	//		let ratio = min(ratioH, ratioW)
-	//		let filter = CIFilter(name: "CILanczosScaleTransform")!
-	//		filter.setValue(image, forKey: kCIInputImageKey)
-	//		filter.setValue(ratio, forKey: kCIInputScaleKey)
-	//		filter.setValue(1.0, forKey: kCIInputAspectRatioKey)
-	//		let outputImage = filter.valueForKey(kCIOutputImageKey) as! CIImage
-	//
-	//		let context = CIContext(options: [kCIContextUseSoftwareRenderer: false])
-	//		let scaledImage = UIImage(CGImage: context.createCGImage(outputImage, fromRect: outputImage.extent))
-	//		return scaledImage
-	//	}
-
-	//捏的手势，使图片放大和缩小，捏的动作是一个连续的动作
-	//	func handlePinchGesture(sender: UIPinchGestureRecognizer) {
-	//		let factor = sender.scale
-	//		if factor > 1 {
-	//			//图片放大
-	//			overlayView.transform = CGAffineTransformMakeScale(lastScaleFactor + factor - 1, lastScaleFactor + factor - 1)
-	//		} else {
-	//			//缩小
-	//			overlayView.transform = CGAffineTransformMakeScale(lastScaleFactor * factor, lastScaleFactor * factor)
-	//		}
-	//		//状态是否结束，如果结束保存数据
-	//		if sender.state == UIGestureRecognizerState.Ended {
-	//			if factor > 1 {
-	//				lastScaleFactor = lastScaleFactor + factor - 1
-	//			} else {
-	//				lastScaleFactor = lastScaleFactor * factor
-	//			}
-	//		}
-	//	}
-
-	func image(image: UIImage, didFinishSavingWithError error: NSError?, contextInfo: UnsafePointer<Void>) {
-		if error == nil {
-			let ac = UIAlertController(title: "Saved!", message: "Your altered image has been saved to your photos.", preferredStyle: .Alert)
-			ac.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
-			presentViewController(ac, animated: true, completion: nil)
-		} else {
-			let ac = UIAlertController(title: "Save error", message: error?.localizedDescription, preferredStyle: .Alert)
-			ac.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
-			presentViewController(ac, animated: true, completion: nil)
 		}
 	}
 }

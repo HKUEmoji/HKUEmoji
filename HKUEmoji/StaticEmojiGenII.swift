@@ -45,12 +45,6 @@ class StaticEmojiGenII: UIViewController {
 
 	@IBOutlet weak var imageView: UIImageView!
 
-	@IBAction func chooseBackground(sender: AnyObject) {
-		//		displayBackGround()
-		//        let chooseBackgroundView = UICollectionViewController()
-
-	}
-
 	@IBAction func addText(sender: AnyObject) {
 
 		//1. Create the alert controller.

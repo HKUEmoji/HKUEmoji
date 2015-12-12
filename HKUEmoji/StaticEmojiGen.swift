@@ -181,12 +181,6 @@ class StaticEmojiGen: UIViewController {
 			if let bound1 = mouth?.frame {
 				svc.mouthBound = CGRect(origin: CGPoint(x: bound1.origin.x - offsetX, y: bound1.origin.y - offsetY), size: bound1.size)
 			}
-//			UIGraphicsBeginImageContextWithOptions(faceBound.size, false, 0.0)
-//			let pointY = -faceBound.origin.y
-//			originalImage.drawInRect(CGRect(origin: CGPoint(x: -faceBound.origin.x, y: pointY), size: originalImage.size))
-//
-//			originalImage = UIGraphicsGetImageFromCurrentImageContext()
-//			UIGraphicsEndImageContext()
 
             if let bound = faceBound {
                 svc.faceImage = keepImageNeededPart(originImage: originalImage, keepPart: adjustFaceBound(bound))
@@ -206,17 +200,6 @@ class StaticEmojiGen: UIViewController {
 				node.center = newLocation
 			}
 		}
-	}
-
-	override func viewWillAppear(animated: Bool) {
-		super.viewWillAppear(animated)
-		//        detecFace()
-		//        navigationController?.hidesBarsOnTap = true
-	}
-
-	override func viewWillDisappear(animated: Bool) {
-		super.viewWillDisappear(animated)
-		//        navigationController?.hidesBarsOnTap = false
 	}
 
 	override func didReceiveMemoryWarning() {
