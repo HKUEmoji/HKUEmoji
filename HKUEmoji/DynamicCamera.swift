@@ -63,10 +63,9 @@ class cameraTool : UIViewController, UIImagePickerControllerDelegate, UINavigati
 
 		// Do any additional setup after loading the view, typically from a nib.
 		choosedPicture = UIImage(named: "pickFace.jpg")
-//		resizeImage = resizeImageFromFrame(choosedPicture)
-//		pickView.frame = CGRect(x: 0, y: 0, width: resizeImage.size.width, height: resizeImage.size.height)
-//		pickView.image = resizeImage
-        pickView.image = choosedPicture
+		resizeImage = resizeImageFromFrame(choosedPicture)
+		pickView.frame = CGRect(x: 0, y: 0, width: resizeImage.size.width, height: resizeImage.size.height)
+		pickView.image = resizeImage
 
 		//pickView.image = choosedPicture
 		pickView.userInteractionEnabled = false
@@ -139,11 +138,12 @@ class cameraTool : UIViewController, UIImagePickerControllerDelegate, UINavigati
 		imagePicker.dismissViewControllerAnimated(true, completion: nil)
 		let pickedImage = info[UIImagePickerControllerOriginalImage] as! UIImage
 		//pickedImage.fixOrientation(pickedImage.imageOrientation)
-//		resizeImage = resizeImageFromFrame(pickedImage)
-//		resizeImage = resizeImage.fixOrientation(pickedImage.imageOrientation)
-//		pickView.frame = CGRect(x: pickView.frame.origin.x, y: pickView.frame.origin.y, width: resizeImage.size.width, height: resizeImage.size.height)
-//		pickView.image = resizeImage
-        pickView.image = pickedImage
+		resizeImage = resizeImageFromFrame(pickedImage)
+		resizeImage = resizeImage.fixOrientation(pickedImage.imageOrientation)
+		pickView.frame = CGRect(x: pickView.frame.origin.x, y: pickView.frame.origin.y, width: resizeImage.size.width, height: resizeImage.size.height)
+		pickView.image = resizeImage
+
+
 	}
 
 	@IBAction func captureFace(sender: UIButton) {
@@ -155,21 +155,21 @@ class cameraTool : UIViewController, UIImagePickerControllerDelegate, UINavigati
 		let imageRef = CGImageCreateWithImageInRect(cgRef, CGRectMake(offsetX, offsetY, overlayView.frame.size.width, overlayView.frame.size.height))
 		faceImage = UIImage(CGImage: imageRef!)
 		faceImage = Toucan(image: faceImage).maskWithImage(maskImage: UIImage(named: "cut.png")!).image
-        pickView.image = faceImage
-        
-        if let fromPageInfo = fromPage {
-            let rootViewController = self.navigationController!
-            let mainStoryboard: UIStoryboard = self.storyboard!
-            if fromPageInfo == "static" {
-                let profileViewController = mainStoryboard.instantiateViewControllerWithIdentifier("StaticEmoji") as! StaticEmojiGen
-                profileViewController.originalImage = faceImage
-                rootViewController.pushViewController(profileViewController, animated: true)
-            } else {
-                let profileViewController = mainStoryboard.instantiateViewControllerWithIdentifier("DynamicEmoji") as! Dynamic
-                profileViewController.faceImage = faceImage
-                rootViewController.pushViewController(profileViewController, animated: true)
-            }
-        }
+		pickView.image = faceImage
+
+		if let fromPageInfo = fromPage {
+			let rootViewController = self.navigationController!
+			let mainStoryboard: UIStoryboard = self.storyboard!
+			if fromPageInfo == "static" {
+				let profileViewController = mainStoryboard.instantiateViewControllerWithIdentifier("StaticEmoji") as! StaticEmojiGen
+				profileViewController.originalImage = faceImage
+				rootViewController.pushViewController(profileViewController, animated: true)
+			} else {
+				let profileViewController = mainStoryboard.instantiateViewControllerWithIdentifier("DynamicEmoji") as! Dynamic
+				profileViewController.faceImage = faceImage
+				rootViewController.pushViewController(profileViewController, animated: true)
+			}
+		}
 	}
 
 	override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
@@ -187,19 +187,20 @@ class cameraTool : UIViewController, UIImagePickerControllerDelegate, UINavigati
 	private func resizeImageFromFrame(originalImage: UIImage) -> (UIImage) {
 		let ratioW = Double((self.view.frame.size.width) / (originalImage.size.width))
 		let ratioH = Double((self.view.frame.size.height) / (originalImage.size.height))
-		let ratio = CGFloat(min(ratioH, ratioW))
-//		let filter = CIFilter(name: "CILanczosScaleTransform")!
-//		filter.setValue(image, forKey: kCIInputImageKey)
-//		filter.setValue(ratio, forKey: kCIInputScaleKey)
-//		filter.setValue(1.0, forKey: kCIInputAspectRatioKey)
-//		let outputImage = filter.valueForKey(kCIOutputImageKey) as! CIImage
-//
-//		let context = CIContext(options: [kCIContextUseSoftwareRenderer: false])
-//		let scaledImage = UIImage(CGImage: context.createCGImage(outputImage, fromRect: outputImage.extent))
-        let transform = CGAffineTransformMakeScale(ratio, ratio)
-        
-		let scaledImage = Toucan.Resize.resizeImage(originalImage, size: CGSizeApplyAffineTransform(originalImage.size, transform))
-        return scaledImage
+		let ratio = 1 / CGFloat(min(ratioH, ratioW))
+		//		let filter = CIFilter(name: "CILanczosScaleTransform")!
+		//		filter.setValue(image, forKey: kCIInputImageKey)
+		//		filter.setValue(ratio, forKey: kCIInputScaleKey)
+		//		filter.setValue(1.0, forKey: kCIInputAspectRatioKey)
+		//		let outputImage = filter.valueForKey(kCIOutputImageKey) as! CIImage
+		//
+		//		let context = CIContext(options: [kCIContextUseSoftwareRenderer: false])
+		//		let scaledImage = UIImage(CGImage: context.createCGImage(outputImage, fromRect: outputImage.extent))
+		let transform = CGAffineTransformMakeScale(ratio, ratio)
+
+		//		let scaledImage = Toucan.Resize.resizeImage(originalImage, size: CGSizeApplyAffineTransform(originalImage.size, transform))
+		let scaledImage = Toucan(image: originalImage).resize(CGSizeApplyAffineTransform(originalImage.size, transform), fitMode: Toucan.Resize.FitMode.Crop).image
+		return scaledImage
 	}
 
 	//捏的手势，使图片放大和缩小，捏的动作是一个连续的动作
