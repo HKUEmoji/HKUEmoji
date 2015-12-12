@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9065128C1C1C0BD400515540 /* CustomPhotoAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9065128B1C1C0BD400515540 /* CustomPhotoAlbum.swift */; };
+		906512981C1C6C7000515540 /* group.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 906512971C1C6C7000515540 /* group.JPG */; };
 		907672FB1C0F16BB00E9FF36 /* DynamicCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907672FA1C0F16BB00E9FF36 /* DynamicCamera.swift */; };
 		9093725C1C15A38F001407F1 /* StaticEmojiGenII.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9093725B1C15A38F001407F1 /* StaticEmojiGenII.swift */; };
 		9867D1D71C1AD50D000E8A95 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9867D1D61C1AD50D000E8A95 /* libsqlite3.tbd */; };
@@ -152,6 +153,7 @@
 
 /* Begin PBXFileReference section */
 		9065128B1C1C0BD400515540 /* CustomPhotoAlbum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPhotoAlbum.swift; sourceTree = "<group>"; };
+		906512971C1C6C7000515540 /* group.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = group.JPG; path = HKUEmoji/group.JPG; sourceTree = "<group>"; };
 		907672FA1C0F16BB00E9FF36 /* DynamicCamera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicCamera.swift; sourceTree = "<group>"; };
 		9093725B1C15A38F001407F1 /* StaticEmojiGenII.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticEmojiGenII.swift; sourceTree = "<group>"; };
 		9867D1D51C1AD23D000E8A95 /* ShareSDK-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ShareSDK-Bridging-Header.h"; path = "../../ShareSDK-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -481,6 +483,7 @@
 			children = (
 				D4F007561C1C297C00E20AD5 /* test1.png */,
 				D4DE04701C1819200085C3F0 /* test.png */,
+				906512971C1C6C7000515540 /* group.JPG */,
 				D46AE95F1C18258700C2F768 /* overlay.png */,
 				D40EB8E61C1BF9FE00F8B77E /* pickFace.jpg */,
 			);
@@ -686,6 +689,7 @@
 				D40EB8E71C1BF9FE00F8B77E /* pickFace.jpg in Resources */,
 				D4F0074A1C1C207800E20AD5 /* emoji4.png in Resources */,
 				989D00E41C1B0D98004B6D28 /* ShareSDK.bundle in Resources */,
+				906512981C1C6C7000515540 /* group.JPG in Resources */,
 				D4F007571C1C297C00E20AD5 /* test1.png in Resources */,
 				E73650351C1BF5E600C61196 /* hou6.png in Resources */,
 				E73650321C1BF5E600C61196 /* hou3.png in Resources */,
