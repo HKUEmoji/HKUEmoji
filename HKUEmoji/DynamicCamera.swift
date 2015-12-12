@@ -239,11 +239,4 @@ class cameraTool : UIViewController, UIImagePickerControllerDelegate, UINavigati
 			presentViewController(ac, animated: true, completion: nil)
 		}
 	}
-
-
-
-
-
-
-
 }
