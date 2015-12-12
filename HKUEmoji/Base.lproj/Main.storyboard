@@ -145,7 +145,7 @@
                                 <rect key="frame" x="98" y="399" width="102" height="102"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="About" id="NfZ-Nz-9CS">
                         <barButtonItem key="backBarButtonItem" title="How to show" id="6to-cF-bDu"/>
@@ -208,49 +208,53 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bkH-CB-vwe">
-                                <rect key="frame" x="113" y="316" width="94" height="30"/>
-                                <state key="normal" title="Static Emoji"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bkH-CB-vwe">
+                                <rect key="frame" x="130" y="280" width="98" height="108"/>
+                                <state key="normal" backgroundImage="Numbers.png"/>
                                 <connections>
                                     <segue destination="txh-ek-kSn" kind="show" id="t62-C8-y0f"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vhv-gQ-MnA">
-                                <rect key="frame" x="102" y="247" width="117" height="30"/>
-                                <state key="normal" title="Dynamic Emoji"/>
-                                <connections>
-                                    <segue destination="wf8-8W-TF0" kind="show" id="0ZR-PF-FBR"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdA-Vh-Pjd">
-                                <rect key="frame" x="113" y="384" width="94" height="30"/>
-                                <state key="normal" title="Local Emoji"/>
-                                <connections>
-                                    <segue destination="HZO-Pe-3tg" kind="show" id="Yod-Pc-Mtt"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m2O-Op-8E3">
-                                <rect key="frame" x="137" y="447" width="46" height="30"/>
-                                <state key="normal" title="About"/>
-                                <connections>
-                                    <segue destination="QxD-dD-uZ4" kind="show" id="jr2-oV-h7c"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HKUEmoji" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WzC-h1-hJj">
-                                <rect key="frame" x="103" y="115" width="114" height="46"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WzC-h1-hJj">
+                                <rect key="frame" x="130" y="159" width="114" height="46"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdA-Vh-Pjd">
+                                <rect key="frame" x="130" y="436" width="98" height="109"/>
+                                <state key="normal" backgroundImage="Tips.png"/>
+                                <connections>
+                                    <segue destination="HZO-Pe-3tg" kind="show" id="Yod-Pc-Mtt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vhv-gQ-MnA">
+                                <rect key="frame" x="130" y="126" width="98" height="111"/>
+                                <state key="normal" backgroundImage="iMovies.png"/>
+                                <connections>
+                                    <segue destination="wf8-8W-TF0" kind="show" id="0ZR-PF-FBR"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="WlY-ze-Utg"/>
+                    <navigationItem key="navigationItem" id="WlY-ze-Utg">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="Hxt-7X-fIn">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="m2O-Op-8E3">
+                                <rect key="frame" x="313" y="7" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Setting 3.png"/>
+                                <connections>
+                                    <segue destination="QxD-dD-uZ4" kind="show" id="jr2-oV-h7c"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="721" y="-801"/>
+            <point key="canvasLocation" x="720.5" y="-801.5"/>
         </scene>
         <!--LocalEmoji-->
         <scene sceneID="60R-fY-xWu">
@@ -292,6 +296,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Numbers.png" width="80" height="108"/>
+        <image name="Setting 3.png" width="16" height="10"/>
+        <image name="Tips.png" width="79" height="109"/>
         <image name="eye.png" width="102" height="102"/>
+        <image name="iMovies.png" width="81" height="109"/>
     </resources>
 </document>

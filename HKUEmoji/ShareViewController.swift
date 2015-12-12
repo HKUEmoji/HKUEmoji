@@ -11,11 +11,12 @@ import Social
 
 
 class ShareViewController: UIViewController {
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Wallpaper01.png")!)
+
         // Do any additional setup after loading the view.
     }
     
