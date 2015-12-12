@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZPY-9R-5Tk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZPY-9R-5Tk">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--DynamicEmojiPage-->
@@ -19,11 +21,13 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dynamic Emoji" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n5I-MR-ONt">
                                 <rect key="frame" x="86" y="274" width="148" height="21"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Dynamic Emoji" id="FEz-7a-ekq"/>
@@ -47,27 +51,34 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Locate your eye and mouth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HTM-Kd-UNe">
                                 <rect key="frame" x="10" y="80" width="218" height="21"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TPh-Hp-n4i">
                                 <rect key="frame" x="104" y="569" width="70" height="46"/>
+                                <animations/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G0S-LH-PnS">
                                 <rect key="frame" x="256" y="569" width="66" height="46"/>
+                                <animations/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QTW-2L-sES">
                                 <rect key="frame" x="182" y="569" width="66" height="46"/>
+                                <animations/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bIx-G7-3Ei">
                                 <rect key="frame" x="10" y="577" width="67" height="30"/>
+                                <animations/>
                                 <state key="normal" title="Confirm"/>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FgF-pl-b0z">
                                 <rect key="frame" x="0.0" y="126" width="375" height="362"/>
+                                <animations/>
                             </imageView>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
@@ -95,11 +106,13 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dynamic Camera" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="byL-Qc-SfB">
                                 <rect key="frame" x="71" y="237" width="148" height="21"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Camera" id="7hr-ck-kd5" colorLabel="IBBuiltInLabel-Red">
@@ -129,6 +142,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ng-tn-5gR">
                                 <rect key="frame" x="111" y="255" width="48" height="30"/>
+                                <animations/>
                                 <state key="normal" title="Twitter"/>
                                 <connections>
                                     <action selector="twitterButtonPushed:" destination="QxD-dD-uZ4" eventType="touchUpInside" id="Dgv-gi-VM7"/>
@@ -136,6 +150,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cAa-MU-7nQ">
                                 <rect key="frame" x="218" y="255" width="67" height="30"/>
+                                <animations/>
                                 <state key="normal" title="Facebook"/>
                                 <connections>
                                     <action selector="facebookButtonPushed:" destination="QxD-dD-uZ4" eventType="touchUpInside" id="XmO-IJ-MW7"/>
@@ -143,8 +158,10 @@
                             </button>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="eye.png" translatesAutoresizingMaskIntoConstraints="NO" id="9Jh-c7-z2x">
                                 <rect key="frame" x="98" y="399" width="102" height="102"/>
+                                <animations/>
                             </imageView>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="About" id="NfZ-Nz-9CS">
@@ -156,6 +173,7 @@
                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="hku.png" id="jy1-hE-MTt">
                     <rect key="frame" x="0.0" y="0.0" width="652" height="1024"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <animations/>
                 </imageView>
             </objects>
             <point key="canvasLocation" x="859.5" y="-83.5"/>
@@ -174,15 +192,18 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TPL-WB-eb9">
                                 <rect key="frame" x="-5" y="64" width="325" height="460"/>
+                                <animations/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="860-wY-hd5">
                                 <rect key="frame" x="134" y="477" width="46" height="30"/>
+                                <animations/>
                                 <state key="normal" title="Catch"/>
                                 <connections>
                                     <segue destination="91b-1G-Psu" kind="show" id="gGy-C4-Rwf"/>
                                 </connections>
                             </button>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="bottomMargin" secondItem="860-wY-hd5" secondAttribute="bottom" constant="20" id="v0u-AB-L66"/>
@@ -212,44 +233,105 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bkH-CB-vwe">
-                                <rect key="frame" x="204" y="230" width="98" height="108"/>
-                                <state key="normal" backgroundImage="Numbers.png"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bkH-CB-vwe">
+                                <rect key="frame" x="154" y="502" width="66" height="85"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="nhj-WN-Mao"/>
+                                    <constraint firstAttribute="width" secondItem="bkH-CB-vwe" secondAttribute="height" multiplier="11:14" id="ob1-OX-Uv9"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="static_logo"/>
                                 <connections>
                                     <segue destination="txh-ek-kSn" kind="show" id="t62-C8-y0f"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WzC-h1-hJj">
-                                <rect key="frame" x="130" y="159" width="114" height="46"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vhv-gQ-MnA">
-                                <rect key="frame" x="60" y="230" width="98" height="111"/>
-                                <state key="normal" backgroundImage="iMovies.png"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vhv-gQ-MnA">
+                                <rect key="frame" x="46" y="502" width="67" height="85"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="vhv-gQ-MnA" secondAttribute="height" multiplier="11:14" id="0ZG-t1-UPG"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="dynamic_logo"/>
                                 <connections>
                                     <segue destination="wf8-8W-TF0" kind="show" id="0ZR-PF-FBR"/>
                                 </connections>
                             </button>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="Cell + hku.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ewh-kh-9Fw">
-                                <rect key="frame" x="17" y="78" width="119" height="56"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Ewh-kh-9Fw">
+                                <rect key="frame" x="0.0" y="0.0" width="119" height="56"/>
+                                <animations/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdA-Vh-Pjd">
-                                <rect key="frame" x="60" y="384" width="98" height="109"/>
-                                <state key="normal" backgroundImage="Tips.png"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HKUEmoji" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E5n-nY-461">
+                                <rect key="frame" x="112" y="149" width="150" height="99"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="E5n-nY-461" secondAttribute="height" multiplier="74:49" id="Bif-IX-4yt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdA-Vh-Pjd">
+                                <rect key="frame" x="263" y="502" width="66" height="85"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="66" id="Bsq-cG-gvk"/>
+                                    <constraint firstAttribute="width" secondItem="hdA-Vh-Pjd" secondAttribute="height" multiplier="11:14" id="EWn-NV-id7"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="local_emoji"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Bsq-cG-gvk"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <segue destination="HZO-Pe-3tg" kind="show" id="Yod-Pc-Mtt"/>
                                 </connections>
                             </button>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="E5n-nY-461" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.4" id="25E-HL-Ek6"/>
+                            <constraint firstItem="hdA-Vh-Pjd" firstAttribute="bottom" secondItem="bkH-CB-vwe" secondAttribute="bottom" id="6s2-Ey-Zp5"/>
+                            <constraint firstItem="hdA-Vh-Pjd" firstAttribute="bottom" secondItem="vhv-gQ-MnA" secondAttribute="bottom" id="79m-dn-e09"/>
+                            <constraint firstItem="bkH-CB-vwe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="83N-Yb-F8N"/>
+                            <constraint firstItem="hdA-Vh-Pjd" firstAttribute="centerY" secondItem="bkH-CB-vwe" secondAttribute="centerY" id="C39-i5-2t0"/>
+                            <constraint firstItem="vhv-gQ-MnA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="IL9-88-jLf"/>
+                            <constraint firstItem="E5n-nY-461" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KMK-CR-jsZ"/>
+                            <constraint firstItem="hdA-Vh-Pjd" firstAttribute="top" secondItem="vhv-gQ-MnA" secondAttribute="top" id="Ump-uv-C0B"/>
+                            <constraint firstItem="E5n-nY-461" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="85" id="Ybm-oG-ZAO"/>
+                            <constraint firstItem="hdA-Vh-Pjd" firstAttribute="height" secondItem="bkH-CB-vwe" secondAttribute="height" id="eiw-sM-BNl"/>
+                            <constraint firstItem="vhv-gQ-MnA" firstAttribute="height" secondItem="bkH-CB-vwe" secondAttribute="height" id="eme-x6-LJA"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hdA-Vh-Pjd" secondAttribute="bottom" constant="123" id="imG-h5-Iv9"/>
+                            <constraint firstItem="hdA-Vh-Pjd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="396" id="jBs-R5-ncy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hdA-Vh-Pjd" secondAttribute="trailing" constant="31" id="lAb-Nv-lhp"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bkH-CB-vwe" secondAttribute="bottom" constant="80" id="qpa-sD-jsp"/>
+                            <constraint firstItem="hdA-Vh-Pjd" firstAttribute="leading" secondItem="bkH-CB-vwe" secondAttribute="trailing" constant="40" id="slb-eR-zu5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hdA-Vh-Pjd" secondAttribute="trailing" constant="30" id="zRS-Hf-jn6"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="6s2-Ey-Zp5"/>
+                                <exclude reference="79m-dn-e09"/>
+                                <exclude reference="jBs-R5-ncy"/>
+                                <exclude reference="lAb-Nv-lhp"/>
+                                <exclude reference="slb-eR-zu5"/>
+                                <exclude reference="imG-h5-Iv9"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="WlY-ze-Utg">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="Hxt-7X-fIn">
+                        <barButtonItem key="rightBarButtonItem" image="about_log" style="plain" id="Hxt-7X-fIn">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="m2O-Op-8E3">
                                 <rect key="frame" x="313" y="7" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
                                 <state key="normal" image="Setting 3.png"/>
                                 <connections>
                                     <segue destination="QxD-dD-uZ4" kind="show" id="jr2-oV-h7c"/>
@@ -274,6 +356,7 @@
                     <view key="view" contentMode="scaleToFill" id="6Vi-PO-tkE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Local Emoji" id="2h4-Cc-rYT"/>
@@ -291,6 +374,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="CMU-en-Cux">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -303,12 +387,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Cell + hku.png" width="119" height="56"/>
-        <image name="Numbers.png" width="80" height="108"/>
         <image name="Setting 3.png" width="16" height="10"/>
-        <image name="Tips.png" width="79" height="109"/>
+        <image name="about_log" width="5" height="3"/>
+        <image name="dynamic_logo" width="27" height="36"/>
         <image name="eye.png" width="102" height="102"/>
         <image name="hku.png" width="50" height="56"/>
-        <image name="iMovies.png" width="81" height="109"/>
+        <image name="local_emoji" width="26" height="36"/>
+        <image name="logo" width="39" height="18"/>
+        <image name="static_logo" width="26" height="36"/>
     </resources>
 </document>
