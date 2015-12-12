@@ -28,15 +28,19 @@
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A1F-e5-04d">
                                 <rect key="frame" x="44" y="443" width="84" height="88"/>
+                                <animations/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NYG-It-x2I">
                                 <rect key="frame" x="143" y="443" width="84" height="88"/>
+                                <animations/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dyU-tc-fbs">
                                 <rect key="frame" x="245" y="443" width="86" height="88"/>
+                                <animations/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="feE-ML-Tnv">
                                 <rect key="frame" x="44" y="114" width="287" height="281"/>
+                                <animations/>
                             </imageView>
                         </subviews>
                         <animations/>
@@ -53,7 +57,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i1h-Ki-1vC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="455.5" y="-1498.5"/>
+            <point key="canvasLocation" x="375.5" y="-1690.5"/>
         </scene>
         <!--StaticEmojiPage-->
         <scene sceneID="527-bT-NEl">
@@ -316,7 +320,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Gf-QO-6Fm">
-                                <rect key="frame" x="0.0" y="89" width="375" height="362"/>
+                                <rect key="frame" x="0.0" y="104" width="375" height="362"/>
                                 <animations/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
@@ -346,20 +350,21 @@
                                     <action selector="searchFromLib:" destination="wf8-8W-TF0" eventType="touchUpInside" id="jy4-q0-fhe"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bmp-Th-Di7">
-                                <rect key="frame" x="302" y="512" width="53" height="30"/>
-                                <animations/>
-                                <state key="normal" title="capture"/>
-                                <connections>
-                                    <action selector="captureFace:" destination="wf8-8W-TF0" eventType="touchUpInside" id="IPy-oI-q1x"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sry-FP-baw">
                                 <rect key="frame" x="32" y="571" width="32" height="30"/>
                                 <animations/>
                                 <state key="normal" title="save"/>
                                 <connections>
                                     <action selector="save:" destination="wf8-8W-TF0" eventType="touchUpInside" id="x1Y-3o-0si"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bmp-Th-Di7">
+                                <rect key="frame" x="302" y="512" width="53" height="30"/>
+                                <animations/>
+                                <state key="normal" title="capture"/>
+                                <connections>
+                                    <action selector="captureFace:" destination="wf8-8W-TF0" eventType="touchUpInside" id="IPy-oI-q1x"/>
+                                    <segue destination="mU2-2d-x2v" kind="show" id="HnX-Ec-Zhz"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -378,9 +383,7 @@
                             <constraint firstItem="0Gf-QO-6Fm" firstAttribute="width" relation="lessThanOrEqual" secondItem="jVm-7M-Xoo" secondAttribute="width" id="riK-Ds-3f1"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Camera" id="7hr-ck-kd5" colorLabel="IBBuiltInLabel-Red">
-                        <barButtonItem key="rightBarButtonItem" title="Next" id="bAy-an-6Xg"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Camera" id="7hr-ck-kd5" colorLabel="IBBuiltInLabel-Red"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="pickView" destination="0Gf-QO-6Fm" id="oNR-fD-Bua"/>
@@ -388,7 +391,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YVd-Eh-QpE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-327.5" y="-1538.5"/>
+            <point key="canvasLocation" x="-179.5" y="-1682.5"/>
         </scene>
         <!--About-->
         <scene sceneID="cEB-e6-uDU">
