@@ -20,7 +20,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         window?.tintColor = themeColor
         
-        
         /**
         *  设置ShareSDK的appKey，如果尚未在ShareSDK官网注册过App，请移步到http://mob.com/login 登录后台进行应用注册，
         *  在将生成的AppKey传入到此方法中。
@@ -41,8 +40,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 SSDKPlatformType.TypeSMS.rawValue,
                 SSDKPlatformType.TypeWechat.rawValue,
                 SSDKPlatformType.TypeQQ.rawValue,
-                SSDKPlatformType.TypeRenren.rawValue,
-                SSDKPlatformType.TypeKaixin.rawValue,
                 SSDKPlatformType.TypeGooglePlus.rawValue,
                 SSDKPlatformType.TypePocket.rawValue,
                 SSDKPlatformType.TypeInstagram.rawValue,
@@ -65,8 +62,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     ShareSDKConnector.connectWeChat(WXApi.classForCoder())
                 case SSDKPlatformType.TypeQQ:
                     ShareSDKConnector.connectQQ(QQApiInterface.classForCoder(), tencentOAuthClass: TencentOAuth.classForCoder())
-                case SSDKPlatformType.TypeRenren:
-                    ShareSDKConnector.connectRenren(RennClient.classForCoder())
                 case SSDKPlatformType.TypeGooglePlus:
                     ShareSDKConnector.connectGooglePlus(GPPSignIn.classForCoder(), shareClass: GPPShare.classForCoder())
                 default:
@@ -86,23 +81,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 case SSDKPlatformType.TypeWechat:
                     //设置微信应用信息
                     appInfo.SSDKSetupWeChatByAppId("wx4868b35061f87885", appSecret: "64020361b8ec4c99936c0e3999a9f249")
-                    
-                    
-                case SSDKPlatformType.TypeTencentWeibo:
-                    //设置腾讯微博应用信息，其中authType设置为只用Web形式授权
-                    appInfo.SSDKSetupTencentWeiboByAppKey("801307650",
-                        appSecret : "ae36f4ee3946e1cbb98d6965b0b2ff5c",
-                        redirectUri : "http://www.sharesdk.cn")
-                    
-                    
+     
                 case SSDKPlatformType.TypeFacebook:
                     //设置Facebook应用信息，其中authType设置为只用SSO形式授权
                     
                     appInfo.SSDKSetupFacebookByApiKey("107704292745179",
                         appSecret : "38053202e1a5fe26c80c753071f0b573",
                         authType : SSDKAuthTypeBoth)
-                    
-                    
                     
                 case SSDKPlatformType.TypeTwitter:
                     //设置Twitter应用信息
@@ -116,19 +101,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                         appKey : "aed9b0303e3ed1e27bae87c33761161d",
                         authType : SSDKAuthTypeWeb)
                     
-                    
                 case SSDKPlatformType.TypeDouBan:
                     //设置豆瓣应用信息
                     appInfo.SSDKSetupDouBanByApiKey("02e2cbe5ca06de5908a863b15e149b0b", secret: "9f1e7b4f71304f2f", redirectUri: "http://www.sharesdk.cn")
-                    
-                    
-                case SSDKPlatformType.TypeRenren:
-                    //设置人人网应用信息
-                    appInfo.SSDKSetupRenRenByAppId("226427", appKey: "fc5b8aed373c4c27a05b712acba0f8c3", secretKey: "f29df781abdd4f49beca5a2194676ca4", authType: SSDKAuthTypeBoth)
-                    
-                case SSDKPlatformType.TypeKaixin:
-                    //设置开心网应用信息
-                    appInfo.SSDKSetupKaiXinByApiKey("358443394194887cee81ff5890870c7c", secretKey: "da32179d859c016169f66d90b6db2a23", redirectUri: "http://www.sharesdk.cn/")
                     
                 case SSDKPlatformType.TypeGooglePlus:
                     //设置GooglePlus应用信息
@@ -167,7 +142,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     //设置印象笔记（国际版）应用信息
                 case SSDKPlatformType.TypeEvernote:
                     appInfo.SSDKSetupEvernoteByConsumerKey("sharesdk-7807", consumerSecret: "d05bf86993836004", sandbox: true)
-                    
                     
                 default:
                     break

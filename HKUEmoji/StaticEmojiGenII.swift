@@ -17,7 +17,12 @@ class StaticEmojiGenII: UIViewController {
 	var mouthBound: CGRect?
 	var faceImage: UIImage?
 
-    var currentImage: String = "" 
+	var currentImage: String = ""
+    var inputText: String! {
+        didSet {
+            self.drawImagesAndText()
+        }
+    }
 	var trueEmojiNames = ["CP3 2": 0,
 		"CP3": 0,
 		"curry1": 1,]
@@ -33,45 +38,46 @@ class StaticEmojiGenII: UIViewController {
 	var backgroundImage: UIImage!
 
 	@IBOutlet weak var imageView: UIImageView!
-    
+
 	@IBAction func chooseBackground(sender: AnyObject) {
 		//		displayBackGround()
 		//        let chooseBackgroundView = UICollectionViewController()
 
 	}
-    
-    @IBAction func addText(sender: AnyObject) {
-    }
-    
+
+	@IBAction func addText(sender: AnyObject) {
+
+		//1. Create the alert controller.
+		let alert = UIAlertController(title: "Input", message: "Enter a text", preferredStyle: .Alert)
+
+		//2. Add the text field. You can configure it however you need.
+		alert.addTextFieldWithConfigurationHandler({(textField) -> Void in
+				textField.text = ""
+			})
+
+		//3. Grab the value from the text field, and print it when the user clicks OK.
+		alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: {(action) -> Void in
+					let textField = alert.textFields![0] as UITextField
+					self.inputText = textField.text!
+				}))
+
+		// 4. Present the alert.
+		self.presentViewController(alert, animated: true, completion: nil)
+	}
+
 	@IBAction func changeThreshold(sender: AnyObject) {
-		//        let lowpassFilter = GPUImageLowPassFilter()
-		//        lowpassFilter.filterStrength = 0.7
 		let sketchFilter = GPUImageThresholdSketchFilter()
-		        //        sketchFilter.texelWidth = 1
-		        //        sketchFilter.texelHeight = 1
 		sketchFilter.edgeStrength = 0.847457647
 		sketchFilter.threshold = 0.402542382
 		let toonFilter = GPUImageToonFilter()
 		toonFilter.texelHeight = 0.0027118644
-        toonFilter.texelWidth = 0.001610169559
+		toonFilter.texelWidth = 0.001610169559
 		toonFilter.threshold = 0.70762711763381958
-		
-		let filterGroup = GPUImageFilterGroup()
-		//        filterGroup.addFilter(crosshatchFilter)
 
-//		let blackWhiteFilter = GPUImageGrayscaleFilter()
-//        let crossHathcFilter = GPUImageCrosshatchFilter()
-//        crossHathcFilter.lineWidth = CGFloat(toonFilterThresthod.value) / 1000
-//        crossHathcFilter.crossHatchSpacing = CGFloat(edgeStrength.value) / 100
+		let filterGroup = GPUImageFilterGroup()
 
 		filterGroup.addFilter(sketchFilter)
 		filterGroup.addFilter(toonFilter)
-//		filterGroup.addFilter(blackWhiteFilter)
-//        filterGroup.addFilter(crossHathcFilter)
-		//        toonFilter.addTarget(lowpassFilter)
-		//        lowpassFilter.addTarget(sketchFilter)
-
-//		crossHathcFilter.addTarget(sketchFilter)
 
 		filterGroup.initialFilters = [toonFilter]
 		toonFilter.addTarget(sketchFilter)
@@ -85,19 +91,19 @@ class StaticEmojiGenII: UIViewController {
 		super.viewDidLoad()
 
 		// Do any additional setup after loading the view.
-		if currentImage == ""{
-            currentImage = self.cartoonEmojiNames.first!.0
-        }
+		if currentImage == "" {
+			currentImage = self.cartoonEmojiNames.first!.0
+		}
 		//        changeBackground(UIAlertAction(title: currentImage.0, style: .Default, handler: nil))
 
 		navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Action, target: self, action: "saveOrShare")
 	}
-    
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        self.changeBackground(UIAlertAction(title: self.currentImage, style: .Default, handler: nil))
-    }
+
+	override func viewDidAppear(animated: Bool) {
+		super.viewDidAppear(animated)
+
+		self.changeBackground(UIAlertAction(title: self.currentImage, style: .Default, handler: nil))
+	}
 
 	override func viewDidLayoutSubviews() {
 		super.viewDidLayoutSubviews()
@@ -107,14 +113,14 @@ class StaticEmojiGenII: UIViewController {
 		super.didReceiveMemoryWarning()
 		// Dispose of any resources that can be recreated.
 	}
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "choose background" {
-            let svc = segue.destinationViewController as! ChooseStaticEmojiBackground
-            svc.cartoonEmojiBackground = Array(self.cartoonEmojiNames.keys)
-            svc.trueEmojiBackground = Array(self.trueEmojiNames.keys)
-        }
-    }
+
+	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+		if segue.identifier == "choose background" {
+			let svc = segue.destinationViewController as! ChooseStaticEmojiBackground
+			svc.cartoonEmojiBackground = Array(self.cartoonEmojiNames.keys)
+			svc.trueEmojiBackground = Array(self.trueEmojiNames.keys)
+		}
+	}
 
 	/**
 	 add face image to the background
@@ -173,6 +179,33 @@ class StaticEmojiGenII: UIViewController {
 			UIImageWriteToSavedPhotosAlbum(currentImage, self, "image:didFinishSavingWithError:contextInfo:", nil)
 		}
 	}
+    
+    func drawImagesAndText() {
+        // 1
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: imageView.image!.size.width, height: (imageView.image!.size.height + 100)), false, 0)
+        _ = UIGraphicsGetCurrentContext()
+        
+        // 2
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.alignment = .Center
+        
+        // 3
+        let attrs = [NSFontAttributeName: UIFont(name: "HelveticaNeue-Thin", size: 30)!, NSParagraphStyleAttributeName: paragraphStyle]
+        
+        // 4
+        self.inputText.drawWithRect(CGRect(x: 32, y: 32, width: imageView.image!.size.width, height: 100), options: .UsesLineFragmentOrigin, attributes: attrs, context: nil)
+        
+        // 5
+        let mouse = imageView.image
+        mouse?.drawAtPoint(CGPoint(x: 0, y: 100))
+        
+        // 6
+        let img = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        // 7
+        imageView.image = img
+    }
 
 	func image(image: UIImage, didFinishSavingWithError error: NSError?, contextInfo: UnsafePointer<Void>) {
 		if error == nil {
@@ -186,25 +219,25 @@ class StaticEmojiGenII: UIViewController {
 		}
 	}
 
-    func getCartoonFace(originalImage: UIImage) -> (UIImage) {
-        let sketchFilter = GPUImageThresholdSketchFilter()
-        sketchFilter.edgeStrength = 0.847457647
-        sketchFilter.threshold = 0.402542382
-        let toonFilter = GPUImageToonFilter()
-        toonFilter.texelHeight = 0.0027118644
-        toonFilter.texelWidth = 0.001610169559
-        toonFilter.threshold = 0.70762711763381958
-        
-        let filterGroup = GPUImageFilterGroup()
-        
-        filterGroup.addFilter(sketchFilter)
-        filterGroup.addFilter(toonFilter)
-        
-        filterGroup.initialFilters = [toonFilter]
-        toonFilter.addTarget(sketchFilter)
-        filterGroup.terminalFilter = sketchFilter
-        
-        let processedImage = filterGroup.imageByFilteringImage(faceImage)
+	func getCartoonFace(originalImage: UIImage) -> (UIImage) {
+		let sketchFilter = GPUImageThresholdSketchFilter()
+		sketchFilter.edgeStrength = 0.847457647
+		sketchFilter.threshold = 0.402542382
+		let toonFilter = GPUImageToonFilter()
+		toonFilter.texelHeight = 0.0027118644
+		toonFilter.texelWidth = 0.001610169559
+		toonFilter.threshold = 0.70762711763381958
+
+		let filterGroup = GPUImageFilterGroup()
+
+		filterGroup.addFilter(sketchFilter)
+		filterGroup.addFilter(toonFilter)
+
+		filterGroup.initialFilters = [toonFilter]
+		toonFilter.addTarget(sketchFilter)
+		filterGroup.terminalFilter = sketchFilter
+
+		let processedImage = filterGroup.imageByFilteringImage(faceImage)
 		return processedImage
 	}
 
@@ -220,6 +253,11 @@ class StaticEmojiGenII: UIViewController {
 		presentViewController(ac, animated: true, completion: nil)
 	}
 
+	/**
+	 change the background of emotion
+
+	 - parameter action: as this function used for uialert.
+	 */
 	func changeBackground(action: UIAlertAction) {
 		if self.trueEmojiNames.keys.contains(action.title!) {
 			currentImage = action.title!
