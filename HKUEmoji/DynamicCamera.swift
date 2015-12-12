@@ -9,6 +9,8 @@
 import UIKit
 import MobileCoreServices
 import Toucan
+import AssetsLibrary
+
 
 extension UIImage {
     
@@ -217,25 +219,11 @@ class cameraTool :  UIViewController, UIImagePickerControllerDelegate, UINavigat
     
    
     
-    @IBAction func save(sender: UIButton) {
-        if let currentImage = faceImage {
-            UIImageWriteToSavedPhotosAlbum(currentImage, self, "image:didFinishSavingWithError:contextInfo:", nil)
-        }
+    @IBAction func save(sender: UIButton) {        CustomPhotoAlbum.sharedInstance.saveImage(faceImage)
 
     }
     
-    func image(image: UIImage, didFinishSavingWithError error: NSError?, contextInfo: UnsafePointer<Void>) {
-    if error == nil {
-    let ac = UIAlertController(title: "Saved!", message: "Your altered image has been saved to your photos.", preferredStyle: .Alert)
-    ac.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
-    presentViewController(ac, animated: true, completion: nil)
-    } else {
-    let ac = UIAlertController(title: "Save error", message: error?.localizedDescription, preferredStyle: .Alert)
-    ac.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
-    presentViewController(ac, animated: true, completion: nil)
-    }
-    }
-    
+       
     
     
     

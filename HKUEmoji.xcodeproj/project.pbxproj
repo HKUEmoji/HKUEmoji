@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9065128C1C1C0BD400515540 /* CustomPhotoAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9065128B1C1C0BD400515540 /* CustomPhotoAlbum.swift */; };
 		907672FB1C0F16BB00E9FF36 /* DynamicCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907672FA1C0F16BB00E9FF36 /* DynamicCamera.swift */; };
 		9093725C1C15A38F001407F1 /* StaticEmojiGenII.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9093725B1C15A38F001407F1 /* StaticEmojiGenII.swift */; };
 		D40EB8D61C1BF77500F8B77E /* LocalEmoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40EB8D51C1BF77500F8B77E /* LocalEmoji.swift */; };
@@ -107,6 +108,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9065128B1C1C0BD400515540 /* CustomPhotoAlbum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPhotoAlbum.swift; sourceTree = "<group>"; };
 		907672FA1C0F16BB00E9FF36 /* DynamicCamera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicCamera.swift; sourceTree = "<group>"; };
 		9093725B1C15A38F001407F1 /* StaticEmojiGenII.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticEmojiGenII.swift; sourceTree = "<group>"; };
 		D40EB8D01C1BF71E00F8B77E /* Toucan.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Toucan.xcodeproj; path = Submodules/Toucan/Toucan.xcodeproj; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 				9093725B1C15A38F001407F1 /* StaticEmojiGenII.swift */,
 				D4E148181C19A41C00F49A36 /* ChooseStaticEmojiBackground.swift */,
 				D4E1481C1C19A5E700F49A36 /* ChooseStaticEmojiShow.swift */,
+				9065128B1C1C0BD400515540 /* CustomPhotoAlbum.swift */,
 			);
 			path = HKUEmoji;
 			sourceTree = "<group>";
@@ -442,6 +445,7 @@
 			files = (
 				D4DE04931C181A720085C3F0 /* AppDelegate.swift in Sources */,
 				D40EB8D81C1BF77C00F8B77E /* LocalImageCell.swift in Sources */,
+				9065128C1C1C0BD400515540 /* CustomPhotoAlbum.swift in Sources */,
 				D4E148191C19A41C00F49A36 /* ChooseStaticEmojiBackground.swift in Sources */,
 				D47C02631C0334CB00CDFDEB /* ViewController.swift in Sources */,
 				9093725C1C15A38F001407F1 /* StaticEmojiGenII.swift in Sources */,
