@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9065127B1C198B8C00515540 /* pickFace.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9065127A1C198B8C00515540 /* pickFace.jpg */; };
 		9065127D1C19AE7A00515540 /* LocalEmoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9065127C1C19AE7A00515540 /* LocalEmoji.swift */; };
+		906512811C1BE9DB00515540 /* LocalImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906512801C1BE9DB00515540 /* LocalImageCell.swift */; };
 		907672FB1C0F16BB00E9FF36 /* DynamicCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907672FA1C0F16BB00E9FF36 /* DynamicCamera.swift */; };
 		907673011C0FF32C00E9FF36 /* cameraOverLay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907673001C0FF32C00E9FF36 /* cameraOverLay.swift */; };
 		909372581C15A311001407F1 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 909372571C15A311001407F1 /* background.png */; };
@@ -108,6 +109,7 @@
 /* Begin PBXFileReference section */
 		9065127A1C198B8C00515540 /* pickFace.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pickFace.jpg; sourceTree = "<group>"; };
 		9065127C1C19AE7A00515540 /* LocalEmoji.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalEmoji.swift; sourceTree = "<group>"; };
+		906512801C1BE9DB00515540 /* LocalImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalImageCell.swift; sourceTree = "<group>"; };
 		907672FA1C0F16BB00E9FF36 /* DynamicCamera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicCamera.swift; sourceTree = "<group>"; };
 		907672FE1C0FE4DF00E9FF36 /*  cameraOverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = " cameraOverlayView.xib"; sourceTree = "<group>"; };
 		907673001C0FF32C00E9FF36 /* cameraOverLay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cameraOverLay.swift; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 				907672FE1C0FE4DF00E9FF36 /*  cameraOverlayView.xib */,
 				907673001C0FF32C00E9FF36 /* cameraOverLay.swift */,
 				9065127C1C19AE7A00515540 /* LocalEmoji.swift */,
+				906512801C1BE9DB00515540 /* LocalImageCell.swift */,
 			);
 			path = HKUEmoji;
 			sourceTree = "<group>";
@@ -437,6 +440,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D47C02631C0334CB00CDFDEB /* ViewController.swift in Sources */,
+				906512811C1BE9DB00515540 /* LocalImageCell.swift in Sources */,
 				9093725C1C15A38F001407F1 /* StaticEmojiGenII.swift in Sources */,
 				9065127D1C19AE7A00515540 /* LocalEmoji.swift in Sources */,
 				D49F05091C0BE2DE00E6EBA6 /* StaticEmojiGen.swift in Sources */,
