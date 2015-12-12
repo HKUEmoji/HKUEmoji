@@ -145,7 +145,7 @@
         <!--Static Emoji GenII-->
         <scene sceneID="0q7-7P-pWF">
             <objects>
-                <viewController id="VgB-n6-ZXO" customClass="StaticEmojiGenII" customModule="HKUEmoji" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StaticEmojiGenII" id="VgB-n6-ZXO" customClass="StaticEmojiGenII" customModule="HKUEmoji" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="X3H-Ba-mSl"/>
                         <viewControllerLayoutGuide type="bottom" id="Tij-XW-Jw6"/>

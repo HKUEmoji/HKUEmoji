@@ -73,12 +73,6 @@ class cameraTool : UIViewController, UIImagePickerControllerDelegate, UINavigati
 		self.view.addGestureRecognizer(pinchGesture)
 		pickFace.hidden = true
 	}
-    
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        
-    }
 
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
@@ -147,8 +141,8 @@ class cameraTool : UIViewController, UIImagePickerControllerDelegate, UINavigati
 			let rootViewController = self.navigationController!
 			let mainStoryboard: UIStoryboard = self.storyboard!
 			if fromPageInfo == "static" {
-				let profileViewController = mainStoryboard.instantiateViewControllerWithIdentifier("StaticEmoji") as! StaticEmojiGen
-				profileViewController.originalImage = faceImage
+				let profileViewController = mainStoryboard.instantiateViewControllerWithIdentifier("StaticEmojiGenII") as! StaticEmojiGenII
+				profileViewController.faceImage = faceImage
 				rootViewController.pushViewController(profileViewController, animated: true)
 			} else {
 				let profileViewController = mainStoryboard.instantiateViewControllerWithIdentifier("DynamicEmoji") as! Dynamic

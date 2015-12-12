@@ -167,21 +167,21 @@ class StaticEmojiGen: UIViewController {
 		if segue.identifier == "showGenerater" {
 			let svc = segue.destinationViewController as! StaticEmojiGenII
 //			let scale = min(imageShow.bounds.height / originalImage.size.height, imageShow.bounds.width / originalImage.size.width)
-			let offsetX = background.frame.origin.x + imageShow.frame.origin.x
-			let offsetY = background.frame.origin.y + imageShow.frame.origin.y
+//			let offsetX = background.frame.origin.x + imageShow.frame.origin.x
+//			let offsetY = background.frame.origin.y + imageShow.frame.origin.y
 
 			// transfer the bound info of this imageview to next function.
-			if let bound1 = rightEye?.frame {
-				svc.rightEyeBound = CGRect(origin: CGPoint(x: bound1.origin.x - offsetX, y: bound1.origin.y - offsetY), size: bound1.size)
-			}
-
-			if let bound1 = leftEye?.frame {
-				svc.leftEyeBound = CGRect(origin: CGPoint(x: bound1.origin.x - offsetX, y: bound1.origin.y - offsetY), size: bound1.size)
-			}
-
-			if let bound1 = mouth?.frame {
-				svc.mouthBound = CGRect(origin: CGPoint(x: bound1.origin.x - offsetX, y: bound1.origin.y - offsetY), size: bound1.size)
-			}
+//			if let bound1 = rightEye?.frame {
+//				svc.rightEyeBound = CGRect(origin: CGPoint(x: bound1.origin.x - offsetX, y: bound1.origin.y - offsetY), size: bound1.size)
+//			}
+//
+//			if let bound1 = leftEye?.frame {
+//				svc.leftEyeBound = CGRect(origin: CGPoint(x: bound1.origin.x - offsetX, y: bound1.origin.y - offsetY), size: bound1.size)
+//			}
+//
+//			if let bound1 = mouth?.frame {
+//				svc.mouthBound = CGRect(origin: CGPoint(x: bound1.origin.x - offsetX, y: bound1.origin.y - offsetY), size: bound1.size)
+//			}
 
             if let bound = faceBound {
                 svc.faceImage = keepImageNeededPart(originImage: originalImage, keepPart: adjustFaceBound(bound))

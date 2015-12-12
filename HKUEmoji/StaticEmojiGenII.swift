@@ -13,9 +13,9 @@ import Social
 
 class StaticEmojiGenII: UIViewController {
 
-	var leftEyeBound: CGRect?
-	var rightEyeBound: CGRect?
-	var mouthBound: CGRect?
+//	var leftEyeBound: CGRect?
+//	var rightEyeBound: CGRect?
+//	var mouthBound: CGRect?
 	var faceImage: UIImage?
 
 	var currentImage: String = ""
