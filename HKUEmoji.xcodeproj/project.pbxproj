@@ -12,6 +12,7 @@
 		D40EB8D61C1BF77500F8B77E /* LocalEmoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40EB8D51C1BF77500F8B77E /* LocalEmoji.swift */; };
 		D40EB8D81C1BF77C00F8B77E /* LocalImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40EB8D71C1BF77C00F8B77E /* LocalImageCell.swift */; };
 		D40EB8DF1C1BF7EA00F8B77E /* Toucan.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D40EB8DC1C1BF7E000F8B77E /* Toucan.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D40EB8E71C1BF9FE00F8B77E /* pickFace.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D40EB8E61C1BF9FE00F8B77E /* pickFace.jpg */; };
 		D46AE9601C18258700C2F768 /* overlay.png in Resources */ = {isa = PBXBuildFile; fileRef = D46AE95F1C18258700C2F768 /* overlay.png */; };
 		D46B6CC41C1A7ACF0035E1EC /* test2.png in Resources */ = {isa = PBXBuildFile; fileRef = D46B6CC31C1A7ACF0035E1EC /* test2.png */; };
 		D46B6CC81C1A7C830035E1EC /* test3.png in Resources */ = {isa = PBXBuildFile; fileRef = D46B6CC71C1A7C830035E1EC /* test3.png */; };
@@ -111,6 +112,7 @@
 		D40EB8D01C1BF71E00F8B77E /* Toucan.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Toucan.xcodeproj; path = Submodules/Toucan/Toucan.xcodeproj; sourceTree = "<group>"; };
 		D40EB8D51C1BF77500F8B77E /* LocalEmoji.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalEmoji.swift; sourceTree = "<group>"; };
 		D40EB8D71C1BF77C00F8B77E /* LocalImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalImageCell.swift; sourceTree = "<group>"; };
+		D40EB8E61C1BF9FE00F8B77E /* pickFace.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = pickFace.jpg; path = HKUEmoji/Resourses/pickFace.jpg; sourceTree = "<group>"; };
 		D46AE95F1C18258700C2F768 /* overlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = overlay.png; path = HKUEmoji/Resourses/overlay.png; sourceTree = "<group>"; };
 		D46B6CC31C1A7ACF0035E1EC /* test2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = test2.png; path = HKUEmoji/Resourses/test2.png; sourceTree = "<group>"; };
 		D46B6CC71C1A7C830035E1EC /* test3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = test3.png; path = HKUEmoji/Resourses/test3.png; sourceTree = "<group>"; };
@@ -239,6 +241,7 @@
 				D4DE04701C1819200085C3F0 /* test.png */,
 				D4E1481E1C19AF2E00F49A36 /* erkangface.png */,
 				D46AE95F1C18258700C2F768 /* overlay.png */,
+				D40EB8E61C1BF9FE00F8B77E /* pickFace.jpg */,
 				D46B6CC71C1A7C830035E1EC /* test3.png */,
 				D46B6CC31C1A7ACF0035E1EC /* test2.png */,
 			);
@@ -410,6 +413,7 @@
 				D4DE04951C181A950085C3F0 /* test.png in Resources */,
 				D4DE04941C181A900085C3F0 /* Assets.xcassets in Resources */,
 				D47C026B1C0334CB00CDFDEB /* LaunchScreen.storyboard in Resources */,
+				D40EB8E71C1BF9FE00F8B77E /* pickFace.jpg in Resources */,
 				D47C02661C0334CB00CDFDEB /* Main.storyboard in Resources */,
 				D46B6CC81C1A7C830035E1EC /* test3.png in Resources */,
 			);
