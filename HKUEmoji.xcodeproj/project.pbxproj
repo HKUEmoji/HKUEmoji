@@ -44,9 +44,6 @@
 		D40EB8D81C1BF77C00F8B77E /* LocalImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40EB8D71C1BF77C00F8B77E /* LocalImageCell.swift */; };
 		D40EB8DF1C1BF7EA00F8B77E /* Toucan.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D40EB8DC1C1BF7E000F8B77E /* Toucan.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D40EB8E71C1BF9FE00F8B77E /* pickFace.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D40EB8E61C1BF9FE00F8B77E /* pickFace.jpg */; };
-		D41A81AF1C0DF88D00CF0511 /* eye.png in Resources */ = {isa = PBXBuildFile; fileRef = D41A81AC1C0DF88D00CF0511 /* eye.png */; };
-		D41A81B01C0DF88D00CF0511 /* mouth.png in Resources */ = {isa = PBXBuildFile; fileRef = D41A81AD1C0DF88D00CF0511 /* mouth.png */; };
-		D41A81B11C0DF88D00CF0511 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = D41A81AE1C0DF88D00CF0511 /* test.png */; };
 		D429C7D31C1C0905008F73B9 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D429C7D21C1C0905008F73B9 /* CoreMotion.framework */; };
 		D429C7D51C1C090B008F73B9 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D429C7D41C1C090A008F73B9 /* CoreMedia.framework */; };
 		D429C7D71C1C0972008F73B9 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D429C7D61C1C0972008F73B9 /* MessageUI.framework */; };
@@ -198,9 +195,6 @@
 		D40EB8D51C1BF77500F8B77E /* LocalEmoji.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalEmoji.swift; sourceTree = "<group>"; };
 		D40EB8D71C1BF77C00F8B77E /* LocalImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalImageCell.swift; sourceTree = "<group>"; };
 		D40EB8E61C1BF9FE00F8B77E /* pickFace.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = pickFace.jpg; path = HKUEmoji/Resourses/pickFace.jpg; sourceTree = "<group>"; };
-		D41A81AC1C0DF88D00CF0511 /* eye.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = eye.png; path = HKUEmoji/Assets.xcassets/eye.png; sourceTree = "<group>"; };
-		D41A81AD1C0DF88D00CF0511 /* mouth.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mouth.png; path = HKUEmoji/Assets.xcassets/mouth.png; sourceTree = "<group>"; };
-		D41A81AE1C0DF88D00CF0511 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = test.png; path = HKUEmoji/Assets.xcassets/test.png; sourceTree = "<group>"; };
 		D429C7D21C1C0905008F73B9 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		D429C7D41C1C090A008F73B9 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		D429C7D61C1C0972008F73B9 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
@@ -637,17 +631,14 @@
 				D4DE04941C181A900085C3F0 /* Assets.xcassets in Resources */,
 				989D00DC1C1B0D98004B6D28 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				989D00DD1C1B0D98004B6D28 /* RennSDK.bundle in Resources */,
-				D41A81B01C0DF88D00CF0511 /* mouth.png in Resources */,
 				D47C026B1C0334CB00CDFDEB /* LaunchScreen.storyboard in Resources */,
 				D40EB8E71C1BF9FE00F8B77E /* pickFace.jpg in Resources */,
 				989D00E41C1B0D98004B6D28 /* ShareSDK.bundle in Resources */,
-				D41A81AF1C0DF88D00CF0511 /* eye.png in Resources */,
 				D47C02661C0334CB00CDFDEB /* Main.storyboard in Resources */,
 				989D00E01C1B0D98004B6D28 /* WeiboSDK.bundle in Resources */,
 				989D00E21C1B0D98004B6D28 /* read_me.txt in Resources */,
 				989D00D81C1B0D98004B6D28 /* GooglePlus.bundle in Resources */,
 				989D00E91C1B0D98004B6D28 /* ShareSDKUI.bundle in Resources */,
-				D41A81B11C0DF88D00CF0511 /* test.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -851,7 +842,7 @@
 					"$(PROJECT_DIR)/HKUEmoji/libraries/extends/WeChatSDK",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = HKUEmoji.HKUEmoji;
+				PRODUCT_BUNDLE_IDENTIFIER = hk.hku.cs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ShareSDK-Bridging-Header.h";
 			};
@@ -882,7 +873,7 @@
 					"$(PROJECT_DIR)/HKUEmoji/libraries/extends/WeChatSDK",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = HKUEmoji.HKUEmoji;
+				PRODUCT_BUNDLE_IDENTIFIER = hk.hku.cs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ShareSDK-Bridging-Header.h";
 			};

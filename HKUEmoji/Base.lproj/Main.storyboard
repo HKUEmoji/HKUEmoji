@@ -337,6 +337,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sry-FP-baw">
                                 <rect key="frame" x="32" y="571" width="32" height="30"/>
+                                <animations/>
                                 <state key="normal" title="save"/>
                                 <connections>
                                     <action selector="save:" destination="wf8-8W-TF0" eventType="touchUpInside" id="x1Y-3o-0si"/>
@@ -602,6 +603,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9An-J7-uhY">
                                 <rect key="frame" x="35" y="167" width="240" height="128"/>
+                                <animations/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="7oK-5L-gc6">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -618,10 +620,13 @@
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KjZ-Ii-Zbc">
                                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                    <animations/>
                                                 </imageView>
                                             </subviews>
+                                            <animations/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <animations/>
                                         <connections>
                                             <outlet property="imageView" destination="KjZ-Ii-Zbc" id="cja-lN-ELv"/>
                                         </connections>

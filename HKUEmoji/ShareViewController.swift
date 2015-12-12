@@ -39,7 +39,7 @@ class ShareViewController: UIViewController {
         //1.创建分享参数
         let shareParames = NSMutableDictionary()
         shareParames.SSDKSetupShareParamsByText("分享内容",
-            images : UIImage(named: "eye.png"),
+            images : UIImage(named: "eye"),
             url : NSURL(string:"http://mob.com"),
             title : "分享标题",
             type : SSDKContentType.Auto)
@@ -75,7 +75,7 @@ class ShareViewController: UIViewController {
         let shareParames = NSMutableDictionary()
         
         shareParames.SSDKSetupShareParamsByText("分享内容",
-            images : UIImage(named: "eye.png"),
+            images : UIImage(named: "eye"),
             url : NSURL(string:"http://mob.com"),
             title : "分享标题",
             type : SSDKContentType.Auto)

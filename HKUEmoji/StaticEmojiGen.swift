@@ -21,7 +21,7 @@ class StaticEmojiGen: UIViewController {
 	var faceBound: CGRect!
 
 	lazy var originalImage: UIImage = {
-		return UIImage(named: "test3.png")
+		return UIImage(named: "test.png")
 	}()!
 
 	lazy var context: CIContext = {
