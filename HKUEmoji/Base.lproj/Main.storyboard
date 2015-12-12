@@ -132,22 +132,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mqc-er-4PX">
-                                <rect key="frame" x="0.0" y="579" width="375" height="44"/>
-                                <animations/>
-                                <items>
-                                    <barButtonItem systemItem="camera" id="tEY-sK-KFn">
-                                        <connections>
-                                            <segue destination="HYg-EU-htr" kind="show" identifier="choose background" id="Qle-do-88n"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem systemItem="compose" id="y1A-ad-Cq3">
-                                        <connections>
-                                            <action selector="addText:" destination="VgB-n6-ZXO" id="NXT-en-kSo"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QDb-9Y-A1B">
                                 <rect key="frame" x="0.0" y="86" width="375" height="356"/>
                                 <subviews>
@@ -165,6 +149,23 @@
                                     <constraint firstItem="u3h-77-EkL" firstAttribute="centerX" secondItem="QDb-9Y-A1B" secondAttribute="centerX" id="vTg-Xa-iwg"/>
                                 </constraints>
                             </view>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mqc-er-4PX">
+                                <rect key="frame" x="0.0" y="579" width="375" height="44"/>
+                                <animations/>
+                                <items>
+                                    <barButtonItem systemItem="camera" id="tEY-sK-KFn">
+                                        <connections>
+                                            <segue destination="HYg-EU-htr" kind="show" identifier="choose background" id="Qle-do-88n"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="compose" id="y1A-ad-Cq3">
+                                        <inset key="imageInsets" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
+                                        <connections>
+                                            <action selector="addText:" destination="VgB-n6-ZXO" id="NXT-en-kSo"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

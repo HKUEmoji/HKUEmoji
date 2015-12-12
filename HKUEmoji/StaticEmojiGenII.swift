@@ -9,6 +9,7 @@
 import UIKit
 import ImageIO
 import GPUImage
+import Social
 
 class StaticEmojiGenII: UIViewController {
 
@@ -18,11 +19,11 @@ class StaticEmojiGenII: UIViewController {
 	var faceImage: UIImage?
 
 	var currentImage: String = ""
-    var inputText: String! {
-        didSet {
-            self.drawImagesAndText()
-        }
-    }
+	var inputText: String! {
+		didSet {
+			self.drawImagesAndText()
+		}
+	}
 	var trueEmojiNames = ["CP3 2": 0,
 		"CP3": 0,
 		"curry1": 1,]
@@ -96,8 +97,10 @@ class StaticEmojiGenII: UIViewController {
 		}
 		//        changeBackground(UIAlertAction(title: currentImage.0, style: .Default, handler: nil))
 
-		navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Action, target: self, action: "saveOrShare")
-	}
+		let share = UIBarButtonItem(barButtonSystemItem: .Action, target: self, action: "share")
+        let save = UIBarButtonItem(barButtonSystemItem: .Save, target: self, action: "save")
+		navigationItem.rightBarButtonItems = [share, save]
+    }
 
 	override func viewDidAppear(animated: Bool) {
 		super.viewDidAppear(animated)
@@ -174,38 +177,48 @@ class StaticEmojiGenII: UIViewController {
 		return bounds
 	}
 
-	func saveOrShare() {
-		if let currentImage = backgroundImage {
-			UIImageWriteToSavedPhotosAlbum(currentImage, self, "image:didFinishSavingWithError:contextInfo:", nil)
-		}
+	func share() {
+		//			UIImageWriteToSavedPhotosAlbum(currentImage, self, "image:didFinishSavingWithError:contextInfo:", nil)
+		let shareParames = NSMutableDictionary()
+		shareParames.SSDKSetupShareParamsByText("Share Contents",
+			images : imageView.image,
+			url : nil,
+			title : "Share",
+			type : SSDKContentType.Auto)
+
+		ShareSDK.showShareActionSheet(self.view, items: nil, shareParams: shareParames, onShareStateChanged: nil)
 	}
-    
-    func drawImagesAndText() {
-        // 1
-        UIGraphicsBeginImageContextWithOptions(CGSize(width: imageView.image!.size.width, height: (imageView.image!.size.height + 100)), false, 0)
-        _ = UIGraphicsGetCurrentContext()
-        
-        // 2
-        let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.alignment = .Center
-        
-        // 3
-        let attrs = [NSFontAttributeName: UIFont(name: "HelveticaNeue-Thin", size: 30)!, NSParagraphStyleAttributeName: paragraphStyle]
-        
-        // 4
-        self.inputText.drawWithRect(CGRect(x: 32, y: 32, width: imageView.image!.size.width, height: 100), options: .UsesLineFragmentOrigin, attributes: attrs, context: nil)
-        
-        // 5
-        let mouse = imageView.image
-        mouse?.drawAtPoint(CGPoint(x: 0, y: 100))
-        
-        // 6
-        let img = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        
-        // 7
-        imageView.image = img
-    }
+
+	func save() {
+		UIImageWriteToSavedPhotosAlbum(imageView.image!, self, "image:didFinishSavingWithError:contextInfo:", nil)
+	}
+
+	func drawImagesAndText() {
+		// 1
+		UIGraphicsBeginImageContextWithOptions(CGSize(width: imageView.image!.size.width, height: (imageView.image!.size.height + 100)), false, 0)
+		_ = UIGraphicsGetCurrentContext()
+
+		// 2
+		let paragraphStyle = NSMutableParagraphStyle()
+		paragraphStyle.alignment = .Center
+
+		// 3
+		let attrs = [NSFontAttributeName: UIFont(name: "HelveticaNeue-Thin", size: 30)!, NSParagraphStyleAttributeName: paragraphStyle]
+
+		// 4
+		self.inputText.drawWithRect(CGRect(x: 32, y: 32, width: imageView.image!.size.width, height: 100), options: .UsesLineFragmentOrigin, attributes: attrs, context: nil)
+
+		// 5
+		let mouse = imageView.image
+		mouse?.drawAtPoint(CGPoint(x: 0, y: 100))
+
+		// 6
+		let img = UIGraphicsGetImageFromCurrentImageContext()
+		UIGraphicsEndImageContext()
+
+		// 7
+		imageView.image = img
+	}
 
 	func image(image: UIImage, didFinishSavingWithError error: NSError?, contextInfo: UnsafePointer<Void>) {
 		if error == nil {
