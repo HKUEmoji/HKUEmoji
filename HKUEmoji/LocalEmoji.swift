@@ -18,8 +18,6 @@ class localEmojiCtrl : UIViewController,UICollectionViewDelegate,UICollectionVie
         UIImage(named: "mouth")
         ]
     
-    
-    
     let imageGroup :PHAssetCollection = CustomPhotoAlbum.sharedInstance.assetCollection
     @IBOutlet var collectionView: UICollectionView!
     
@@ -36,7 +34,7 @@ class localEmojiCtrl : UIViewController,UICollectionViewDelegate,UICollectionVie
         let imageManager = PHCachingImageManager()
         for(var i=0;i<collection.count;i++){
             let imageC = collection[i]
-            var imageOption = PHImageRequestOptions()
+            let imageOption = PHImageRequestOptions()
             imageManager.requestImageForAsset(imageC as! PHAsset, targetSize: PHImageManagerMaximumSize, contentMode:  PHImageContentMode.AspectFit, options: imageOption, resultHandler: { (result, info) -> Void in
                 self.images.append(result!)
             self.collectionView.reloadData()
@@ -75,6 +73,16 @@ func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath ind
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        let image = self.images[indexPath.item]
+        let shareParames = NSMutableDictionary()
+        shareParames.SSDKSetupShareParamsByText("Share contents",
+            images : image,
+            url : NSURL(string:"http://mob.com"),
+            title : "分享标题",
+            type : SSDKContentType.Auto)
+        
+        ShareSDK.showShareActionSheet(self.view, items: nil, shareParams: shareParames, onShareStateChanged: nil)
+    
        /* if let tabItem = BackgroundChoice.init(rawValue: backgroundChoice.rawValue){
         switch tabItem{
     case .trueEmoji:

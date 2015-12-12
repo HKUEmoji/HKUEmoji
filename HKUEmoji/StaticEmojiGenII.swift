@@ -183,7 +183,6 @@ class StaticEmojiGenII: UIViewController {
 	}
 
 	func share() {
-		//			UIImageWriteToSavedPhotosAlbum(currentImage, self, "image:didFinishSavingWithError:contextInfo:", nil)
 		let shareParames = NSMutableDictionary()
 		shareParames.SSDKSetupShareParamsByText("Share Contents",
 			images : imageView.image,
@@ -195,7 +194,11 @@ class StaticEmojiGenII: UIViewController {
 	}
 
 	func save() {
-		UIImageWriteToSavedPhotosAlbum(imageView.image!, self, "image:didFinishSavingWithError:contextInfo:", nil)
+        CustomPhotoAlbum.sharedInstance.saveImage(imageView.image!)
+        let ac = UIAlertController(title: "Saved!", message: "Your altered image has been saved to your photos.", preferredStyle: .Alert)
+        ac.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+        presentViewController(ac, animated: true, completion: nil)
+//		UIImageWriteToSavedPhotosAlbum(imageView.image!, self, "image:didFinishSavingWithError:contextInfo:", nil)
 	}
 
 	func drawImagesAndText() {
