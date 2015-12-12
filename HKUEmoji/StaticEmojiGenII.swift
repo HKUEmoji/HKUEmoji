@@ -29,7 +29,11 @@ class StaticEmojiGenII: UIViewController {
 		"curry1": 1,]
 
 	var cartoonEmojiNames = ["erkangface": CGRect(x: 172, y: 114, width: 151, height: 188),
-    "emoji2": CGRect(x: 120, y: 116, width: 55, height: 50)]
+		"emoji2": CGRect(x: 120, y: 116, width: 55, height: 50),
+        "emoji3": CGRect(x: 240, y: 228, width: 105, height: 100),
+        "emoji4": CGRect(x: 240, y: 151, width: 125, height: 125),
+        "emoji5": CGRect(x: 128, y: 68, width: 120, height: 90),
+    ]
 
 	var currentFilter: CIFilter!
 
@@ -99,9 +103,9 @@ class StaticEmojiGenII: UIViewController {
 		//        changeBackground(UIAlertAction(title: currentImage.0, style: .Default, handler: nil))
 
 		let share = UIBarButtonItem(barButtonSystemItem: .Action, target: self, action: "share")
-        let save = UIBarButtonItem(barButtonSystemItem: .Save, target: self, action: "save")
+		let save = UIBarButtonItem(barButtonSystemItem: .Save, target: self, action: "save")
 		navigationItem.rightBarButtonItems = [share, save]
-    }
+	}
 
 	override func viewDidAppear(animated: Bool) {
 		super.viewDidAppear(animated)

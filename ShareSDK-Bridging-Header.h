@@ -39,9 +39,6 @@
 //以下是新郎微博SDK的依赖库：
 //ImageIO.framework
 
-//人人SDK头文件
-#import <RennSDK/RennSDK.h>
-
 //GooglePlus SDK头文件
 #import <GooglePlus/GooglePlus.h>
 //GooglePlus SDK需要在项目Build Settings中的Other Linker Flags添加"-ObjC"
