@@ -67,6 +67,16 @@
 		D4F007491C1C207800E20AD5 /* emoji3.png in Resources */ = {isa = PBXBuildFile; fileRef = D4F007451C1C207800E20AD5 /* emoji3.png */; };
 		D4F0074A1C1C207800E20AD5 /* emoji4.png in Resources */ = {isa = PBXBuildFile; fileRef = D4F007461C1C207800E20AD5 /* emoji4.png */; };
 		D4F0074B1C1C207800E20AD5 /* emoji5.png in Resources */ = {isa = PBXBuildFile; fileRef = D4F007471C1C207800E20AD5 /* emoji5.png */; };
+		D4F007571C1C297C00E20AD5 /* test1.png in Resources */ = {isa = PBXBuildFile; fileRef = D4F007561C1C297C00E20AD5 /* test1.png */; };
+		E73650141C1575F900C61196 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73650131C1575F900C61196 /* Dynamic.swift */; };
+		E73650251C1BEAC300C61196 /* dynamic1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E73650241C1BEAC300C61196 /* dynamic1.jpg */; };
+		E73650271C1BEAD600C61196 /* dynamic2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E73650261C1BEAD600C61196 /* dynamic2.jpg */; };
+		E736502A1C1BF27200C61196 /* hou1.png in Resources */ = {isa = PBXBuildFile; fileRef = E73650281C1BF27200C61196 /* hou1.png */; };
+		E73650311C1BF5E600C61196 /* hou2.png in Resources */ = {isa = PBXBuildFile; fileRef = E736502C1C1BF5E600C61196 /* hou2.png */; };
+		E73650321C1BF5E600C61196 /* hou3.png in Resources */ = {isa = PBXBuildFile; fileRef = E736502D1C1BF5E600C61196 /* hou3.png */; };
+		E73650331C1BF5E600C61196 /* hou4.png in Resources */ = {isa = PBXBuildFile; fileRef = E736502E1C1BF5E600C61196 /* hou4.png */; };
+		E73650341C1BF5E600C61196 /* hou5.png in Resources */ = {isa = PBXBuildFile; fileRef = E736502F1C1BF5E600C61196 /* hou5.png */; };
+		E73650351C1BF5E600C61196 /* hou6.png in Resources */ = {isa = PBXBuildFile; fileRef = E73650301C1BF5E600C61196 /* hou6.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -224,6 +234,16 @@
 		D4F007461C1C207800E20AD5 /* emoji4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = emoji4.png; path = Resourses/emoji4.png; sourceTree = "<group>"; };
 		D4F007471C1C207800E20AD5 /* emoji5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = emoji5.png; path = Resourses/emoji5.png; sourceTree = "<group>"; };
 		D4FFC2821C15699500B7B35B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D4F007561C1C297C00E20AD5 /* test1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = test1.png; path = HKUEmoji/Resourses/test1.png; sourceTree = "<group>"; };
+		E73650131C1575F900C61196 /* Dynamic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
+		E73650241C1BEAC300C61196 /* dynamic1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dynamic1.jpg; sourceTree = "<group>"; };
+		E73650261C1BEAD600C61196 /* dynamic2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dynamic2.jpg; sourceTree = "<group>"; };
+		E73650281C1BF27200C61196 /* hou1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hou1.png; sourceTree = "<group>"; };
+		E736502C1C1BF5E600C61196 /* hou2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hou2.png; sourceTree = "<group>"; };
+		E736502D1C1BF5E600C61196 /* hou3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hou3.png; sourceTree = "<group>"; };
+		E736502E1C1BF5E600C61196 /* hou4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hou4.png; sourceTree = "<group>"; };
+		E736502F1C1BF5E600C61196 /* hou5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hou5.png; sourceTree = "<group>"; };
+		E73650301C1BF5E600C61196 /* hou6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hou6.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -454,6 +474,7 @@
 				9093725B1C15A38F001407F1 /* StaticEmojiGenII.swift */,
 				D4E148181C19A41C00F49A36 /* ChooseStaticEmojiBackground.swift */,
 				D4E1481C1C19A5E700F49A36 /* ChooseStaticEmojiShow.swift */,
+				E73650131C1575F900C61196 /* Dynamic.swift */,
 			);
 			path = HKUEmoji;
 			sourceTree = "<group>";
@@ -464,6 +485,18 @@
 				D4DE04701C1819200085C3F0 /* test.png */,
 				D46AE95F1C18258700C2F768 /* overlay.png */,
 				D40EB8E61C1BF9FE00F8B77E /* pickFace.jpg */,
+				E736502C1C1BF5E600C61196 /* hou2.png */,
+				E736502D1C1BF5E600C61196 /* hou3.png */,
+				E736502E1C1BF5E600C61196 /* hou4.png */,
+				E736502F1C1BF5E600C61196 /* hou5.png */,
+				E73650301C1BF5E600C61196 /* hou6.png */,
+				D4F007561C1C297C00E20AD5 /* test1.png */,
+				E73650281C1BF27200C61196 /* hou1.png */,
+				E73650261C1BEAD600C61196 /* dynamic2.jpg */,
+				E73650241C1BEAC300C61196 /* dynamic1.jpg */,
+				D41A81AC1C0DF88D00CF0511 /* eye.png */,
+				D41A81AD1C0DF88D00CF0511 /* mouth.png */,
+				D41A81AE1C0DF88D00CF0511 /* test.png */,
 			);
 			name = Resources;
 			path = ..;
@@ -647,16 +680,28 @@
 				989D00DC1C1B0D98004B6D28 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				D4F0074B1C1C207800E20AD5 /* emoji5.png in Resources */,
 				989D00DD1C1B0D98004B6D28 /* RennSDK.bundle in Resources */,
+				D41A81B01C0DF88D00CF0511 /* mouth.png in Resources */,
+				E73650341C1BF5E600C61196 /* hou5.png in Resources */,
+				E73650311C1BF5E600C61196 /* hou2.png in Resources */,
+				E73650251C1BEAC300C61196 /* dynamic1.jpg in Resources */,
+				E736502A1C1BF27200C61196 /* hou1.png in Resources */,
+				E73650271C1BEAD600C61196 /* dynamic2.jpg in Resources */,
 				D47C026B1C0334CB00CDFDEB /* LaunchScreen.storyboard in Resources */,
 				D40EB8E71C1BF9FE00F8B77E /* pickFace.jpg in Resources */,
 				D4F0074A1C1C207800E20AD5 /* emoji4.png in Resources */,
 				989D00E41C1B0D98004B6D28 /* ShareSDK.bundle in Resources */,
+				D41A81AF1C0DF88D00CF0511 /* eye.png in Resources */,
+				D4F007571C1C297C00E20AD5 /* test1.png in Resources */,
+				E73650351C1BF5E600C61196 /* hou6.png in Resources */,
+				E73650321C1BF5E600C61196 /* hou3.png in Resources */,
 				D47C02661C0334CB00CDFDEB /* Main.storyboard in Resources */,
 				989D00E01C1B0D98004B6D28 /* WeiboSDK.bundle in Resources */,
 				989D00E21C1B0D98004B6D28 /* read_me.txt in Resources */,
 				D4F007481C1C207800E20AD5 /* emoji2.png in Resources */,
 				989D00D81C1B0D98004B6D28 /* GooglePlus.bundle in Resources */,
 				989D00E91C1B0D98004B6D28 /* ShareSDKUI.bundle in Resources */,
+				D41A81B11C0DF88D00CF0511 /* test.png in Resources */,
+				E73650331C1BF5E600C61196 /* hou4.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -687,6 +732,7 @@
 				D47C02631C0334CB00CDFDEB /* ViewController.swift in Sources */,
 				9093725C1C15A38F001407F1 /* StaticEmojiGenII.swift in Sources */,
 				D40EB8D61C1BF77500F8B77E /* LocalEmoji.swift in Sources */,
+				E73650141C1575F900C61196 /* Dynamic.swift in Sources */,
 				D49F05091C0BE2DE00E6EBA6 /* StaticEmojiGen.swift in Sources */,
 				98845F7B1C148A0B001D4799 /* ShareViewController.swift in Sources */,
 				D49553001C09E707003700B3 /* StaticCamera.swift in Sources */,

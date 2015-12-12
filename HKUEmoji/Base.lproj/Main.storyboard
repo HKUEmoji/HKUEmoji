@@ -10,7 +10,7 @@
         <!--DynamicEmojiPage-->
         <scene sceneID="Dj5-ns-5h5">
             <objects>
-                <viewController title="DynamicEmojiPage" id="mU2-2d-x2v" sceneMemberID="viewController">
+                <viewController title="DynamicEmojiPage" id="mU2-2d-x2v" customClass="Dynamic" customModule="HKUEmoji" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4X6-HF-Ldr"/>
                         <viewControllerLayoutGuide type="bottom" id="JRd-uw-Kmw"/>
@@ -20,22 +20,40 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dynamic Emoji" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n5I-MR-ONt">
-                                <rect key="frame" x="86" y="274" width="148" height="21"/>
+                                <rect key="frame" x="123" y="77" width="148" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A1F-e5-04d">
+                                <rect key="frame" x="44" y="443" width="84" height="88"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NYG-It-x2I">
+                                <rect key="frame" x="143" y="443" width="84" height="88"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dyU-tc-fbs">
+                                <rect key="frame" x="245" y="443" width="86" height="88"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="feE-ML-Tnv">
+                                <rect key="frame" x="44" y="114" width="287" height="281"/>
+                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Dynamic Emoji" id="FEz-7a-ekq"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="gifImage" destination="feE-ML-Tnv" id="wWU-Xs-onF"/>
+                        <outlet property="gifTemplate1" destination="A1F-e5-04d" id="7u5-k7-r6z"/>
+                        <outlet property="gifTemplate2" destination="NYG-It-x2I" id="SHd-eK-0kP"/>
+                        <outlet property="gifTemplate3" destination="dyU-tc-fbs" id="Khk-NC-lDm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i1h-Ki-1vC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="277.5" y="-1682.5"/>
+            <point key="canvasLocation" x="455.5" y="-1498.5"/>
         </scene>
         <!--StaticEmojiPage-->
         <scene sceneID="527-bT-NEl">
