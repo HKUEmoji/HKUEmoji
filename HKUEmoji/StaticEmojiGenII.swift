@@ -138,9 +138,9 @@ class StaticEmojiGenII: UIViewController {
 	func addFaceToBackGround(faceBound: CGRect, backgroundImage: UIImage, faceImage: UIImage) -> UIImage {
 		//        let ratio = min(faceBound.height / faceImage.size.height, faceBound.width / faceImage.size.width)
 		//        let newFaceImage = StaticEmojiGen.resizeImageFromRatio(faceImage, ratio: Double(ratio))
-		UIGraphicsBeginImageContextWithOptions(backgroundImage.size, false, 0.0)
+        UIGraphicsBeginImageContextWithOptions(backgroundImage.size, false, 0.0)
+        faceImage.drawInRect(faceBound)
 		backgroundImage.drawInRect(CGRect(origin: CGPointZero, size: backgroundImage.size))
-		faceImage.drawInRect(faceBound)
 
 		let newImage = UIGraphicsGetImageFromCurrentImageContext()
 		UIGraphicsEndImageContext()
