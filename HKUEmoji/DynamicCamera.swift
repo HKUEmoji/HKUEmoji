@@ -140,7 +140,6 @@ class cameraTool : UIViewController, UIImagePickerControllerDelegate, UINavigati
 		let offsetX = overlayView.frame.origin.x - pickView.frame.origin.x
 		let offsetY = overlayView.frame.origin.y - pickView.frame.origin.y
 
-
 		let cgRef = resizeImage.CGImage;
 		let imageRef = CGImageCreateWithImageInRect(cgRef, CGRectMake(offsetX, offsetY, overlayView.frame.size.width, overlayView.frame.size.height))
 		faceImage = UIImage(CGImage: imageRef!)
@@ -162,23 +161,23 @@ class cameraTool : UIViewController, UIImagePickerControllerDelegate, UINavigati
 	}
 
 	private func resizeImageFromFrame(originalImage: UIImage) -> (UIImage) {
-//		let image = CIImage(image: originalImage)
+		let image = CIImage(image: originalImage)
 		let ratioW = Double((self.view.frame.size.width) / (originalImage.size.width))
 		let ratioH = Double((self.view.frame.size.height) / (originalImage.size.height))
 		let ratio = CGFloat(min(ratioH, ratioW))
-//		let filter = CIFilter(name: "CILanczosScaleTransform")!
-//		filter.setValue(image, forKey: kCIInputImageKey)
-//		filter.setValue(ratio, forKey: kCIInputScaleKey)
-//		filter.setValue(1.0, forKey: kCIInputAspectRatioKey)
-//		let outputImage = filter.valueForKey(kCIOutputImageKey) as! CIImage
-        let transform = CGAffineTransformMakeScale(ratio, ratio)
-        let filter = GPUImageTransformFilter()
-        filter.affineTransform = transform
-        filter.forceProcessingAtSizeRespectingAspectRatio(CGSize(width: originalImage.size.width * ratio, height: originalImage.size.height * ratio))
-        let scaledImage = filter.imageByFilteringImage(originalImage)
+		let filter = CIFilter(name: "CILanczosScaleTransform")!
+		filter.setValue(image, forKey: kCIInputImageKey)
+		filter.setValue(ratio, forKey: kCIInputScaleKey)
+		filter.setValue(1.0, forKey: kCIInputAspectRatioKey)
+		let outputImage = filter.valueForKey(kCIOutputImageKey) as! CIImage
+//        let transform = CGAffineTransformMakeScale(ratio, ratio)
+//        let filter = GPUImageTransformFilter()
+//        filter.affineTransform = transform
+//        filter.forceProcessingAtSizeRespectingAspectRatio(CGSize(width: originalImage.size.width * ratio, height: originalImage.size.height * ratio))
+//        let scaledImage = filter.imageByFilteringImage(originalImage)
 
-//		let context = CIContext(options: [kCIContextUseSoftwareRenderer: false])
-//		let scaledImage = UIImage(CGImage: context.createCGImage(outputImage, fromRect: outputImage.extent))
+		let context = CIContext(options: [kCIContextUseSoftwareRenderer: false])
+		let scaledImage = UIImage(CGImage: context.createCGImage(outputImage, fromRect: outputImage.extent))
 		return scaledImage
 	}
 
