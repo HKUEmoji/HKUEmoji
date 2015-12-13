@@ -74,8 +74,6 @@ class cameraTool : UIViewController, UIImagePickerControllerDelegate, UINavigati
                 pickView.image = UIImage(named:"bb1")
             }
         }
-        
-        
 
 		//gesture
 		let pinchGesture = UIPinchGestureRecognizer(target: self, action: "handlePinchGesture:")
@@ -129,11 +127,13 @@ class cameraTool : UIViewController, UIImagePickerControllerDelegate, UINavigati
 
 		let pickedImage = info[UIImagePickerControllerOriginalImage] as! UIImage
 		//resizeImage = pickedImage.fixOrientation()
+//        resizeImage = pickedImage
 		resizeImage = resizeImageFromFrame(pickedImage)
         resizeImage = resizeImage.fixOrientation(pickedImage.imageOrientation)
 		pickView.frame = CGRect(x: pickView.frame.origin.x, y: pickView.frame.origin.y, width: resizeImage.size.width, height: resizeImage.size.height)
 		pickView.image = resizeImage
 		pickFace.hidden = false
+//        pickFace.userInteractionEnabled = true
 	}
 
 	@IBAction func captureFace(sender: UIButton) {
@@ -162,7 +162,7 @@ class cameraTool : UIViewController, UIImagePickerControllerDelegate, UINavigati
 	}
 
 	private func resizeImageFromFrame(originalImage: UIImage) -> (UIImage) {
-		let image = CIImage(image: originalImage)
+//		let image = CIImage(image: originalImage)
 		let ratioW = Double((self.view.frame.size.width) / (originalImage.size.width))
 		let ratioH = Double((self.view.frame.size.height) / (originalImage.size.height))
 		let ratio = CGFloat(min(ratioH, ratioW))
