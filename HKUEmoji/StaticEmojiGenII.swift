@@ -29,7 +29,7 @@ class StaticEmojiGenII: UIViewController {
 		"curry1": 1,]
 
 	var cartoonEmojiNames = ["erkangface": CGRect(x: 172, y: 114, width: 151, height: 188),
-		"emoji2": CGRect(x: 120, y: 116, width: 55, height: 50),
+		"emoji2": CGRect(x: 100, y: 100, width: 90, height: 90),
         "emoji3": CGRect(x: 240, y: 228, width: 105, height: 100),
         "emoji4": CGRect(x: 240, y: 151, width: 125, height: 125),
         "emoji5": CGRect(x: 128, y: 68, width: 120, height: 90),
@@ -68,7 +68,7 @@ class StaticEmojiGenII: UIViewController {
 	@IBAction func changeThreshold(sender: AnyObject) {
 		let sketchFilter = GPUImageThresholdSketchFilter()
 		sketchFilter.edgeStrength = 0.847457647
-		sketchFilter.threshold = 0.402542382
+		sketchFilter.threshold = 0.302542382
 		let toonFilter = GPUImageToonFilter()
 		toonFilter.texelHeight = 0.0027118644
 		toonFilter.texelWidth = 0.001610169559

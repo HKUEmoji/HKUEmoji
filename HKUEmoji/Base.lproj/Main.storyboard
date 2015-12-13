@@ -420,17 +420,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vhv-gQ-MnA">
-                                <rect key="frame" x="46" y="487" width="85" height="85"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="vhv-gQ-MnA" secondAttribute="height" id="0ZG-t1-UPG"/>
-                                </constraints>
-                                <state key="normal" backgroundImage="bb1"/>
-                                <connections>
-                                    <action selector="showDynamicPage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qiw-lu-sEv"/>
-                                </connections>
-                            </button>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Ewh-kh-9Fw">
                                 <rect key="frame" x="0.0" y="0.0" width="39" height="18"/>
                                 <animations/>
@@ -455,7 +444,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Dynamic" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bl1-oE-dOa">
                                 <rect key="frame" x="46" y="465" width="85" height="22"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="shadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -463,7 +452,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Local" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5bZ-TD-b7r">
                                 <rect key="frame" x="244" y="465" width="85" height="22"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="shadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -471,11 +460,22 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Static" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7UM-Sh-5eS">
                                 <rect key="frame" x="145" y="465" width="85" height="22"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="shadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vhv-gQ-MnA">
+                                <rect key="frame" x="46" y="487" width="85" height="85"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="vhv-gQ-MnA" secondAttribute="height" id="0ZG-t1-UPG"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="bb1"/>
+                                <connections>
+                                    <action selector="showDynamicPage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qiw-lu-sEv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -488,7 +488,7 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="7UM-Sh-5eS" secondAttribute="bottom" constant="180" id="E8g-rY-rok"/>
                             <constraint firstItem="bl1-oE-dOa" firstAttribute="width" secondItem="vhv-gQ-MnA" secondAttribute="width" id="EFI-XZ-zex"/>
                             <constraint firstItem="7UM-Sh-5eS" firstAttribute="width" secondItem="bkH-CB-vwe" secondAttribute="width" id="Hp9-10-IQP"/>
-                            <constraint firstItem="vhv-gQ-MnA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="IL9-88-jLf"/>
+                            <constraint firstItem="vhv-gQ-MnA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="IL9-88-jLf"/>
                             <constraint firstItem="7UM-Sh-5eS" firstAttribute="centerX" secondItem="bkH-CB-vwe" secondAttribute="centerX" id="Mnc-d6-WqZ"/>
                             <constraint firstItem="bl1-oE-dOa" firstAttribute="baseline" secondItem="7UM-Sh-5eS" secondAttribute="baseline" id="NNZ-sG-tgl"/>
                             <constraint firstItem="hdA-Vh-Pjd" firstAttribute="top" secondItem="vhv-gQ-MnA" secondAttribute="top" id="Ump-uv-C0B"/>
@@ -504,7 +504,7 @@
                             <constraint firstItem="7UM-Sh-5eS" firstAttribute="leading" secondItem="bkH-CB-vwe" secondAttribute="leading" id="rII-qj-FkH"/>
                             <constraint firstItem="hdA-Vh-Pjd" firstAttribute="leading" secondItem="bkH-CB-vwe" secondAttribute="trailing" constant="40" id="slb-eR-zu5"/>
                             <constraint firstItem="5bZ-TD-b7r" firstAttribute="centerX" secondItem="hdA-Vh-Pjd" secondAttribute="centerX" id="tcf-T8-tyB"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="hdA-Vh-Pjd" secondAttribute="trailing" constant="30" id="zRS-Hf-jn6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hdA-Vh-Pjd" secondAttribute="trailing" constant="20" id="zRS-Hf-jn6"/>
                             <constraint firstItem="7UM-Sh-5eS" firstAttribute="bottom" secondItem="bkH-CB-vwe" secondAttribute="top" id="zeL-vb-drr"/>
                         </constraints>
                         <variation key="default">
