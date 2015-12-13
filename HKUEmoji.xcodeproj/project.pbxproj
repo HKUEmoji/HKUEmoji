@@ -56,7 +56,6 @@
 		D47C02631C0334CB00CDFDEB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47C02621C0334CB00CDFDEB /* ViewController.swift */; };
 		D47C02661C0334CB00CDFDEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D47C02641C0334CB00CDFDEB /* Main.storyboard */; };
 		D47C026B1C0334CB00CDFDEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D47C02691C0334CB00CDFDEB /* LaunchScreen.storyboard */; };
-		D49F05091C0BE2DE00E6EBA6 /* StaticEmojiGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49F05081C0BE2DE00E6EBA6 /* StaticEmojiGen.swift */; };
 		D49F05491C0BEF6600E6EBA6 /* GPUImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D49F05371C0BED1A00E6EBA6 /* GPUImage.framework */; };
 		D4DE04931C181A720085C3F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47C02601C0334CB00CDFDEB /* AppDelegate.swift */; };
 		D4DE04941C181A900085C3F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4FFC2821C15699500B7B35B /* Assets.xcassets */; };
@@ -223,7 +222,6 @@
 		D47C026C1C0334CB00CDFDEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D47C02711C0334CB00CDFDEB /* HKUEmojiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HKUEmojiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D47C027C1C0334CB00CDFDEB /* HKUEmojiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HKUEmojiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D49F05081C0BE2DE00E6EBA6 /* StaticEmojiGen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticEmojiGen.swift; sourceTree = "<group>"; };
 		D49F052E1C0BED1A00E6EBA6 /* GPUImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GPUImage.xcodeproj; path = Submodules/GPUImage/framework/GPUImage.xcodeproj; sourceTree = "<group>"; };
 		D4DE04701C1819200085C3F0 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = test.png; path = HKUEmoji/Resourses/test.png; sourceTree = "<group>"; };
 		D4E148181C19A41C00F49A36 /* ChooseStaticEmojiBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseStaticEmojiBackground.swift; sourceTree = "<group>"; };
@@ -467,7 +465,6 @@
 				D47C02691C0334CB00CDFDEB /* LaunchScreen.storyboard */,
 				D47C026C1C0334CB00CDFDEB /* Info.plist */,
 				907672FA1C0F16BB00E9FF36 /* DynamicCamera.swift */,
-				D49F05081C0BE2DE00E6EBA6 /* StaticEmojiGen.swift */,
 				98845F7A1C148A0B001D4799 /* ShareViewController.swift */,
 				9093725B1C15A38F001407F1 /* StaticEmojiGenII.swift */,
 				D4E148181C19A41C00F49A36 /* ChooseStaticEmojiBackground.swift */,
@@ -732,7 +729,6 @@
 				9093725C1C15A38F001407F1 /* StaticEmojiGenII.swift in Sources */,
 				D40EB8D61C1BF77500F8B77E /* LocalEmoji.swift in Sources */,
 				E73650141C1575F900C61196 /* Dynamic.swift in Sources */,
-				D49F05091C0BE2DE00E6EBA6 /* StaticEmojiGen.swift in Sources */,
 				98845F7B1C148A0B001D4799 /* ShareViewController.swift in Sources */,
 				907672FB1C0F16BB00E9FF36 /* DynamicCamera.swift in Sources */,
 				D4E1481D1C19A5E700F49A36 /* ChooseStaticEmojiShow.swift in Sources */,
