@@ -30,7 +30,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        self.navigationController?.setNavigationBarHidden(false, animated: true)
+//        self.navigationController?.setNavigationBarHidden(true, animated: true)
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "backfinal")!)
     }
 
@@ -38,6 +38,18 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+        super.viewDidDisappear(animated)
+    }
+    
 
 }
 

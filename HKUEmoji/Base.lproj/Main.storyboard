@@ -475,6 +475,14 @@
                                     <action selector="showDynamicPage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qiw-lu-sEv"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uFr-xw-ctU">
+                                <rect key="frame" x="324" y="64" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="About"/>
+                                <connections>
+                                    <segue destination="QxD-dD-uZ4" kind="show" id="0Y4-dT-URx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -519,19 +527,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="WlY-ze-Utg">
-                        <barButtonItem key="rightBarButtonItem" image="about_log" style="plain" id="Hxt-7X-fIn">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="m2O-Op-8E3">
-                                <rect key="frame" x="319" y="2" width="40" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <animations/>
-                                <state key="normal" title="About"/>
-                                <connections>
-                                    <segue destination="QxD-dD-uZ4" kind="show" id="jr2-oV-h7c"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="WlY-ze-Utg"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -627,7 +623,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="about_log" width="5" height="3"/>
         <image name="bb1" width="934" height="930"/>
         <image name="bb2" width="932" height="930"/>
         <image name="bb3" width="930" height="930"/>
