@@ -239,11 +239,11 @@ class StaticEmojiGenII: UIViewController {
 	func getCartoonFace(originalImage: UIImage) -> (UIImage) {
 		let sketchFilter = GPUImageThresholdSketchFilter()
 		sketchFilter.edgeStrength = 0.847457647
-		sketchFilter.threshold = 0.402542382
+		sketchFilter.threshold = 0.352542382
 		let toonFilter = GPUImageToonFilter()
 		toonFilter.texelHeight = 0.0027118644
 		toonFilter.texelWidth = 0.001610169559
-		toonFilter.threshold = 0.70762711763381958
+		toonFilter.threshold = 0.65762711763381958
 
 		let filterGroup = GPUImageFilterGroup()
 
