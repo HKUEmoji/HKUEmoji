@@ -18,8 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="HKU Emoji" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uvy-Mm-ss9">
-                                <rect key="frame" x="154" y="65" width="292" height="193"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HKU Emoji" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uvy-Mm-ss9">
+                                <rect key="frame" x="120" y="181" width="360" height="238"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Uvy-Mm-ss9" secondAttribute="height" multiplier="292:193" id="cZ0-6L-jG7"/>
@@ -33,6 +33,8 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Uvy-Mm-ss9" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="TNT-hp-1rv"/>
+                            <constraint firstItem="Uvy-Mm-ss9" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="gkh-wG-eBy"/>
                             <constraint firstItem="Uvy-Mm-ss9" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.6" id="jRl-Lp-H4J"/>
                         </constraints>
                     </view>
