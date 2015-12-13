@@ -218,8 +218,6 @@
 		D47C02651C0334CB00CDFDEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D47C026A1C0334CB00CDFDEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D47C026C1C0334CB00CDFDEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D47C02711C0334CB00CDFDEB /* HKUEmojiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HKUEmojiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D47C027C1C0334CB00CDFDEB /* HKUEmojiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HKUEmojiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D49F052E1C0BED1A00E6EBA6 /* GPUImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GPUImage.xcodeproj; path = Submodules/GPUImage/framework/GPUImage.xcodeproj; sourceTree = "<group>"; };
 		D4E148181C19A41C00F49A36 /* ChooseStaticEmojiBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseStaticEmojiBackground.swift; sourceTree = "<group>"; };
 		D4E1481C1C19A5E700F49A36 /* ChooseStaticEmojiShow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseStaticEmojiShow.swift; sourceTree = "<group>"; };
@@ -439,8 +437,6 @@
 			isa = PBXGroup;
 			children = (
 				D47C025D1C0334CB00CDFDEB /* HKUEmoji.app */,
-				D47C02711C0334CB00CDFDEB /* HKUEmojiTests.xctest */,
-				D47C027C1C0334CB00CDFDEB /* HKUEmojiUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -539,42 +535,6 @@
 			productReference = D47C025D1C0334CB00CDFDEB /* HKUEmoji.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D47C02701C0334CB00CDFDEB /* HKUEmojiTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D47C02881C0334CB00CDFDEB /* Build configuration list for PBXNativeTarget "HKUEmojiTests" */;
-			buildPhases = (
-				D47C026D1C0334CB00CDFDEB /* Sources */,
-				D47C026E1C0334CB00CDFDEB /* Frameworks */,
-				D47C026F1C0334CB00CDFDEB /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D47C02731C0334CB00CDFDEB /* PBXTargetDependency */,
-			);
-			name = HKUEmojiTests;
-			productName = HKUEmojiTests;
-			productReference = D47C02711C0334CB00CDFDEB /* HKUEmojiTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		D47C027B1C0334CB00CDFDEB /* HKUEmojiUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D47C028B1C0334CB00CDFDEB /* Build configuration list for PBXNativeTarget "HKUEmojiUITests" */;
-			buildPhases = (
-				D47C02781C0334CB00CDFDEB /* Sources */,
-				D47C02791C0334CB00CDFDEB /* Frameworks */,
-				D47C027A1C0334CB00CDFDEB /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D47C027E1C0334CB00CDFDEB /* PBXTargetDependency */,
-			);
-			name = HKUEmojiUITests;
-			productName = HKUEmojiUITests;
-			productReference = D47C027C1C0334CB00CDFDEB /* HKUEmojiUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -623,8 +583,6 @@
 			projectRoot = "";
 			targets = (
 				D47C025C1C0334CB00CDFDEB /* HKUEmoji */,
-				D47C02701C0334CB00CDFDEB /* HKUEmojiTests */,
-				D47C027B1C0334CB00CDFDEB /* HKUEmojiUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -931,54 +889,6 @@
 			};
 			name = Release;
 		};
-		D47C02891C0334CB00CDFDEB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = HKUEmojiTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = HKUEmoji.HKUEmojiTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HKUEmoji.app/HKUEmoji";
-			};
-			name = Debug;
-		};
-		D47C028A1C0334CB00CDFDEB /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = HKUEmojiTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = HKUEmoji.HKUEmojiTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HKUEmoji.app/HKUEmoji";
-			};
-			name = Release;
-		};
-		D47C028C1C0334CB00CDFDEB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = HKUEmojiUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = HKUEmoji.HKUEmojiUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = HKUEmoji;
-				USES_XCTRUNNER = YES;
-			};
-			name = Debug;
-		};
-		D47C028D1C0334CB00CDFDEB /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = HKUEmojiUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = HKUEmoji.HKUEmojiUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = HKUEmoji;
-				USES_XCTRUNNER = YES;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -996,24 +906,6 @@
 			buildConfigurations = (
 				D47C02861C0334CB00CDFDEB /* Debug */,
 				D47C02871C0334CB00CDFDEB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D47C02881C0334CB00CDFDEB /* Build configuration list for PBXNativeTarget "HKUEmojiTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D47C02891C0334CB00CDFDEB /* Debug */,
-				D47C028A1C0334CB00CDFDEB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D47C028B1C0334CB00CDFDEB /* Build configuration list for PBXNativeTarget "HKUEmojiUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D47C028C1C0334CB00CDFDEB /* Debug */,
-				D47C028D1C0334CB00CDFDEB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

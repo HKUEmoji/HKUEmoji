@@ -242,7 +242,7 @@
                                     <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
                                 </accessibility>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bmp-Th-Di7">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bmp-Th-Di7">
                                 <rect key="frame" x="271" y="512" width="66" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Pick Face"/>
@@ -250,7 +250,7 @@
                                     <action selector="captureFace:" destination="wf8-8W-TF0" eventType="touchUpInside" id="IPy-oI-q1x"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UAd-8g-nSI">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UAd-8g-nSI">
                                 <rect key="frame" x="23" y="512" width="89" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Take a Photo"/>
@@ -258,7 +258,7 @@
                                     <action selector="takePhone:" destination="wf8-8W-TF0" eventType="touchUpInside" id="Oml-bA-YQV"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ajZ-bV-Qwj">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ajZ-bV-Qwj">
                                 <rect key="frame" x="146" y="512" width="82" height="30"/>
                                 <animations/>
                                 <constraints>
@@ -284,8 +284,8 @@
                             <constraint firstItem="ajZ-bV-Qwj" firstAttribute="centerX" secondItem="0Gf-QO-6Fm" secondAttribute="centerX" id="ExF-bq-N3O"/>
                             <constraint firstAttribute="trailingMargin" secondItem="bmp-Th-Di7" secondAttribute="trailing" constant="10" id="Mfi-Uh-n7r"/>
                             <constraint firstItem="bmp-Th-Di7" firstAttribute="centerY" secondItem="ajZ-bV-Qwj" secondAttribute="centerY" id="RUF-kh-wr4"/>
-                            <constraint firstItem="Cw8-F7-U3U" firstAttribute="top" relation="greaterThanOrEqual" secondItem="ajZ-bV-Qwj" secondAttribute="bottom" constant="30" id="Vgy-9n-b4V"/>
-                            <constraint firstItem="ajZ-bV-Qwj" firstAttribute="top" relation="greaterThanOrEqual" secondItem="0Gf-QO-6Fm" secondAttribute="bottom" constant="40" id="hyx-yZ-3lF"/>
+                            <constraint firstItem="Cw8-F7-U3U" firstAttribute="top" secondItem="ajZ-bV-Qwj" secondAttribute="bottom" constant="50" id="Vgy-9n-b4V"/>
+                            <constraint firstItem="0Gf-QO-6Fm" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="ajZ-bV-Qwj" secondAttribute="top" constant="20" id="hyx-yZ-3lF"/>
                             <constraint firstItem="0Gf-QO-6Fm" firstAttribute="top" secondItem="Ub4-bh-6yR" secondAttribute="bottom" constant="25" id="oNh-ne-G8q"/>
                             <constraint firstItem="0Gf-QO-6Fm" firstAttribute="width" relation="lessThanOrEqual" secondItem="jVm-7M-Xoo" secondAttribute="width" id="riK-Ds-3f1"/>
                         </constraints>
@@ -515,11 +515,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="WlY-ze-Utg">
                         <barButtonItem key="rightBarButtonItem" image="about_log" style="plain" id="Hxt-7X-fIn">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="m2O-Op-8E3">
-                                <rect key="frame" x="313" y="7" width="46" height="30"/>
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="m2O-Op-8E3">
+                                <rect key="frame" x="319" y="2" width="40" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
-                                <state key="normal" image="Setting 3.png"/>
+                                <state key="normal" title="About"/>
                                 <connections>
                                     <segue destination="QxD-dD-uZ4" kind="show" id="jr2-oV-h7c"/>
                                 </connections>
@@ -621,7 +621,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Setting 3.png" width="102" height="102"/>
         <image name="about_log" width="5" height="3"/>
         <image name="bb1" width="934" height="930"/>
         <image name="bb2" width="932" height="930"/>
