@@ -67,8 +67,8 @@ class StaticEmojiGenII: UIViewController {
 
 	@IBAction func changeThreshold(sender: AnyObject) {
 		let sketchFilter = GPUImageThresholdSketchFilter()
-		sketchFilter.edgeStrength = 0.847457647
-		sketchFilter.threshold = 0.302542382
+		sketchFilter.edgeStrength = 0.867457647
+		sketchFilter.threshold = 0.352542382
 		let toonFilter = GPUImageToonFilter()
 		toonFilter.texelHeight = 0.0027118644
 		toonFilter.texelWidth = 0.001610169559
