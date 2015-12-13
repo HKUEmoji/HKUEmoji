@@ -30,9 +30,9 @@ class StaticEmojiGenII: UIViewController {
 
 	var cartoonEmojiNames = ["erkangface": CGRect(x: 172, y: 114, width: 151, height: 188),
 		"emoji2": CGRect(x: 100, y: 100, width: 90, height: 90),
-        "emoji3": CGRect(x: 240, y: 228, width: 105, height: 100),
-        "emoji4": CGRect(x: 240, y: 151, width: 125, height: 125),
-        "emoji5": CGRect(x: 128, y: 68, width: 120, height: 90),
+        "emoji3": CGRect(x: 220, y: 208, width: 135, height: 130),
+        "emoji4": CGRect(x: 220, y: 131, width: 155, height: 155),
+        "emoji5": CGRect(x: 128, y: 68, width: 140, height: 120),
     ]
 
 	var currentFilter: CIFilter!

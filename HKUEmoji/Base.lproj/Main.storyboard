@@ -80,7 +80,6 @@
                                     </imageView>
                                 </subviews>
                                 <animations/>
-                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="u3h-77-EkL" firstAttribute="centerY" secondItem="QDb-9Y-A1B" secondAttribute="centerY" id="9Jo-Z3-6Eg"/>
                                     <constraint firstItem="u3h-77-EkL" firstAttribute="width" relation="lessThanOrEqual" secondItem="QDb-9Y-A1B" secondAttribute="width" id="AVy-RH-r45"/>
