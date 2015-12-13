@@ -14,8 +14,8 @@ import GPUImage
 
 extension UIImage {
 
-	func fixOrientation(orientation: UIImageOrientation) -> UIImage {
-		if (self.imageOrientation == orientation) {
+    func fixOrientation(orientation:UIImageOrientation) -> UIImage {
+		if (orientation == .Up) {
 			return self
 		}
 
@@ -23,11 +23,11 @@ extension UIImage {
 
 		switch (orientation) {
 		case .Left:
-			transform = CGAffineTransformTranslate(transform, self.size.height, 0)
+			transform = CGAffineTransformTranslate(transform, self.size.width, 0)
 			transform = CGAffineTransformRotate(transform, CGFloat(M_PI_2))
 
 		case .Right:
-			transform = CGAffineTransformTranslate(transform, 0, self.size.width)
+			transform = CGAffineTransformTranslate(transform, 0, self.size.height)
 			transform = CGAffineTransformRotate(transform, CGFloat(-M_PI_2))
 
 		default:
@@ -49,7 +49,6 @@ extension UIImage {
 class cameraTool : UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
 	@IBOutlet weak var pickView: UIImageView!
-
 	@IBOutlet weak var pickFace: UIButton!
 	var overlayView: UIImageView!
 	var choosedPicture: UIImage!
@@ -68,6 +67,15 @@ class cameraTool : UIViewController, UIImagePickerControllerDelegate, UINavigati
 		// Do any additional setup after loading the view, typically from a nib.
 		pickView.userInteractionEnabled = false
 		overlayView = UIImageView(image: UIImage(named: "overlay"))
+        if let fromPageInfo = fromPage {
+            if fromPageInfo == "static" {
+                pickView.image = UIImage(named:"bb2")
+            } else {
+                pickView.image = UIImage(named:"bb1")
+            }
+        }
+        
+        
 
 		//gesture
 		let pinchGesture = UIPinchGestureRecognizer(target: self, action: "handlePinchGesture:")
@@ -120,9 +128,9 @@ class cameraTool : UIViewController, UIImagePickerControllerDelegate, UINavigati
 		}
 
 		let pickedImage = info[UIImagePickerControllerOriginalImage] as! UIImage
-		//pickedImage.fixOrientation(pickedImage.imageOrientation)
+		//resizeImage = pickedImage.fixOrientation()
 		resizeImage = resizeImageFromFrame(pickedImage)
-		resizeImage = resizeImage.fixOrientation(pickedImage.imageOrientation)
+        resizeImage = resizeImage.fixOrientation(pickedImage.imageOrientation)
 		pickView.frame = CGRect(x: pickView.frame.origin.x, y: pickView.frame.origin.y, width: resizeImage.size.width, height: resizeImage.size.height)
 		pickView.image = resizeImage
 		pickFace.hidden = false
