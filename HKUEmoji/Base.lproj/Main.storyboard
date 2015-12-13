@@ -397,7 +397,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bkH-CB-vwe">
-                                <rect key="frame" x="145" y="467" width="85" height="85"/>
+                                <rect key="frame" x="145" y="487" width="85" height="85"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="85" id="nhj-WN-Mao"/>
@@ -415,7 +415,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vhv-gQ-MnA">
-                                <rect key="frame" x="46" y="467" width="85" height="85"/>
+                                <rect key="frame" x="46" y="487" width="85" height="85"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="vhv-gQ-MnA" secondAttribute="height" id="0ZG-t1-UPG"/>
@@ -430,7 +430,7 @@
                                 <animations/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdA-Vh-Pjd">
-                                <rect key="frame" x="244" y="467" width="85" height="85"/>
+                                <rect key="frame" x="244" y="487" width="85" height="85"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="66" id="Bsq-cG-gvk"/>
@@ -447,7 +447,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dynamic" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bl1-oE-dOa">
-                                <rect key="frame" x="46" y="445" width="85" height="22"/>
+                                <rect key="frame" x="46" y="465" width="85" height="22"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -455,7 +455,7 @@
                                 <color key="shadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Local" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5bZ-TD-b7r">
-                                <rect key="frame" x="244" y="445" width="85" height="22"/>
+                                <rect key="frame" x="244" y="465" width="85" height="22"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -463,7 +463,7 @@
                                 <color key="shadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Static" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7UM-Sh-5eS">
-                                <rect key="frame" x="145" y="445" width="85" height="22"/>
+                                <rect key="frame" x="145" y="465" width="85" height="22"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -478,7 +478,7 @@
                             <constraint firstItem="hdA-Vh-Pjd" firstAttribute="bottom" secondItem="vhv-gQ-MnA" secondAttribute="bottom" id="79m-dn-e09"/>
                             <constraint firstItem="bkH-CB-vwe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="83N-Yb-F8N"/>
                             <constraint firstItem="hdA-Vh-Pjd" firstAttribute="centerY" secondItem="bkH-CB-vwe" secondAttribute="centerY" id="C39-i5-2t0"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="7UM-Sh-5eS" secondAttribute="bottom" constant="200" id="E8g-rY-rok"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="7UM-Sh-5eS" secondAttribute="bottom" constant="180" id="E8g-rY-rok"/>
                             <constraint firstItem="bl1-oE-dOa" firstAttribute="width" secondItem="vhv-gQ-MnA" secondAttribute="width" id="EFI-XZ-zex"/>
                             <constraint firstItem="7UM-Sh-5eS" firstAttribute="width" secondItem="bkH-CB-vwe" secondAttribute="width" id="Hp9-10-IQP"/>
                             <constraint firstItem="vhv-gQ-MnA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="IL9-88-jLf"/>
